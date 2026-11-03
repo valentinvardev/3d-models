@@ -1,0 +1,54 @@
+{
+ "name": "DoubleBarrel_Hold",
+ "_intent": "Escopeta de dos caños con martillos (coach gun) montada y lista, como se lleva de verdad: la cantonera en el hueco del hombro derecho, la mano derecha en la muñeca con el pulgar cerca de los martillos (amartillados), la izquierda debajo de la caña de astilla (_Grip2), los caños casi nivelados (5° abajo), el torso de perfil y la cabeza al frente. Solo brazos, cintura y cuello. Prioridad Idle.",
+ "loop": true,
+ "priority": "Idle",
+ "props": {"Stock": {"parent": "RightHand"}, "Barrels": {"parent": "Stock"}, "Extractor": {"parent": "Stock"}, "HammerL": {"parent": "Stock"}, "HammerR": {"parent": "Stock"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -38, "pitch": 4},
+   "Neck": {"turn": 36, "pitch": 6},
+   "RightShoulder": {"swing": 49.9, "spread": 19, "twist": 61.9},
+   "RightElbow": {"swing": 65.5},
+   "RightWrist": {"swing": 0, "spread": -12.3, "twist": 0.1},
+   "LeftShoulder": {"swing": 63.9, "spread": -2, "twist": -24.7},
+   "LeftElbow": {"swing": 44},
+   "LeftWrist": {"swing": 0, "spread": -4.4, "twist": 0},
+   "Barrels": {"rot": [0, 0, 0]},
+   "Extractor": {"rot": [0, 0, 0], "pos": [0, 0, 0]},
+   "HammerL": {"rot": [38, 0, 0]},
+   "HammerR": {"rot": [38, 0, 0]},
+   "Stock": {"rot": [-126.3, -26.4, -25.4]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -38, "pitch": 5.5},
+   "Neck": {"turn": 36, "pitch": 6},
+   "RightShoulder": {"swing": 49.9, "spread": 19, "twist": 61.9},
+   "RightElbow": {"swing": 65.5},
+   "RightWrist": {"swing": 0, "spread": -12.3, "twist": 0.1},
+   "LeftShoulder": {"swing": 63.9, "spread": -2, "twist": -24.7},
+   "LeftElbow": {"swing": 44},
+   "LeftWrist": {"swing": 0, "spread": -4.4, "twist": 0},
+   "Barrels": {"rot": [0, 0, 0]},
+   "Extractor": {"rot": [0, 0, 0], "pos": [0, 0, 0]},
+   "HammerL": {"rot": [38, 0, 0]},
+   "HammerR": {"rot": [38, 0, 0]},
+   "Stock": {"rot": [-126.3, -26.4, -25.4]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -38, "pitch": 4},
+   "Neck": {"turn": 36, "pitch": 6},
+   "RightShoulder": {"swing": 49.9, "spread": 19, "twist": 61.9},
+   "RightElbow": {"swing": 65.5},
+   "RightWrist": {"swing": 0, "spread": -12.3, "twist": 0.1},
+   "LeftShoulder": {"swing": 63.9, "spread": -2, "twist": -24.7},
+   "LeftElbow": {"swing": 44},
+   "LeftWrist": {"swing": 0, "spread": -4.4, "twist": 0},
+   "Barrels": {"rot": [0, 0, 0]},
+   "Extractor": {"rot": [0, 0, 0], "pos": [0, 0, 0]},
+   "HammerL": {"rot": [38, 0, 0]},
+   "HammerR": {"rot": [38, 0, 0]},
+   "Stock": {"rot": [-126.3, -26.4, -25.4]}
+  }}
+ ]
+}

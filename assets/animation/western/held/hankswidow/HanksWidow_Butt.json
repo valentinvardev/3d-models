@@ -1,0 +1,82 @@
+{
+ "name": "HanksWidow_Butt",
+ "_intent": "Culatazo con La Viuda (D024, se lee a 40 studs): desde HanksWidow_Hold el brazo sube adelante por encima de la cabeza con el caño para arriba y el torso apenas atrás (0,13 s); baja como un hachazo con la culata adelante y el torso cargando adelante: la culata pega bajando a ~3,9 del piso (pecho-cuello), ~2,4 studs adelante (marcador Hit, 0,22 s); remata un poco más abajo y vuelve exacto a HanksWidow_Hold a los 0,55 s (cooldown 0,8 s). La izquierda acompaña en guardia y tira para atrás en el golpe.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.22, "name": "Hit"}],
+ "props": {"Body": {"parent": "RightHand"}, "Cylinder": {"parent": "Body"}, "LoadingGate": {"parent": "Body"}, "Hammer": {"parent": "Body"}},
+ "keys": [
+  {"t": 0.0, "ease": "linear", "joints": {
+   "Waist": {"turn": 14},
+   "Neck": {"turn": -10},
+   "RightShoulder": {"swing": 78, "spread": -14},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 22},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 0.13, "ease": "linear", "joints": {
+   "Waist": {"turn": 2, "pitch": -4},
+   "Neck": {"turn": -2, "pitch": 2},
+   "RightShoulder": {"swing": 162, "spread": -4},
+   "RightElbow": {"swing": 62},
+   "RightWrist": {"swing": -28},
+   "LeftShoulder": {"swing": 34, "spread": 8},
+   "LeftElbow": {"swing": 44},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 0.22, "ease": "out", "joints": {
+   "Waist": {"turn": 20, "pitch": 10},
+   "Neck": {"turn": -20.8, "pitch": 2},
+   "RightShoulder": {"swing": 96, "spread": -14},
+   "RightElbow": {"swing": 24},
+   "RightWrist": {"swing": 22},
+   "LeftShoulder": {"swing": -12, "spread": 10},
+   "LeftElbow": {"swing": 30},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 0.29, "ease": "smooth", "joints": {
+   "Waist": {"turn": 24, "pitch": 13},
+   "Neck": {"turn": -25.4, "pitch": 2},
+   "RightShoulder": {"swing": 70, "spread": -16},
+   "RightElbow": {"swing": 20},
+   "RightWrist": {"swing": 26},
+   "LeftShoulder": {"swing": -16, "spread": 10},
+   "LeftElbow": {"swing": 30},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 0.42, "ease": "smooth", "joints": {
+   "Waist": {"turn": 19, "pitch": 6.5},
+   "Neck": {"turn": -17.7, "pitch": 1},
+   "RightShoulder": {"swing": 74, "spread": -15},
+   "RightElbow": {"swing": 16},
+   "RightWrist": {"swing": 13},
+   "LeftShoulder": {"swing": -3, "spread": 8},
+   "LeftElbow": {"swing": 26},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 0.55, "ease": "smooth", "joints": {
+   "Waist": {"turn": 14},
+   "Neck": {"turn": -10},
+   "RightShoulder": {"swing": 78, "spread": -14},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 22},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }}
+ ]
+}

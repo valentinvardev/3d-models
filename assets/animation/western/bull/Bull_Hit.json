@@ -1,0 +1,31 @@
+{
+ "name": "Bull_Hit",
+ "_intent": "Golpe fuerte recibido: la cabeza se sacude arriba y hacia su derecha (cuello y cabeza, 0,07 s, lineal), vuelve abajo con bronca (0,2) y se acomoda (0,45). La cola salta. Solo cuello, cabeza y cola (no toca el torso ni las patas): se puede tocar encima del Idle o de la caminata sin que se claven las pezuñas, y cualquier otra acción lo pisa. Empieza y termina en la pose del Idle t=0 (cuello, cabeza y cola).",
+ "rig": "assets/models/western/enemies/WST_Enemy_ZombieBull/04_roblox/WST_Enemy_ZombieBull.rig.json",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0.0, "ease": "linear", "joints": {
+   "Neck": {"rot": [-1.5, 0.0, 0.0]},
+   "Head": {"rot": [-3, 0.0, 0.0]},
+   "Tail": {"rot": [-4, 0.0, -10]}
+  }},
+  {"t": 0.07, "ease": "out", "joints": {
+   "Neck": {"rot": [10, -8, 5]},
+   "Head": {"rot": [22, -18, 14]},
+   "Tail": {"rot": [-30, 0.0, 10]}
+  }},
+  {"t": 0.2, "ease": "smooth", "joints": {
+   "Neck": {"rot": [-8, 4, -2]},
+   "Head": {"rot": [-12, 6, -4]}
+  }},
+  {"t": 0.22, "ease": "smooth", "joints": {
+   "Tail": {"rot": [6, 0.0, -20]}
+  }},
+  {"t": 0.45, "ease": "smooth", "joints": {
+   "Neck": {"rot": [-1.5, 0.0, 0.0]},
+   "Head": {"rot": [-3, 0.0, 0.0]},
+   "Tail": {"rot": [-4, 0.0, -10]}
+  }}
+ ]
+}

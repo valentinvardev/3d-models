@@ -1,0 +1,93 @@
+{
+ "name": "Walker_Attack",
+ "_intent": "Zarpazo del muerto. Anticipación bien legible (pilar Animaciones de foco): se echa atrás, levanta el brazo derecho bien alto con la garra abierta y estira el izquierdo hacia la víctima; llega a la anticipación a los 0,28 s, tiembla arriba hasta los 0,34 y baja el zarpazo en diagonal con todo el cuerpo en 0,10 s (lineal: con aceleración cúbica el hombro pasaba los 1600 °/s y se leía como un salto). El marcador Hit (0,44) es el contacto: más que los 0,4 s de telegraphSeconds. Se recupera encorvado.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.44, "name": "Hit"}],
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.01, 0], "pitch": 0, "turn": 0},
+   "Waist": {"pitch": 14, "turn": 0},
+   "Neck": {"pitch": 6},
+   "LeftHip": {"swing": 6},
+   "LeftKnee": {"swing": -10},
+   "LeftAnkle": {"swing": 4},
+   "RightHip": {"swing": 4},
+   "RightKnee": {"swing": -8},
+   "RightAnkle": {"swing": 4},
+   "LeftShoulder": {"swing": 4, "spread": 4},
+   "LeftElbow": {"swing": 10},
+   "RightShoulder": {"swing": 2, "spread": 4},
+   "RightElbow": {"swing": 14}
+  }},
+  {"t": 0.28, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.12, 0.12], "pitch": -4, "turn": 14},
+   "Waist": {"pitch": -8, "turn": 18},
+   "Neck": {"pitch": -14},
+   "LeftHip": {"swing": 22},
+   "LeftKnee": {"swing": -22},
+   "LeftAnkle": {"swing": 0},
+   "RightHip": {"swing": -12},
+   "RightKnee": {"swing": -16},
+   "RightAnkle": {"swing": 28},
+   "LeftShoulder": {"swing": 62, "spread": 18},
+   "LeftElbow": {"swing": 26},
+   "RightShoulder": {"swing": 12, "spread": 158},
+   "RightElbow": {"swing": 50}
+  }},
+  {"t": 0.34, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.13, 0.14], "pitch": -5, "turn": 16},
+   "Waist": {"pitch": -10, "turn": 20},
+   "Neck": {"pitch": -16},
+   "LeftShoulder": {"swing": 64, "spread": 16},
+   "LeftElbow": {"swing": 24},
+   "RightShoulder": {"swing": 14, "spread": 164},
+   "RightElbow": {"swing": 54}
+  }},
+  {"t": 0.44, "ease": "out", "joints": {
+   "Root": {"pos": [0, -0.06, -0.3], "pitch": 6, "turn": -16},
+   "Waist": {"pitch": 24, "turn": -34},
+   "Neck": {"pitch": 18},
+   "LeftHip": {"swing": 34},
+   "LeftKnee": {"swing": -30},
+   "LeftAnkle": {"swing": -4},
+   "RightHip": {"swing": -22},
+   "RightKnee": {"swing": -12},
+   "RightAnkle": {"swing": 24},
+   "LeftShoulder": {"swing": 18, "spread": 30},
+   "LeftElbow": {"swing": 40},
+   "RightShoulder": {"swing": 76, "spread": 10},
+   "RightElbow": {"swing": 12}
+  }},
+  {"t": 0.6, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.07, -0.34], "pitch": 6, "turn": -20},
+   "Waist": {"pitch": 28, "turn": -38},
+   "Neck": {"pitch": 20},
+   "LeftShoulder": {"swing": 10, "spread": 34},
+   "LeftElbow": {"swing": 44},
+   "RightShoulder": {"swing": 40, "spread": -12},
+   "RightElbow": {"swing": 18},
+   "LeftHip": {"swing": 34},
+   "LeftKnee": {"swing": -30},
+   "LeftAnkle": {"swing": -4},
+   "RightHip": {"swing": -22},
+   "RightKnee": {"swing": -12},
+   "RightAnkle": {"swing": 24}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.01, 0], "pitch": 0, "turn": 0},
+   "Waist": {"pitch": 14, "turn": 0},
+   "Neck": {"pitch": 6},
+   "LeftHip": {"swing": 6},
+   "LeftKnee": {"swing": -10},
+   "LeftAnkle": {"swing": 4},
+   "RightHip": {"swing": 4},
+   "RightKnee": {"swing": -8},
+   "RightAnkle": {"swing": 4},
+   "LeftShoulder": {"swing": 4, "spread": 4},
+   "LeftElbow": {"swing": 10},
+   "RightShoulder": {"swing": 2, "spread": 4},
+   "RightElbow": {"swing": 14}
+  }}
+ ]
+}

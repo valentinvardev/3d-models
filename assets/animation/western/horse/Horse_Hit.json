@@ -1,0 +1,31 @@
+{
+ "name": "Horse_Hit",
+ "_intent": "Golpe fuerte recibido: la cabeza se sacude arriba y hacia su derecha (cuello 12° y cabeza 24° arriba, 0,07 s, lineal hasta el golpe), vuelve abajo (0,2) y se acomoda (0,45). La cola se aprieta y salta. Solo cuello, cabeza y cola: no toca el torso (el _Seat y el jinete no se mueven) ni las patas, así que se puede tocar encima del Idle, de la caminata o del galope sin que los cascos patinen, y cualquier otra acción (Rear, Death) lo pisa. Empieza y termina en la pose del Idle t=0 en esas tres articulaciones.",
+ "rig": "assets/models/western/transport/WST_Mount_Horse/04_roblox/WST_Mount_Horse.rig.json",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0.0, "ease": "linear", "joints": {
+   "Neck": {"rot": [-4, 0.0, 0.0]},
+   "Head": {"rot": [-3, 0.0, 0.0]},
+   "Tail": {"rot": [-3, 0.0, -6]}
+  }},
+  {"t": 0.07, "ease": "out", "joints": {
+   "Neck": {"rot": [12, -10, 4]},
+   "Head": {"rot": [24, -18, 12]},
+   "Tail": {"rot": [-32, 0.0, 10]}
+  }},
+  {"t": 0.2, "ease": "smooth", "joints": {
+   "Neck": {"rot": [-10, 5, -2]},
+   "Head": {"rot": [-12, 8, -4]}
+  }},
+  {"t": 0.22, "ease": "smooth", "joints": {
+   "Tail": {"rot": [4, 0.0, -18]}
+  }},
+  {"t": 0.45, "ease": "smooth", "joints": {
+   "Neck": {"rot": [-4, 0.0, 0.0]},
+   "Head": {"rot": [-3, 0.0, 0.0]},
+   "Tail": {"rot": [-3, 0.0, -6]}
+  }}
+ ]
+}

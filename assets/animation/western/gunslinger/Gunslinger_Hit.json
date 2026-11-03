@@ -1,0 +1,48 @@
+{
+ "name": "Gunslinger_Hit",
+ "_intent": "Golpe recibido del pistolero: el impacto le tira el hombro derecho atrás (el torso gira y se va para atrás), la cabeza se sacude y el brazo del revólver se abre; vuelve a la pose con el caño hacia abajo. Solo de la cintura para arriba (no toca Root ni piernas): se puede tocar encima de la caminata.",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "out", "joints": {
+   "Waist": {"pitch": 4, "lean": -3, "turn": 3},
+   "Neck": {"pitch": 3, "turn": 0, "lean": 0},
+   "LeftShoulder": {"swing": 2, "spread": 8},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": 6},
+   "RightShoulder": {"swing": 6, "spread": 6, "twist": 2.1},
+   "RightElbow": {"swing": 16},
+   "RightWrist": {"swing": -41}
+  }},
+  {"t": 0.07, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -10, "lean": 4, "turn": -14},
+   "Neck": {"pitch": -26, "turn": 12, "lean": 6},
+   "LeftShoulder": {"swing": -12, "spread": 28},
+   "LeftElbow": {"swing": 34},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": -14, "spread": 34, "twist": 0},
+   "RightElbow": {"swing": 30},
+   "RightWrist": {"swing": -10}
+  }},
+  {"t": 0.18, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 0, "lean": 0, "turn": -6},
+   "Neck": {"pitch": -10, "turn": 6, "lean": 3},
+   "LeftShoulder": {"swing": -4, "spread": 16},
+   "LeftElbow": {"swing": 24},
+   "LeftWrist": {"swing": 4},
+   "RightShoulder": {"swing": 0, "spread": 18, "twist": 0},
+   "RightElbow": {"swing": 22},
+   "RightWrist": {"swing": -24}
+  }},
+  {"t": 0.42, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 4, "lean": -3, "turn": 3},
+   "Neck": {"pitch": 3, "turn": 0, "lean": 0},
+   "LeftShoulder": {"swing": 2, "spread": 8},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": 6},
+   "RightShoulder": {"swing": 6, "spread": 6, "twist": 2.1},
+   "RightElbow": {"swing": 16},
+   "RightWrist": {"swing": -41}
+  }}
+ ]
+}

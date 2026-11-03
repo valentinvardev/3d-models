@@ -1,0 +1,995 @@
+{
+ "WST_Bg_Mesa": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Mesa_A 192, Mesa_B 194, Butte_A 194, Butte_B 192 /300 por pieza, 2 vueltas, inferido: nombres Mesa_A/Mesa_B/Butte_A/Butte_B, medidas dentro de los rangos (150x50, 100x40, 60x80, 70x65), 3 estratos por pieza con colores propios, plantas irregulares con dos bahías, talud de casco convexo. Dudoso: el talud ancho de los buttes"
+  ]
+ },
+ "WST_Boss_Butcher": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 4082/3800, 4 vueltas, H 7,0 (k 1,346, cadera 0,43 H, torso x1,5, hombros ±1,50, cabeza 1,26). Inferido: pantalón cloth_blue, gancho de mango en T con la cadena en un ojal atrás, vetas en 3 piezas (Silver_LeftLowerArm, Silver_RightLowerArm, Silver_Neck), manchas talladas en vez de parches en relieve."
+  ]
+ },
+ "WST_Boss_DoyleBrothers": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Bruto 2552/3200 y Tirador 2460/3200, 4 vueltas. Los dos en un GLB con prefijo Brute_/Shooter_ (dos R15 no entran en un archivo con los mismos nombres): Bruto en x -2,1, H 6,6 (k 1,269, hombros ±1,30); Tirador en x +1,5, H 5,6 (k 1,077, hombros ±0,80). Inferido: hacha al hombro, camisa del Tirador cloth_black, pluma feather_black. Decidir: ¿dos ids o sacar el prefijo al importar?"
+  ]
+ },
+ "WST_Boss_Engineer": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 3552/3400, 4 vueltas, H 6,0 (k 1,154) con brazos largos: codo 0,565 H, muñeca 0,39 H; hombros ±1,06. Inferido: pala clavada en el piso sostenida por la derecha (en pose I no entra en las dos manos; _Grip/_Grip2 marcan las manos), mangas arremangadas sobre el codo, manos enguantadas, visera leather_dark."
+  ]
+ },
+ "WST_Boss_Foreman": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 4014/4200, 3 vueltas, H 6,4 (k 1,231, pecho 1,94 x 1,24, hombros ±1,10). Inferido: sombrero cloth_brown, vela paint_cream, chaleco abierto, bandolera leather_dark con 10 cartuchos perpendiculares, silbato a la izquierda, cartucho parado delante del puño, sin Silver_Eyes, vetas en una pieza por segmento."
+  ]
+ },
+ "WST_Boss_Preacher": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 4102/4500, 3 vueltas, H 6,5 (k 1,25, pecho 1,50, miembros 0,85, hombros ±0,95). Inferido: marcadores _MuzzleL/_MuzzleR (no pueden llamarse igual), revólveres con el caño hacia abajo (brazo colgando) y el izquierdo superpuesto a la biblia, cachas wood_dark, botas hide_black, sin Silver_Eyes, vetas en una pieza por segmento."
+  ]
+ },
+ "WST_Boss_Preacher_TrueForm": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: ¿La verdadera forma es la 'casi hecha de plata'? Decide Valentin.",
+   "2026-10-29: 2026-10-29: desbloqueado, decidido sin Valentin (ver Abierto del documento de prompts)",
+   "2026-10-29: 5816/6000, 6 vueltas (8 construcciones), H 7,83 sin aureola (8,50 con), hombros 3,17 (1,35x del humano; articulaciones 1,30x), cruz 4,50 x 2,40. Inferido: la cruz tomada por el pie de la barra larga (0,62) en la derecha y arrastrada atrás con la cabeza en el piso (38 grados, 12 afuera); miembros alargados (cadera 0,50 H, muneca 0,37 H, codo 0,56 H); la plata va dentro de las 15 piezas (unica Silver_: el corazon); faldones en los muslos cortados en la cadera; mascara de la frente al menton; sin pelo; pies de cristal. Dudoso: vetas de neon no brillan en Studio si no se separan; tobillo con 0,045 sin tapar (solape 0,125); la cruz toca el piso en reposo."
+  ]
+ },
+ "WST_Boss_Sheriff": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 5930/3500, 6 vueltas, H 6,2 (k 1,192, torso x1,25, hombros ±1,12). Inferido: pantalón cloth_blue, escopeta modelada con los caños hacia abajo (brazo colgando), cinturón de cartuchos cruzado, martingala. Exceso: escopeta 1396 con chanflanes, cabeza 976, placa 296 (prompt 120)."
+  ]
+ },
+ "WST_CH_Altar": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1056/800, 3 vueltas, inferido: piezas Platform, Table (mesa y mantel), Cross, Candlestick_1..4, Candle_Glow_1..4, Silver_Crust; escalones de 0,5 x 0,6 al frente, mesa con patas y travesaño, mantel con caída desgarrada y dos manchas, cruz con rombo en el cruce y grapas a la pared, dos candeleros en la mesa y dos de pie, costra de silver_crust con juntas de neón. Dudoso: el arma del Predicador tiene que copiar esta cruz."
+  ]
+ },
+ "WST_CH_Bell": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 952/600, 4 vueltas, inferido: rueda de radio 2 del lado +X y la cuerda bajando desde su canto de adelante (z -2), cascos convexos de dos bandas (interior facetado), óxido en la boca y un parche al frente, costra al frente (-Z) y tres vetas con ramas desde la corona. Dudoso: +59 % de triángulos (la rueda sola ~180)."
+  ]
+ },
+ "WST_CH_Church": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 7878/6000 (máx ~410 por objeto), 4 vueltas, inferido: neogótico de tabla y tapajuntas crema sobre zócalo de piedra, ventanas ojivales con marco oscuro roto, campanario de 10 x 10 que nace de la fachada a 18 con trampillas para la cuerda, arcos ojivales, chapitel de 8 caras con cruz, cerchas de tijera cada 7,3, agujero en la pared L entre la 2.a y 3.a ventana, 3 agujeros en la zona 2. Dudoso: posición del campanario; hueco del portón de medio punto (el portón aún no existe); variante quemada no modelada."
+  ]
+ },
+ "WST_CH_Pew": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 488 en el archivo (~160 por banco)/250, 2 vueltas, inferido: frente del banco a -Z (en la iglesia se gira 180°), cabecera de canto curvo convexo, respaldo reclinado 3,6° y macizo hasta 0,2, tapa wood_dark, fragmentos = dos cabeceras + asiento + respaldo (en el partido, las dos mitades), volcado apoyado en la tapa, partido con la mitad derecha corrida 0,35 y girada 7°. Dudoso: el tope de 250 parece por banco."
+  ]
+ },
+ "WST_CH_Pulpit": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 738/500, 2 vueltas, inferido: hexágono con el frente plano a -Z, entrada atrás a la izquierda (150°) y escalera curva por la izquierda, baranda a 7,2, tornavoz a 12 sobre un poste en la cara de atrás, paneles crema tallados, huellas wood_mid, libro de tapas leather_dark, dos vetas del piso al fuste. Dudoso: con colisión de casco el cajón queda macizo hasta 7,2 (conviene colisión precisa en frag02)."
+  ]
+ },
+ "WST_CH_SermonBoard": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 140/100 (~47 por pieza), 1 vuelta, inferido: hojas verticales con la espalda en la pared (z 0), esquinas de abajo dobladas 35° y 22°, clavos de cabeza piramidal, desgarro de y 0,45 a 1,05 con dientes, pila girada -8/+5/-2° con clavos solo en la de adelante, piezas en fila (x 0/2/4,2)."
+  ]
+ },
+ "WST_Canyon_Boulders": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: S1 34, S2 32, M1 106, M2 110, L1 172, L2 166 /150 por roca (+15 % en las grandes por el segundo bulto), 2 vueltas, inferido: proporciones (chatas, base plana), colores por roca, veta horizontal del 20 % en medianas y grandes, segundo bulto en las grandes, fila con origen propio por roca"
+  ]
+ },
+ "WST_Canyon_BrokenBridge": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: No está definido cómo se cruza el puente roto.",
+   "2026-10-29: 2026-10-29: desbloqueado, decidido sin Valentin (ver Abierto del documento de prompts)",
+   "2026-10-29: 1992/2500, 5 vueltas, 32,84 x 14,0 x 8,6 (tablero de 32,6 x 6 con la cara de arriba a 14; caballetes de 4 patas con cruz en X cada 8 en x = ±8 y ±16), escombros 15,35 x 5,16 x 8,08 entre las patas de x = ±7,75 (frag01-02 las dos mitades del caballete del medio paradas de canto, frag03-04 tramos de tablero apuntalándolas, frag05-06 largueros apoyados, frag07 tablas, frag08 pedazo de larguero; máx 30 % del volumen, ancho mín 0,5; solo apoyos de 0,005-0,01 entre fragmentos y ninguno toca lo fijo), _ChargeSpot (0, 0,05, -4,05). Libre con los escombros volados: 15,4 de ancho entre caballetes hasta y = 9,79 (punta del larguero colgado), 12,57 bajo los tramos enteros y cielo abierto en x -2,07 a 2,95. Inferido: caballetes de dos pisos (los 2 caídos son las mitades del de x = 0), sin rieles, cruces por la cara de afuera, escombros de canto para que el frente no sea rampa, sin suelo. Dudoso: los apoyos son de arista (montón de maderas), no caras compartidas como pide el Bloque C para un sólido; frag07 y frag08 solo apoyan en el suelo."
+  ]
+ },
+ "WST_Canyon_Rockslide": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 736/1200 (incluye 12 del marcador), 2 vueltas, inferido: rocas como celdas de Voronoi cortadas por su propio elipsoide facetado (grietas reales entre rocas, caras de contacto planas), 5 abajo y 3 arriba, vetas en 3 rocas, piedras sueltas al pie metidas en su roca, _ChargeSpot al pie del frente (-Z). Dudoso: el marcador del lado de la ruta (el prompt dice 'base center')"
+  ]
+ },
+ "WST_Canyon_Wall": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: A 642, B 718, C 676 /1500 por módulo (bajo a propósito: pocos triángulos por área), 6 vueltas, inferido: 8 estratos de 2-3,5 con alturas y colores propios, cornisas a 15,5 y 24,5, talud ochre, quiebres de cada estrato al azar con entrante 0 en las puntas, torres de roca arriba, cárcava de boca 9 a 3 con escalones de 1,6 y cono de derrumbe, rincón girado sobre el origen. Dudoso: caras verticales (look mesa en capas); colisión precisa en Studio"
+  ]
+ },
+ "WST_DG_JailInterior": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1408/1200 (+17 %: llaves de primer plano con aro y tres llaves, bocallave tallada), 4 vueltas, inferido: nombres CellFront/Bunk/Bucket/Desk, puerta de 2,86 a la derecha con eje en (3,64,0,0) afuera del poste, celda de 6 de fondo, catre colgado de cadenas a z=6, escritorio 4x2,6x2 con cajonera y afiches, CellDoor_Broken abierta 80° y colgando 5° de la bisagra de arriba con dos barrotes doblados y el fleje de abajo arrancado, puesta 7 a la derecha. Dudoso: la variante rota en otro lugar (no superpuesta)"
+  ]
+ },
+ "WST_DG_SaloonInterior": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 3624/2500 (+45 %: interior que se defiende de cerca; tableros en relieve, baranda de bronce, estantes del barman tallados, 16 botellas, espejo tallado y rajado, mesa partida con cartas y fichas), 3 vueltas, inferido: disposición de muestra (cada objeto con su origen), mueble de 1,5 de fondo, mesa 2,55, asiento 1,75, rueda a 7,6 colgada hasta y=10, nombres <Objeto>_fragNN, grietas con franja coal de 0,05 por lado, varillas en vez de cadenas cortas. Dudoso: silla rota en parantes (fragmentos que se tocan en líneas); 14 materiales"
+  ]
+ },
+ "WST_DG_SheriffStar": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 546/200 (pantalla completa: brazos facetados con cresta, bolitas de 20, anillo y surco gunmetal, abolladura y roce tallados), 2 vueltas, inferido: origen en el centro (objeto que cae, no apoya), una punta arriba, brazo de arriba a la derecha doblado 10° hacia el frente, abolladura en el brazo de abajo, roce en diagonal abajo a la izquierda hasta el anillo, alfiler con bisagra y gancho. Dudoso: 2,7 veces el tope; el roce solo marca las partes altas"
+  ]
+ },
+ "WST_DG_Station": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 4420/2500 (+77 %: 10 aberturas con molduras y vidrio, 60 tapajuntas en relieve, hiladas, cabios y ménsulas a la vista desde el andén), 6 vueltas, inferido: footprint 24x10 = techo de 24 y edificio+mirador de ~10 (el andén 40x8 aparte), alero de las vías quebrado a 18° hasta z=6, puertas cerradas, mirador 4,4->2,8 x 1,6, ménsulas en x=±2,45/±7,75 y en los hastiales, cartel 7x1,4 en z=5 mirando a las vías, carro de equipaje de 4 ruedas, caño de estufa. Dudoso: lectura del footprint; alero sin postes 4 más allá de las puntas; 10 materiales"
+  ]
+ },
+ "WST_DG_StoreShelves": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Por pieza contra 800: Shelves_General 1466 (+83 %: ~40 objetos de mercadería), Counter_Store 866, GunDisplay_Wall 478, armas 112-160; 4 vueltas, inferido: fila de muestra, alturas de estantes, mercadería por estante, vitrina en la mitad izquierda del mostrador, armero sin fragmentos (el prompt no da frag), carabina como cuarta arma larga, 2 revólveres colgados caño abajo, cajas de balas en la repisa, clavijas a la altura de cada arma. Dudoso: estantería 83 % sobre el tope"
+  ]
+ },
+ "WST_DG_TelegraphDesk": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 876/600 (+46 %: primer plano del telegrafista; manipulador con horquilla y bornes, receptor con bobinas, pilas con tapa y cables), 2 vueltas, inferido: WallCoil como pieza aparte (va en la pared), Key = solo la palanca (la base queda en Body), receptor sobre caja de resonancia, pilas atrás a la izquierda, lámpara adelante a la izquierda, rollo rust, _Operator en el piso en z=-2. Dudoso: la pieza WallCoil que el prompt no nombra"
+  ]
+ },
+ "WST_DG_WaterTower": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1470/1200 (+22 %: 16 duelas con ranura real y escalera de 11 peldaños), 2 vueltas, inferido: lado de las vías +Z (como la estación), caño guardado a 72° con soga colgando, escalera en la pata -X -Z, 5 durmientes, techo en dos hiladas, cruz rota en el lado -X y una duela astillada. Dudoso: la colisión de casco de Body tapa el paso entre las patas"
+  ]
+ },
+ "WST_Enemy_BloatedMiner": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2330/1800 (+29 %: ~800 en la plata que pide el prompt, grietas talladas con neón y 6 pústulas; barril de 12 lados), 5 vueltas, inferido: brazos abiertos 35°/8° para pasar por fuera de la panza (con la I-pose de 8° la atravesaban), panza máxima en la cintura, cabeza de ~1,0, mangas arremangadas, tirante cortado colgando de la pretina. Dudoso: la pose de brazos y una cara algo caricaturesca."
+  ]
+ },
+ "WST_Enemy_DeadGunslinger": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2030/1700 (+19 %: guardapolvo en 3 piezas con ruedo en zigzag, canana con cartuchos, sombrero con balazo), 3 vueltas, inferido: pantalón cloth_black, cartucheras vacías, canana del hombro derecho a la cadera izquierda, copa chata de 0,40, cuello del guardapolvo alzado"
+  ]
+ },
+ "WST_Enemy_Runner": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1490/1400 (+6 %: cara tallada y pecho hundido con costillas), 4 vueltas, inferido: cintura 0,56 H, muñeca 0,41 H (brazos largos), hombros 0,66, torso tirado adelante (brazos en z=-0,22), cinturón de soga, pelo en cortina despareja"
+  ]
+ },
+ "WST_Enemy_Vulture": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 396/400, 3 vueltas, inferido: alas a y=0,62, cuello de 0,6 en dos tramos, gorguera como bola facetada, patas recogidas como dos cuñas, agujeros como ranuras abiertas en el borde (sin booleanas) y un dedo que falta en cada punta"
+  ]
+ },
+ "WST_Enemy_Walker_A": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Piloto de la receta (2026-10-28).",
+   "2026-10-28: 1766/1800, 6 vueltas (piloto). Huecos tallados, color pintado."
+  ]
+ },
+ "WST_Enemy_Walker_B": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2276/1800 (calidad primero), 3 vueltas. Inferido: forma del chal, cordones, agujero de la media en la canilla izquierda."
+  ]
+ },
+ "WST_Enemy_Walker_C": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1902/1800 (+6 %: sombrero de 3 piezas de ala con mordisco dentado, chaparreras con alas), 7 construcciones, inferido: chaparreras batwing, cinta del sombrero leather_dark como mancha de sudor, pelo corto oscuro, sombrero inclinado atrás y a la derecha, pañuelo corrido a la izquierda"
+  ]
+ },
+ "WST_Enemy_Walker_D": {
+  "estado": "construido",
+  "intentos": 2,
+  "notas": [
+   "2026-10-28: 1904/1800 (+6 %: labio arrancado con dientes largos, tizne tallado, portavelas), 3 vueltas, inferido: bigote caído, dedo roto en la mano izquierda, botas de trabajo a media caña, ala caída atrás y alzada adelante, botones de hierro",
+   "2026-10-28: 1874/1800 (+4 %: labio arrancado con dientes largos, tizne tallado, portavelas), 4 vueltas, inferido: bigote caído, dedo roto en la mano izquierda, botas de trabajo a media caña, ala caída atrás y alzada adelante, tizne en mejilla derecha y entrecejo (la izquierda es de las vetas)"
+  ]
+ },
+ "WST_Enemy_ZombieBull": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1668/2200, 4 vueltas, inferido: alturas de las articulaciones (hombro 3,3, rodilla 1,55, cadera 3,35, garrón 1,65), orejas chicas bajo los cuernos, papada, cola con borla negra, el cuerno roto es el derecho, estrella blanca en la frente, Silver_Veins y Silver_Eyes como piezas aparte (origen del Torso y de la Head)"
+  ]
+ },
+ "WST_Enemy_ZombieRider": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2028/1600 (+27 %: sombrero de ala enorme con roturas y copa alta, lazo de dos vueltas, mandíbula descarnada con muelas), 5 vueltas, inferido: poncho que tapa el torso con hombreras hasta x=±0,95 (los brazos salen por debajo), chaparreras sin alas, cinta de cuero, tres roturas en V en el ala, lazo colgado de una tira del cinto"
+  ]
+ },
+ "WST_HC_Bonfire": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 364/250, 2 vueltas, inferido: pieza principal 'Bonfire' (el raíz ya se llama WST_HC_Bonfire), 6 troncos con el tercio de abajo carbonizado, cama de ceniza coal, piedras en cadena"
+  ]
+ },
+ "WST_HC_CemeteryFence": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Iron 482, Gate 780, Picket 284 /250 por módulo, 2 vueltas, inferido: pilares de piedra en las dos puntas (fixed_Posts), arco elíptico con cartel gunmetal arriba de 5,28, hojas con tope que sube al centro, estacas blanqueadas (paint_cream) con dos reemplazadas; nombres Fence_Gate_PostL/PostR/Arch/GateL/GateR"
+  ]
+ },
+ "WST_HC_ChurchDoors": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1520/800, 3 vueltas, calza con WST_CH_Church (origen en (0,0,-24,6) de la iglesia; luz 7,6 x 11,8 para tapar el corte de radio 4 en 6 tramos), inferido: jambas de sillares e imposta, arco de 7 dovelas con clave, cadenas en X a armellas en las jambas, candado de bronce, piezas Surround_L/R/Arch"
+  ]
+ },
+ "WST_HC_Graves": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 56-468/250 por pieza (abierta 468), 3 vueltas, inferido: tierra removida hide_brown, forro del pozo bajo el piso hasta -3,1, fondo del cajón, tapa de 6,3 quebrada apoyada a 45°, pala con manija en D; dudoso: el forro bajo el piso exige hueco en el terreno"
+  ]
+ },
+ "WST_HC_LampPost": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 186/200, 2 vueltas, inferido: poste de 0,45, travesaño a 8,0, farol de 1,2 con techo en pirámide y mechero, corte en diagonal a media altura; tramos del poste ~48 % cada uno (Bloque C pide 45)"
+  ]
+ },
+ "WST_HC_Tombstones": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 64-172/120 por pieza (Round 172 por el arco y 3 manchas), 2 vueltas, inferido: medidas de cuadrada, ojival, rota y marcador, dado de la cruz, rajaduras con escalón de 0,03, cruces de tabla de 0,35 de espesor, nombres <Variante>_fragNN"
+  ]
+ },
+ "WST_Item_Bandages": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 144/100, 2 vueltas, inferido: pieza única Body (el raíz ya lleva el id), agujero del rollo, rollo acostado con la punta que cae en curva al piso, alfiler en U sobre la punta"
+  ]
+ },
+ "WST_Item_Coffee": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 142/120, 1 vuelta, inferido: pieza única Body, borde de hierro levantado (enrollado), asa del mismo enlozado, paredes de 0,025"
+  ]
+ },
+ "WST_Item_DoctorTonic": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 146/120, 3 vueltas, inferido: pieza única Body, alturas de hombro y cuello, labio del pico, hilo de soga bajo el labio y etiquetita apoyada en el hombro del frente; dudoso: vidrio y corcho en un mismo MeshPart (no admite Glass transparente)"
+  ]
+ },
+ "WST_Item_Lantern": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 414/250, 2 vueltas, inferido: Globe como pieza propia (Glass en Studio), pieza principal Body, anillo del quemador en bronce y manija de madera, asa cruzada sobre X con orejas de pivote"
+  ]
+ },
+ "WST_Item_Rounds": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 730/200 (seis piezas de ~120: culotes, casquillos huecos, engarces; calidad primero), 4 vueltas."
+  ]
+ },
+ "WST_Item_Whiskey": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 120/120, 1 vuelta, inferido: pieza única Body, alturas de hombro/cuello/labio, etiqueta pintada envolviendo las 3 caras del frente (no 0,01 afuera). La forma vive en bottle() para que la molotov la importe"
+  ]
+ },
+ "WST_Kit_Barricade": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Window 84, Door 150, Street 954 /300 por pieza (la de calle: mesa, 2 cajones, rueda con llanta y rayos, 3 bolsas atadas), 3 vueltas. Inferido: tablas de 0,18 (debajo del 0,4 de fragmentos), ventana con dos tablas atrás y una combada adelante, orígenes en el hueco como el resto del kit, composición de la barricada de calle (mesa al medio, cajones a la izquierda, rueda apoyada y bolsas a la derecha)."
+  ]
+ },
+ "WST_Kit_Door": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Plank 400, Panel 292, Saloon 328, Frame 212 /250 por pieza (herraje: bisagras de pletina, pestillo, picaporte), 2 vueltas. Inferido: el marco forra el hueco con 0,06 (luz 3,88 x 7,44) y las puertas miden 3,84 x 7,38 x 0,4; hojas del saloon 1,93 (-3,5 %); origen de cada puerta en el pie de su bisagra (x = -1,92 del hueco), del marco abajo al centro del hueco. Dudoso: espesor 0,4 por la regla de fragmentos; curva del saloon baja hacia el centro."
+  ]
+ },
+ "WST_Kit_FalseFront": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 990-1327/300 por pieza (calidad primero: cornisa con friso, tapa moldurada y ménsulas, banda con borde, 4 fragmentos cerrados en escalera), 4 vueltas. Inferido: tabla de remate abajo, perfil de cornisa y ménsulas cada 2, escalones (centro 3,6 a 6, 1,4 a 4, puntas 0,8 a 3), banda en y 1,2-2,8, retorno de la esquina hacia +X (falta espejo para la otra esquina). Dudoso: bug de process_model con normales personalizadas (52 esquinas desviadas en el GLB, parche oscuro en el friso del arco)."
+  ]
+ },
+ "WST_Kit_Interior": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Floor_Planks 212, Stairs 386, Balcony 808, Partition 444 /300 por pieza, 2 vueltas. Inferido: escalera que sube hacia +Z con 15 escalones de 0,667 x 0,933 y baranda del lado +X; balcón con origen en el piso al centro del borde contra la pared, baranda de balaustres cada 1 y dos ménsulas; tabique con friso de tablas hasta 3, guardasilla, zócalo y moldura; grietas en zigzag. Dudoso: balcón 2,7x el tope."
+  ]
+ },
+ "WST_Kit_Porch": {
+  "estado": "construido",
+  "intentos": 2,
+  "notas": [
+   "2026-10-28: Floor 668, Roof 758, Column 194, Step 48, Railing 382, HitchRail 248 /400 por pieza, 2 vueltas. Inferido: orígenes (piso y techo en el suelo bajo el centro del porche, z = -3; escalón al centro de su borde de atrás; baranda y palenque abajo al centro), tablas de 0,4, largueros, listón, ménsulas triangulares, huellas a 0,7 y 0,4. Dudoso: la columna mide 7,27 y no 9 (con piso a 1 y techo a 9 adelante + viga, 9 no entra); con 2 fragmentos la regla del 45 % no se cumple (escalón 64 %).",
+   "2026-10-28: Floor 668, Roof 758, Column 194, Step 48, Railing 368, HitchRail 248 /400 por pieza, 3 vueltas. Inferido: orígenes (piso y techo en el suelo bajo el centro del porche, z = -3; escalón al centro de su borde de atrás; baranda y palenque abajo al centro), tablas de 0,4, largueros, listón, ménsulas triangulares, huellas a 0,7 y 0,4. Dudoso: la columna mide 7,27 y no 9 (con piso a 1 y techo a 9 adelante + viga, 9 no entra); con 2 fragmentos la regla del 45 % no se cumple (escalón 64 %)."
+  ]
+ },
+ "WST_Kit_Roof": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Flat 252, Gable 264, Gable_Charred 428, GableEnd 416, Chimney 360 /500 por pieza, 1 vuelta. Inferido: papel alquitranado en iron con juntas coal, reborde como pieza fija aparte (Roof_Flat_fixed_Lip, se gira al borde que dé afuera), alero de 0,6, espesor 0,4, hileras de 0,75, ventilación en el hastial, cornisa y losa de la chimenea. Dudoso: qué bordes del techo plano llevan reborde (resuelto con la pieza aparte)."
+  ]
+ },
+ "WST_Kit_Sign": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Band 76, Hanging 210, Post 148, Arrow 196 /150 por pieza, 1 vuelta. Inferido: campo tallado 0,05 en paint_cream dentro del borde wood_dark (dos caras en colgado, poste y flecha); ménsula de hierro en L con tornapunta y cadenas de dos eslabones; tablero del poste al tope del poste de 4; flecha hacia +X con cola en V; orígenes: banda en su cara de atrás, tablero colgado en su pivote arriba al centro, poste y tablero abajo al centro del poste. Dudoso: espesores 0,2/0,15 del prompt por debajo del mínimo de 0,4 de fragmentos."
+  ]
+ },
+ "WST_Kit_Trim": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Corner 24, Belt 16, Cornice 32 /80 por pieza, 1 vuelta. Inferido: tablas del esquinero de 0,15, L para la esquina de adelante a la derecha con el origen en la base de la esquina del edificio (se gira para las otras); faja y cornisa con el origen abajo al centro de la cara de atrás; perfil escalonado de la cornisa con el escalón del medio en wood_mid; nombres fixed_Trim_<Pieza>."
+  ]
+ },
+ "WST_Kit_Wall": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 890-966/400 por pieza (calidad primero: cortes en escalera de 6 fragmentos cerrados + 13 hiladas con juntas), 4 vueltas. Inferido: zócalo, hiladas de 0,8 desde 0,6 (alféizar y dintel en junta), doble ventana 2,4 con centros en ±1,8, agujero de la rota 2,9 x 3,2, nombres <Variante>_fragNN, variantes en fila cada 8. Dudoso: la doble no tiene ventana del kit (huecos de 2,4)."
+  ]
+ },
+ "WST_Kit_WallBrick": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Plain 1292, Window 1852, Door 1302, DoubleWindow 1488 /600 por pieza (18 surcos reales de 0,04 que pide el prompt x 8 fragmentos en escalera), 1 vuelta. Inferido: zócalo de 0,8 con chaflán de 0,2 (la primera junta cae en 1,0 y alféizar/dintel/puerta caen en juntas), revoque paint_cream adentro, juntas verticales pintadas cada 3 hiladas, dinteles y alféizares stone_grey, nombres Brick_<Variante>_fragNN. Dudoso: costo de los surcos reales (pintados bajaría ~40 %)."
+  ]
+ },
+ "WST_Kit_WallStone": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 744 + 768 = 1512/600 del modelo entero (calidad primero: ~55 piedras facetadas por variante con surco en V; pared única de la cárcel, pocas instancias), 3 vueltas. Inferido: juntas en V sin mortero de otro color, hiladas fijas con juntas en 6,5 y 8,0 (la ventana cae entre hiladas), 1 de cada 8 piedras ocre, filas de fragmentos a 2,9 / 5,6 / 8,0, barrotes con el fragmento de su lado. Dudoso: trozos de abajo de hasta 4,5 de ancho (el prompt pide 1,5-3)."
+  ]
+ },
+ "WST_Kit_Window": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Sash 432, Shutters 924, Broken 430 /250 por pieza (alféizar, botaguas, guillotina desfasada, postigos con persiana), 2 vueltas. Inferido: forro 0,06 + tapajuntas 0,41 + alféizar + repisa + dintel con botaguas; guillotina con la hoja de abajo adelante; postigos abiertos contra la pared, 1,83 de ancho para que cierren justo, pivote en x = ±1,85 z = -0,46; vidrios rotos en un objeto Shards. Dudoso: no hay ventana para los huecos de 2,4 de Wall_DoubleWindow."
+  ]
+ },
+ "WST_Mine_Elevator": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1984/1800, 2 vueltas, inferido: lado abierto al frente con portón de media altura en guías, rueda detrás del eje para que el cable caiga al centro, puntal trasero, collar al ras del piso, forro de tablones con cuadros cada 4 y 0,5 de luz con la jaula. Dudoso: ShaftWalls hueco con colisión de casco"
+  ]
+ },
+ "WST_Mine_Entrance": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2756/1500, 4 vueltas, inferido: vía dentro de Frame y vagoneta (versión simple de la MineCart) dentro de Tailings, Lamp_Glow_1/_2 como objetos aparte, túnel de 10,5 con fondo coal, estratos, riostras y tope de vía; 9 materiales en total (1-5 por objeto)"
+  ]
+ },
+ "WST_Mine_ExplosivesDepot": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1712/1500, 3 vueltas, inferido: puertas abiertas 105/80 grados, reparto de los 8 fragmentos (3 pares de cajones, 2 sueltos, 3 barriles), segundo marco al fondo, recorrido de la mecha (piso y roca izquierda), cartel a la derecha, bloque de roca en columnas, 8 materiales"
+  ]
+ },
+ "WST_Mine_Gallery": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 3496/4000, 3 vueltas, inferido: piso de la galería (pozo) 3 más bajo que las bocas con repisas y el caballete a la altura de los túneles, pasarela de arriba más angosta, escaleras y columnas ubicadas, columnas hasta el techo medido. Dudoso: colisión de casco en Shell/Scaffolding/Pillars"
+  ]
+ },
+ "WST_Mine_GasPocket": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 372/300, 3 vueltas, inferido: origen en el centro de la espalda, cuatro gajos alrededor del eje con grietas rectas radiales y cráter en la punta, grieta mayor abajo a la izquierda. Dudoso: grietas rectas y no en zigzag (gajos convexos con contacto exacto)"
+  ]
+ },
+ "WST_Mine_Rails": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1724 en 6 piezas (Straight 108/150, Curve 360, Switch 684 + palanca 92, Bumper 268, Ramp 212), 2 vueltas, inferido: riel de sección rectangular con la cara a y 0,5, todas las piezas entran por z +4, Y = dos curvas de 90 espejadas, tope de 8 de largo, rampa sobre largueros y caballetes"
+  ]
+ },
+ "WST_Mine_Rubble": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Low 214, High 230, Beam 220, FallingChunk 18 /400 por pieza, 3 vueltas, inferido: núcleo gris + 6-8 lajas + pollera de polvo, viga de 5,2 a 30 grados con dos astillas, origen de la laja que cae en su base"
+  ]
+ },
+ "WST_Mine_Shaft": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1308/800, 2 vueltas, inferido: objetos Body/Ladder/Windlass, brocal de dos hiladas en cabaña, piso de tierra al fondo, escalera en la pared +Z, agarraderas en zigzag entre marcos, rotura del torno. Dudoso: túneles y galería no tienen hueco en el piso para ponerlo"
+  ]
+ },
+ "WST_Mine_SilverHeart": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2824/3000, 4 vueltas, inferido: objetos Geode (roca) y Silver_Crust (cristales con juntas), hueco coal, cristales de la pared apuntando al núcleo y siete que revientan por la boca, núcleo con forma de corazón (cuerpo, dos lóbulos, punta), raíces sobre los planos y=0 y z=4"
+  ]
+ },
+ "WST_Mine_SilverVein": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Wall_A 522, Wall_B 438, Floor 446, Cluster 256 /400 por pieza, 3 vueltas, inferido: origen de las lajas de pared en el centro de la espalda, nombres <Pieza>_Silver_Veins/_Silver_Crust, dibujo de las ramas, cristales de 6 lados con punta y núcleo de neón entre ellos (9 en el racimo)"
+  ]
+ },
+ "WST_Mine_SupportBeam": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 192/300, 2 vueltas, inferido: ángulo de 13,8 (cara de abajo de la punta a 5,0), pivote del sombrero sobre el poste derecho (3,2; 6,9), pedazo de arriba apoyado bajo la punta, chapa de hierro en la unión, origen en el piso al centro del túnel"
+  ]
+ },
+ "WST_Mine_Tunnel": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Straight 1090, Narrow 904, End 952, T 1426, Curve90 2182 /1200 por módulo, 4 vueltas, inferido: perfil simétrico en las puntas, Narrow como estrechamiento con puntas normales, T sin vía en el ramal, radio 12 = pared de adentro (eje 16), entablado sobre los sombreros, derrumbe con puntal quebrado. Dudoso: colisión de casco cierra el túnel (usar PreciseConvexDecomposition)"
+  ]
+ },
+ "WST_Mount_Horse": {
+  "estado": "construido",
+  "intentos": 2,
+  "notas": [
+   "2026-10-28: 2726/1800, 5 vueltas, inferido: cuello y cabeza de 2,2, cabeza 40° bajo la horizontal, patas a ±0,50/±0,55, estribos de madera a 2,2, cascos en coal. Dudoso: Acc_LeatherArmor y Reins cruzan Torso/Neck/Head en un solo objeto (no siguen el rig)",
+   "2026-10-28: 2722/1800, 6 vueltas, inferido: cuello y cabeza de 2,2, cabeza 40° bajo la horizontal, patas a ±0,50/±0,55, estribos de madera a 2,2, cascos en coal. Dudoso: Acc_LeatherArmor y Reins cruzan Torso/Neck/Head en un solo objeto (no siguen el rig)"
+  ]
+ },
+ "WST_Mount_ZombieHorse": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 3686/1800, 4 vueltas, inferido: 5 peladas, 5 mechones de crin y 3 de cola, falta el estribo izquierdo, recorrido de las vetas. Mismo esqueleto que el caballo (importa sus constantes y patas). Dudoso: el doble del tope; Silver_Veins y Reins cruzan piezas del rig"
+  ]
+ },
+ "WST_NPC_Bartender": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2062/1600, 4 vueltas, inferido: whisky adentro del vaso (franja glass_amber), chaleco cerrado en V con puntas, zapatos cloth_black (no hay cuero negro en la paleta), raya al medio como cráneo entre dos mitades de pelo, flecos en el trapo"
+  ]
+ },
+ "WST_NPC_Blacksmith": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1882/1800, 2 vueltas, inferido: barba que baja al pecho, musculosa con sisa (hombros al aire), maza colgando cabeza abajo, herradura con los talones abajo, tira del delantal al cuello, botas de trabajo"
+  ]
+ },
+ "WST_NPC_Gunsmith": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2076/1600, 5 vueltas, inferido: vincha de cuero oscuro bajo el sombrero, lupa levantada 40° sobre el ojo derecho, cuñas de acero claro y mango de lima en los bolsillos, cinto oscuro sobre el delantal, hebilla de hierro"
+  ]
+ },
+ "WST_NPC_OldHank": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 3074/2200, 4 vueltas, inferido: guardapolvo de lona recogido atrás de la funda a la derecha, mangas arremangadas con vuelta roja, cartuchera bajo el guardapolvo, mordida como trapo de lona atado, ojos con blanco además del iris oscuro"
+  ]
+ },
+ "WST_NPC_Peddler": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2338/1800, 2 vueltas, inferido: chaleco mostaza, bigote fino unido a la pera (Van Dyke), pelo gris revuelto bajo la galera, vueltas de los puños turquesa, mitones de cuero, banda mostaza y pluma roja, etiqueta y corcho en la botella, ubicación de los 3 parches"
+  ]
+ },
+ "WST_NPC_Storekeeper": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2176/1600, 4 vueltas, inferido: patillas de chuleta unidas al bigote, anteojitos bajos con vidrio solo en la media luna de abajo, bolsillo y lazo del delantal, pantalón cloth_black, lápiz wood_light"
+  ]
+ },
+ "WST_NPC_Telegraphist": {
+  "estado": "construido",
+  "intentos": 2,
+  "notas": [
+   "2026-10-28: 2100/1600, 3 vueltas, inferido: chaleco cerrado en V con puntas y botones de bronce, cinturón finito, vidrio de los anteojos solo como reflejo arriba (opaco en Studio taparía los ojos), zapatos bajos",
+   "2026-10-28: reconstruido con la base común final del lote (orejas y cejas como detalle): 1970/1600, sin cambio visible"
+  ]
+ },
+ "WST_NPC_TrappedMiner": {
+  "estado": "construido",
+  "intentos": 2,
+  "notas": [
+   "2026-10-28: 2312/1600, 3 vueltas, inferido: vela encendida (llama lamp_glow), barba de días como cáscara hair_dark, tiradores cruzados en X atrás con botones de bronce, pico parado con la cabeza en el piso (el mango de 2,6 no entra de otra forma con el brazo en I-pose), venda en el antebrazo izquierdo",
+   "2026-10-28: reconstruido con la base común final del lote (orejas y cejas como detalle): 2216/1600, sin cambio visible"
+  ]
+ },
+ "WST_Overlay_SilverCrust": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 586/600, 3 vueltas, inferido: 6 placas en la cabeza, 6 en el hombro/omóplato, manga de 6 placas con crestas, parche de 3 placas; juntas de neón como cama 0,045 bajo cada grupo. Dudoso: con sombrero, las placas del cráneo y las púas atraviesan el sombrero (¿la variante saca Acc_Hat?). Revisado sobre A y C."
+  ]
+ },
+ "WST_Overlay_SilverEyes": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 64/60, 2 vueltas, inferido: lágrimas abiertas hacia afuera hasta x=±0,30 para no cruzar la boca; ojos 0,015 más grandes que los de la base (envuelven, no titilan). Revisado montado sobre A y B."
+  ]
+ },
+ "WST_Overlay_SilverVeins": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 260/400, 5 vueltas, inferido: A no tiene mordida en el hombro derecho ni piel en el brazo derecho: la veta del torso arranca en el cuello y pasa enterrada bajo la camisa hasta la rotura del pecho; Silver_RightUpperArm va bajo la manga y solo asoma en el codo. Revisado montado sobre A, C y D sin z-fighting."
+  ]
+ },
+ "WST_Pickup_Ammo": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 190/184/214 contra 120 por variante, 3 vueltas, inferido: medidas como ancho x alto x profundidad, caja abierta = boca tallada + tapa a 110° atrás + balas paradas, alturas de franja y etiqueta, culotes de la escopeta arriba, balas del rifle todas de bronce"
+  ]
+ },
+ "WST_Pickup_SilverDollar": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-29: 148/150, 1 vuelta, inferido: chanflán como borde, radio interior de la estrella"
+  ]
+ },
+ "WST_Pickup_SilverShard": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: A 76, B 62, C 78 /80 por variante, 3 vueltas, inferido: núcleos nombrados Shard_X_Core (tres objetos no pueden llamarse Core), reparto de púas (3/2/4), terrón del pie, Core sale 0,08 por la punta de la púa mayor"
+  ]
+ },
+ "WST_Prop_AmmoCrateRailway": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 486/350, 2 vueltas, inferido: pieza principal Body + Lid (origen en la bisagra), tapa de 0,43, esquineros en cubo que hacen de patas, juntas pintadas, pasador al frente, asas de soga en V con taco de hierro, 3x3 cajas de cartuchos sobre un falso fondo en y = 0,8"
+  ]
+ },
+ "WST_Prop_Barrel": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 746/300 (+632 la variante Barrel_Water), 2 vueltas. Calidad primero: chanflán de juntas ~220, huecos de tapa/fondo ~130, aros en relieve ~130. Inferido: gajos macizos cortados por las juntas (3-2-3-2 duelas), grieta y canto mellado, aros a 16/50/81 %, variante con prefijo Barrel_Water_ y agua aparte."
+  ]
+ },
+ "WST_Prop_BarrelExplosive": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 992/350, 3 vueltas. Cuerpo del barril (746) + cartucho, mechas y placa. Inferido: franja entre los aros de las puntas, placa en el tramo de arriba, cartucho 1,0 x 0,26 agrandado. Caras de corte rojas dentro de la franja (solo se ven al explotar)."
+  ]
+ },
+ "WST_Prop_Cactus": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Por pieza (tope 200): Saguaro_A 250, B 160, Dead 124, PricklyPear 192, BarrelCactus 152, Ocotillo 158; 2 vueltas. Inferido: paint_cream en las puntas claras (no hay verde claro en la paleta), tunas y flores rojas del ocotillo, tocón wood_dark del muerto. Dudoso: coronas claras chicas, de lejos no se ven."
+  ]
+ },
+ "WST_Prop_Crate": {
+  "estado": "construido",
+  "intentos": 0,
+  "notas": [
+   "2026-10-28: Pieza de medición, de Claude Design; ya medida en Studio."
+  ]
+ },
+ "WST_Prop_CrateLarge": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1332/400, 6 vueltas, inferido: espesores de la caja chica, juntas en 0,8, flejes 0,3 x 0,06 escalonados sobre los listones, listón del medio en la tapa, placa arriba del cruce de la X, recorrido de la grieta (franja coal de 0,14), dos esquinas astilladas"
+  ]
+ },
+ "WST_Prop_DynamiteCrate": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 460/250, 2 vueltas. Cartuchos, sogas y uniones de dedos dentadas. Inferido: medidas X x alto x Z, paredes de 0,4, tapa levantada 9° adelante (alto 1,65 abierta), relleno oscuro, franja en la banda del medio, placa sobre la franja."
+  ]
+ },
+ "WST_Prop_GunRack": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2304/1500, 3 vueltas, inferido: mueble apoyado en el piso, pieza fija Body, sombreros parados en el estante con clavija en la copa (colores: marrón/cinta negra, negro/roja, lona/marrón, marrón/roja), revólveres de 188 tris de costado con el caño abajo, chalecos alternados, 9 materiales"
+  ]
+ },
+ "WST_Prop_HandCart": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 632/300, 2 vueltas. Ruedas de 8 rayos y pina de 10 tramos (332 con el eje). Inferido: cuerpo como objeto Body (el vacío raíz ya se llama como el id), patas adelante, varas bajo la caja como manijas, tablas bajas y cabecera, 3 bolsas."
+  ]
+ },
+ "WST_Prop_HayBale": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 120/80 por fardo (60 por mitad); quemado 120; pila de 4 fardos 480 (8 frags); 3 vueltas. Inferido: sección de 6 lados con los cantos de arriba achaflanados, hilos pintados, mechones como cuñas romas, pila en dos capas cruzadas, prefijos HayBale_Burnt_ y HayBale_Stack_. Cada mitad es 50 % del volumen (Frag 2)."
+  ]
+ },
+ "WST_Prop_HitchingPost": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 104/100 (+48 la variante HitchRail_Short), 1 vuelta. Inferido: sección 0,5 con remate, corte en diagonal con el tramo de arriba corrido 0,03 (rajadura visible), argolla al frente, en la variante quedan los postes (fixed_PostL/R) y se parte la baranda. Con 2 fragmentos cada uno es ~50 % del volumen (Bloque C pide <= 45 %)."
+  ]
+ },
+ "WST_Prop_OilLamp": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 340/200 (cuerpo 244, cadena 72, gancho 24; variante de pared 292), 1 vuelta. Inferido: frag01 pantalla, frag02 vidrio, frag03 depósito con varillas; fixed_Hook en el techo; origen en la base de la lámpara (el pivote de Chain en el gancho); la de pared como lámpara colgada de una ménsula."
+  ]
+ },
+ "WST_Prop_Outhouse": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-30: 568/600, 3 vueltas, inferido: alturas de pared para llegar a 8, tablas del dintel, Z de dos travesaños y diagonal, luna abierta hacia +X"
+  ]
+ },
+ "WST_Prop_Sacks": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: ~128 por bolsa (tope 120 tomado por bolsa: el modelo tiene 7); total 870 (parada 128, acostada 128, pila 614), 2 vueltas. Inferido: forma, pila 2+2+1 en tres capas, etiqueta como cara pintada, en la pila las 2 bolsas de abajo enteras para no pasar de 8 fragmentos. Dudoso: etiqueta paint_cream sobre canvas con poco contraste."
+  ]
+ },
+ "WST_Prop_Safe": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 472/500, 2 vueltas, inferido: patas de 0,2, dial arriba y volante abajo, bisagras a la vista, puerta de hierro con frente achaflanado, estantes de hierro, marco rojo = caras de adelante + chaflanes del frente, sin grietas en zigzag (hierro entero). Paredes de 0,3 (prompt) contra el mínimo de 0,4 del Bloque C"
+  ]
+ },
+ "WST_Prop_TelegraphPole": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 322/200 (+334 la variante inclinada; +96 de marcadores), 2 vueltas. Inferido: frag01 tramo de abajo, frag02 de arriba, frag03 cruceta con riostras; quiebre en zigzag, mella clara en el quiebre, sombrerete, variante inclinada hacia +Z. Dudoso: frag02 es 55,5 % del volumen (el quiebre a 1/3 del prompt choca con el tope de 45 % del Bloque C)."
+  ]
+ },
+ "WST_Prop_Wagon_Wreck": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1572/900, 3 vueltas. Las 4 ruedas de 12 rayos son 772. Inferido: giro sobre el perno rey (11° rolido + 4,6° cabeceo), cómo está rota la lona, tablón roto, lanza en el piso, carga volcada, nombres fixed_Frame/fixed_Wheel*/fixed_Cargo. Dudoso: arcos+lona no convexos (escombro tipo medio tambor)."
+  ]
+ },
+ "WST_Prop_WaterTrough": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 220/250 (+388 la variante con bomba), 3 vueltas. Inferido: largo en X, paredes de 0,4, patas en X bajo el cajón, esquineros de casi todo el alto, bomba de jarra en un poste, prefijo WaterTrough_Pump_. Dudoso: con el agua 0,3 bajo el canto, a 15° de elevación se ven 0,08 de 1,2 de agua (a 0,15 se verían 0,64)."
+  ]
+ },
+ "WST_Prop_Woodpile": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-30: 364/400, 3 vueltas, inferido: leños de 4,6 para que entre el tocón, estacas de 2, sin anillo oscuro en las puntas"
+  ]
+ },
+ "WST_RM_Barn": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 7676/5000, 4 vueltas, inferido: gambrel con quiebre en (8,5, 19), tablas de 4/3 con tapajuntas, ventanas 2,67 x 2,4 alféizar a 5, pajar en la mitad de adelante con escalera y 5 fardos, esquineros y marcos crema, viga del pajar con roldana, hastial de atrás ciego, nombres <Pieza>_fragNN. Dudoso: variante quemada no modelada (propuesta: paleta quemada por TextureID), ventanas altas, sin puerta atrás."
+  ]
+ },
+ "WST_RM_Corral": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Rail 104 / Gate 184 / Corner 156 / Chute 192 contra 200 por módulo, 2 vueltas, inferido: módulos en fila (x 0/10/18/34), postes de punta en cada módulo a ±3,75 (encadenados quedan dobles y se tocan), travesaños de sección irregular 0,42 x 0,41, esquina con dos tiradas de 8 (+X y +Z), manga 3 entre ejes con tablas de 0,4 (1,75 libres). Dudoso: postes dobles al encadenar; ancho exterior de la manga 3,45."
+  ]
+ },
+ "WST_RM_Diary": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 184/120, 2 vueltas, inferido: lápiz amarillo (paint_mustard) con punta wood_light, hojas que se arquean hacia el lomo, esquina gastada en cada tapa, mancha de plata tallada 0,006 doblando el canto de la hoja derecha, hojas lisas para el decal. Dudoso: +53 % de triángulos por la mancha tallada y el lápiz de 6 lados."
+  ]
+ },
+ "WST_RM_Slaughterhouse": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2072/2500, 2 vueltas, inferido: hastial al frente (cumbrera en Z, 32°), tabla y tapajuntas como el resto del rancho, mancha oscura ondulada tallada al pie, piso de piedra con canaleta de sangre seca, cartel de lona clara con marco oscuro, edificio partido en piezas convexas (WallFront_L/R/Top, WallBack, WallL/R, RoofL/R, Frame, Floor, Block, Sign). Dudoso: Hooks con las reses conviene sin colisión."
+  ]
+ },
+ "WST_RM_Stable": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 4406/3500, 3 vueltas, inferido: techo a un agua alto adelante (10) bajo atrás (8), boxes de eje 5,13, testeros como Stable_WallEnd_L/R (3 frags), media puerta de abajo sin hoja de arriba (el caballo se asoma), bisagras del lado -X, dintel a 7,5 con ventilación abierta, pesebre y balde colgado en la pared de atrás. Dudoso: hoja de arriba de la puerta holandesa, variante quemada no modelada."
+  ]
+ },
+ "WST_RM_WaterMill": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2304/2500, 2 vueltas, inferido: rueda en el testero +X con eje en X y pilar de piedra afuera, canaleta desde +Z que termina pasando la cima (rueda de arriba), cangilones de arranque radial + brazo, compuerta junto al último caballete, palanca abajo con varilla de hierro (arriba no se alcanza), caño de duelas hacia -Z con pico abajo, puerta y ventana al frente. Dudoso: palanca abajo y no en la canaleta; orientación del caño."
+  ]
+ },
+ "WST_SB_BankInterior": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 3994/3000, 2 vueltas, inferido: armado del set, alto del mostrador 2,95 + paramento a 4,5, muro de la bóveda en 4 piezas (paso 2,8x5,5), puerta cerrada con bisagra a +X, estante y láminas de brillo, escritorio y banco; dudoso: puerta cerrada tapa la plata, 13 materiales"
+  ]
+ },
+ "WST_SB_Bridge": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 412/800 por módulo (dañado 444, estribo 794), 2 vueltas, inferido: caballete centrado en la junta, baranda abulonada al larguero (7,5 de ancho), estribo de piedra con alas, tablas faltantes 4/5/9; dudoso: colisión de fixed_Stringers y fixed_Railing"
+  ]
+ },
+ "WST_SB_Dock": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 780/600 por módulo (End 868, Shack 1202 con la casilla, Rowboat 530), 2 vueltas, inferido: origen en el agua, bitas como pilotes que pasan el tablero, casilla maciza (no se entra), bote paint_teal; dudoso: casilla sin interior"
+  ]
+ },
+ "WST_SB_Forge": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2556/1500, 2 vueltas, inferido: armado del set, piezas Hearth/Anvil/QuenchBarrel/ToolRack/WagonWheel (el prompt solo nombra Coals_Glow y Bellows), ladrillo con juntas, campana y chimenea a 9, fuelle con bisagra en la punta, carbón apagado bajo las brasas; 10 materiales"
+  ]
+ },
+ "WST_SB_MinersShack": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1982/1200, 2 vueltas, inferido: atrás 6,66 de alto, puerta 4x7,5 del kit (dintel 0,5), ventana en el frente, alero de 1,8 sobre el porche, torcedura por corte en X, fragmentos por columnas de tablas con escalón de 0,06 en la quebradura"
+  ]
+ },
+ "WST_Track_Tile": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Plain 692, Cut 776, Embankment 678 /800 por tile, 2 vueltas, inferido: origen de cada tile en el tope del riel (y = 0, como los vagones; el suelo del llano queda a -1,5), variantes en fila sobre X (0, +75, -75), riel en doble T, balasto gris con faldón ocre, estratos oscuros al pie del corte, marcadores _Cactus_<variante>_<n>. Dudoso: origen en el riel y no en el suelo."
+  ]
+ },
+ "WST_Track_Trestle": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2808/1200 (dos tiles completos; cada uno con la vía del llano 472 y 8 caballetes ~770), 2 vueltas, inferido: pasarela a la derecha sin baranda sobre durmientes estirados, 4 largueros, riostra larga a media altura, cauce de arena y piedra, Trestle_Start con el terreno del llano desde z = 20 y talud hasta el cauce en z = -10, origen en el tope del riel. Dudoso: el exceso (alternativa: Trestle_Start solo como terreno)."
+  ]
+ },
+ "WST_Track_Tunnel": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2334/1500 (cada tile lleva su vía de 528 para calzar con el llano; 10 cuadros de madera ~480), 3 vueltas, inferido: boca en la punta -Z mirando a +Z (hacia el tren), cuadros de dos postes y pares cruzados con la cara de abajo a 15,5 en el eje, cara del acantilado en columnas de roca, roca oscura adentro, Tunnel_Inner en x = +50. Dudoso: hacia dónde corre el escenario (define qué punta es la boca)."
+  ]
+ },
+ "WST_Train_Boxcar": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 3186/1800 (bogies 840 y enganches 256 compartidos, juntas pintadas sobre franjas cortadas, puntas con cruz en X, escaleras, freno, tensores), 3 vueltas, inferido: tablas de 1,0, techo a dos aguas wood_dark (cumbrera 12, alero 11,65), pasarela a 12,22, tensores con pendolones, escaleras en las puntas (adelante derecha, atrás izquierda), freno atrás al centro, _Gap_* en las puntas de la pasarela, riel de la puerta hasta z 9,2, interior en madera sin pintar."
+  ]
+ },
+ "WST_Train_Caboose": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 3780/1600 (bogies 840 y enganche compartidos, cúpula 344, caja con juntas pintadas, plataformas con barandas y escalones), 2 vueltas, inferido: rojo como el tren, 2 ventanas por costado y puertas con ventanita en las puntas, escalera adelante a la derecha, chimenea de la estufa, farol colgado de la baranda de atrás con el vidrio hacia atrás, sin pasarela (la cúpula ocupa el medio), cajón de herramientas abajo. Dudoso: el exceso de triángulos."
+  ]
+ },
+ "WST_Train_Locomotive": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 9024/6000 (calidad primero: ruedas de rayos con aire 3824, cabina jugable con frente del hogar), 3 vueltas, inferido: wagon top, orden arenero-campana-domo de vapor, farol rojo con techo de bronce, bielas steel_light (8 materiales con coal), manivelas adelante y biela motriz a la rueda de atrás, techo de chapa en arco, piso de tablas, palanca de cambio y asientos, PilotWheels con origen en el centro del bogie, barra del quitapiedras doblada y otra que falta."
+  ]
+ },
+ "WST_Train_PassengerCar": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 4952/4000 (bogies 840 dentro de Shell, 12 bancos, lámparas, portaequipajes con valijas), 3 vueltas, inferido: 3 pares enfrentados por lado (a la izquierda 2 adelante y 1 atrás), pared izquierda ciega en z ±5 con las 8 ventanas en las puntas, ventanitas de la linterna pintadas, cielo raso crema, techo wood_dark, puertas cerradas con vidrio, bogies y enganches fijos en Shell, Hank en el banco de adelante a la izquierda mirando al medio. Dudoso: 1,76 de piernas entre bancos; colisión del interior."
+  ]
+ },
+ "WST_Train_StockCar": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Solo si los caballos van en el tren (choca con D003).",
+   "2026-10-29: 2026-10-29: desbloqueado, decidido sin Valentin (ver Abierto del documento de prompts)",
+   "2026-10-29: 3548/1600 (bogies 840 y enganches 256 compartidos con ténder y vagón de carga = 68 % del tope; Body 1860 con 24 tablillas con aire, parantes y riostras en A; puertas de tablillas 192 c/u; rampa 172), 3 vueltas, medidas idénticas al vagón de carga (8,58 x 13,095 x 31,826, cumbrera 12, pasarela 12,22, piso 3,5, enganche 2,6, mismos _Roof/_Gap_*), inferido: puntas cerradas con cruz en X en madera clara, 6 tablillas de 0,70 con 7 aires de 0,40, adentro pintado oscuro, rampa guardada parada en el hueco de la puerta derecha (perno en (3,93, 3,56, 0), baja girando -120° sobre Z, 6,9 x 5,3, ~30°), una tablilla floja, sin paja. Dudoso: el exceso de triángulos; la rampa guardada solo se ve entre las tablillas de la puerta."
+  ]
+ },
+ "WST_Train_Tender": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2392/1500 (bogies compartidos 840, enganches de eslabón y perno 256, carbón en terrones 380), 3 vueltas, inferido: bogies de barras en arco con ruedas de plato, tablas del carbón inclinadas a lo largo de todo el tanque, tapa del agua atrás, freno de mano adelante a la izquierda, eslabón solo en el enganche de adelante, plataforma a 4,0 = piso de la cabina."
+  ]
+ },
+ "WST_Train_Wreck": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 7384/7000 (todas las piezas < 5000: loco 3112, vagón A 1510, B 1268), 3 vueltas, inferido: lo que apoya en el suelo no se modela, sin campana ni vidrio del farol, el ténder conserva el bogie de atrás (el de adelante es el juego de ruedas de los escombros), A sigue sobre bogies con rampa de tablas al boquete y perdió la puerta derecha (en los escombros), la cola de la locomotora apoyada en la punta aplastada de A. Dudoso: huella 36 x 71 (pedía ~30 x 60) y alto 24 por los 30° de trompa abajo."
+  ]
+ },
+ "WST_Vehicle_GatlingWagon": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2978/1500 (arma, calidad primero), 4 vueltas, inferido: origen y _Mount abajo del pedestal (no es de mano), Body con origen en los muñones (gira y apunta, la horquilla va con él), timón con dos empuñaduras, _Seat_Gunner a la cadera de un jugador sentado. Dudoso: origen vs Bloque F"
+  ]
+ },
+ "WST_Vehicle_MineCart": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1024/600, 3 vueltas, inferido: y=0 en la cara de arriba del riel (las pestañas bajan 0,05 por adentro), la tina de 2,4 incluye el labio, freno de zapata contra la rueda trasera izquierda, palanca atrás de la pared del fondo, _RailGauge en la rueda delantera izquierda"
+  ]
+ },
+ "WST_Vehicle_PeddlerWagon": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 4072/1600, 4 vueltas, inferido: toldo abierto 20° y mostrador cerrado, mostrador con bisagra a 2,8 (cintura del jugador), buhonero afuera al lado del mostrador, estantes con mercadería adentro, lanza apoyada en el piso, botellas glass_green (7 materiales). Dudoso: ruedas 1968 tris (las de la carreta); dónde va el buhonero"
+  ]
+ },
+ "WST_Vehicle_Wagon": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 3856/1800 (3280 sin la carga Load), 3 vueltas, inferido: la lanza sale 6 desde el frente de la caja (punta en z=-11), trocha x=±2,85, tablero de los pies inclinado, carga a la derecha dejando pasillo para _Seat_3. Dudoso: las 4 ruedas son 1968 tris (12 rayos sueltos + llanta, 16 lados); Body cóncavo para colisión convexa"
+  ]
+ },
+ "WST_Weapon_DoubleBarrel": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2434/800, 6 vueltas, inferido: perno de la bisagra en la punta de la barra debajo de los caños (el prompt dice front top: así no pueden bajar), martillos y extractor en steel_light, extractor solo entre los caños, chapas de las llaves."
+  ]
+ },
+ "WST_Weapon_Dynamite": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: Stick 190/120 y Bundle 468/120, 3 vueltas, inferido: dos variantes en un archivo con nombres sufijados (Stick, Fuse_Stick, _Fuse_Stick, Bundle, Fuse_Bundle, _Fuse_Bundle) porque Blender no deja dos Fuse; mecha dobla a +Y con punta quemada; origen de la mecha donde sale del cartucho."
+  ]
+ },
+ "WST_Weapon_HanksWidow": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2632/800, 3 vueltas, inferido: martillo y gatillo en gunmetal, volutas sobre la correa de abajo con rulo en el escudo, cinta atada a una culata de bronce 0,035 más larga (debajo de las muescas) con nudo atrás. Alto 1,03 por las colas y por la cacha/cilindro del revólver base (misma decisión pendiente)."
+  ]
+ },
+ "WST_Weapon_HuntingRifle": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 2426/900, 6 vueltas, inferido: gatillo fijo en Body adentro de la palanca, mortaja cerrada a los costados (el bloque se ve arriba y abajo), chapas de llave a los dos lados, mira desde arriba del bloque hasta 0,32 de la boca con bases de hierro."
+  ]
+ },
+ "WST_Weapon_Knife": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 358/250, 3 vueltas, inferido: recorte de la punta recto (hoja convexa), canaletas del mango de 0,007 entre cuatro tramos, cuero sin chanflán (lo tapa la mano)."
+  ]
+ },
+ "WST_Weapon_Lasso": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1864/300, 3 vueltas, inferido: rollo en el plano XY como dice el prompt (dice también 'mirando al costado': si es de costado, girar 90° sobre Y), lazo colgando debajo del rollo (alto 1,94), vueltas en abanico, vuelta de cuero con tres vueltas de tira."
+  ]
+ },
+ "WST_Weapon_LeverRifle": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 1788/900, 2 vueltas, inferido: cerrojo, martillo, gatillo y tapa en gunmetal; abrazadera y tapón del tubo; un solo aro de palanca con el gatillo pasando por una ranura; chapas laterales hundidas en el cajón. Ancho 0,17 contra 0,2."
+  ]
+ },
+ "WST_Weapon_Revolver": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: La versión de Claude Design no tiene LoadingGate ni EjectorRod separados (recarga).",
+   "2026-10-28: 1982/800 (calidad primero: chanflanes y detalle mecánico), 6 vueltas. Alto 0,77 vs 0,55 del prompt: el cilindro de 0,27 no entra en 0,55 con una cacha proporcionada; decide Valentin. Con LoadingGate y EjectorRod separados para la recarga."
+  ]
+ },
+ "WST_Weapon_WhiskeyMolotov": {
+  "estado": "construido",
+  "intentos": 1,
+  "notas": [
+   "2026-10-28: 432/200, 3 vueltas, inferido: la cola cae adelante a la derecha pegada al cuello y cuelga ~0,4 (con 0,3 no pasaba el hombro), punta rota en dos tiras, etiqueta con una esquina rota."
+  ]
+ }
+}

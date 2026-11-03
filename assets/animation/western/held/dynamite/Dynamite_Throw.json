@@ -1,0 +1,82 @@
+{
+ "name": "Dynamite_Throw",
+ "_intent": "Tiro de granada por arriba del hombro (D024, se lee a 40 studs): desde Dynamite_Hold el torso gira a la derecha y se echa atrás, la mano lleva el cartucho atrás de la cabeza a la altura de la oreja y la izquierda apunta al blanco (0,2 s); el torso gira a la izquierda, el brazo latiguea por arriba y el cartucho sale adelante y arriba del hombro (marcador Release, 0,32 s: el código esconde el de la mano y lanza uno físico desde ahí); el brazo remata cruzando abajo a la izquierda con el torso inclinado adelante, y vuelve exacto a la pose de Dynamite_Hold a los 0,8 s (ahí el código muestra el siguiente).",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.32, "name": "Release"}],
+ "props": {"Stick": {"parent": "RightHand"}, "Fuse_Stick": {"parent": "Stick"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -34.5, "spread": 2.6, "twist": 18.6},
+   "RightElbow": {"swing": 145.7},
+   "RightWrist": {"swing": -0.1, "spread": -9.4, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [175.5, -2.5, -27.9]}
+  }},
+  {"t": 0.2, "ease": "linear", "joints": {
+   "Waist": {"turn": -28, "pitch": -7},
+   "Neck": {"turn": 27.7, "pitch": 4},
+   "RightShoulder": {"swing": 36, "spread": 45.3, "twist": -69.5},
+   "RightElbow": {"swing": 126.5},
+   "RightWrist": {"swing": 0, "spread": 0, "twist": 0},
+   "LeftShoulder": {"swing": 84, "spread": 4, "twist": 26},
+   "LeftElbow": {"swing": 12},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [175.5, -2.5, -27.9]}
+  }},
+  {"t": 0.32, "ease": "linear", "joints": {
+   "Waist": {"turn": 6, "pitch": 6},
+   "Neck": {"turn": -6.1, "pitch": 4},
+   "RightShoulder": {"swing": 89.8, "spread": 38.8, "twist": -59.5},
+   "RightElbow": {"swing": 100.7},
+   "RightWrist": {"swing": 0, "spread": 0, "twist": 0},
+   "LeftShoulder": {"swing": 14, "spread": 12, "twist": 0},
+   "LeftElbow": {"swing": 70},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [175.5, -2.5, -27.9]}
+  }},
+  {"t": 0.44, "ease": "smooth", "joints": {
+   "Waist": {"turn": 28, "pitch": 14},
+   "Neck": {"turn": -29.9, "pitch": 4},
+   "RightShoulder": {"swing": 13.4, "spread": 0, "twist": 25.9},
+   "RightElbow": {"swing": 107.5},
+   "RightWrist": {"swing": -3.9, "spread": -45, "twist": -6.9},
+   "LeftShoulder": {"swing": -22, "spread": 14, "twist": 0},
+   "LeftElbow": {"swing": 34},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [175.5, -2.5, -27.9]}
+  }},
+  {"t": 0.62, "ease": "smooth", "joints": {
+   "Waist": {"turn": 13, "pitch": 4},
+   "Neck": {"turn": -13.2, "pitch": 4},
+   "RightShoulder": {"swing": -37.1, "spread": 0, "twist": 21.5},
+   "RightElbow": {"swing": 145.1},
+   "RightWrist": {"swing": 0, "spread": 0, "twist": 0},
+   "LeftShoulder": {"swing": 4, "spread": 7, "twist": 0},
+   "LeftElbow": {"swing": 22},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [175.5, -2.5, -27.9]}
+  }},
+  {"t": 0.8, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -34.5, "spread": 2.6, "twist": 18.6},
+   "RightElbow": {"swing": 145.7},
+   "RightWrist": {"swing": -0.1, "spread": -9.4, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [175.5, -2.5, -27.9]}
+  }}
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "name": "ZombieRider_Ride",
+ "_intent": "Jinete zombie montado (loop, Movement). Va soldado al _Seat del caballo: Weld con Part0 = Acc_Saddle, C0 = _Seat.CFrame * CFrame.new(0, 0.10, 0), Part1 = HumanoidRootPart, C1 = HumanoidRootPart.RootRigAttachment.CFrame (en este rig es la identidad: el HRP está en la articulación Root). Encorvado (pelvis 8°, cintura 22°), la cabeza levantada para mirar al frente, los brazos estirados al frente y un poco abiertos como el caminante: las manos van a los costados del cuello del caballo, detrás de la cabeza. Piernas abrazando el barril, rodillas afuera, la punta del pie derecho metida en el aro del estribo (abre de costado) y el izquierdo igual, colgando: al caballo zombie le falta ese estribo. Root y piernas quedan fijas (se nombran en el primer y el último key): el cabeceo del galope lo pone el caballo. El balanceo es de la cintura, el cuello y los brazos (±3° de costado, ±4° de giro, brazos que se mecen a destiempo) en 2,4 s, más lento que cualquier galope para no pelear con él. Medido con FK sobre WST_Mount_ZombieHorse parado: piernas afuera del barril (malla) y brazos sin tocar cuello ni cabeza en todos los cuadros.",
+ "loop": true,
+ "priority": "Movement",
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, 0, 0], "pitch": 8, "lean": 0, "turn": 0},
+   "Waist": {"pitch": 22, "lean": 0, "turn": 0},
+   "Neck": {"pitch": -14, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 48.4, "spread": 17.9, "twist": 40.1},
+   "LeftKnee": {"swing": -60, "twist": 7.9},
+   "LeftAnkle": {"swing": -10.2, "spread": -12.1, "twist": -65.3},
+   "RightHip": {"swing": 48.4, "spread": 17.9, "twist": -40.1},
+   "RightKnee": {"swing": -60, "twist": -7.9},
+   "RightAnkle": {"swing": -10.2, "spread": -12.1, "twist": 65.3},
+   "LeftShoulder": {"swing": 100, "spread": 16, "twist": 0},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": -18},
+   "RightShoulder": {"swing": 100, "spread": 16, "twist": 0},
+   "RightElbow": {"swing": 16},
+   "RightWrist": {"swing": -18}
+  }},
+  {"t": 0.6, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 24, "lean": 3, "turn": -4},
+   "Neck": {"pitch": -10, "lean": -3, "turn": 7},
+   "LeftShoulder": {"swing": 96, "spread": 18, "twist": 0},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": -18},
+   "RightShoulder": {"swing": 104, "spread": 14, "twist": 0},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": -18}
+  }},
+  {"t": 1.2, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 22, "lean": 0, "turn": 0},
+   "Neck": {"pitch": -14, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": 100, "spread": 16, "twist": 0},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": -18},
+   "RightShoulder": {"swing": 100, "spread": 16, "twist": 0},
+   "RightElbow": {"swing": 16},
+   "RightWrist": {"swing": -18}
+  }},
+  {"t": 1.8, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 24, "lean": -3, "turn": 4},
+   "Neck": {"pitch": -12, "lean": 3, "turn": -7},
+   "LeftShoulder": {"swing": 104, "spread": 14, "twist": 0},
+   "LeftElbow": {"swing": 12},
+   "LeftWrist": {"swing": -18},
+   "RightShoulder": {"swing": 96, "spread": 18, "twist": 0},
+   "RightElbow": {"swing": 20},
+   "RightWrist": {"swing": -18}
+  }},
+  {"t": 2.4, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, 0, 0], "pitch": 8, "lean": 0, "turn": 0},
+   "Waist": {"pitch": 22, "lean": 0, "turn": 0},
+   "Neck": {"pitch": -14, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 48.4, "spread": 17.9, "twist": 40.1},
+   "LeftKnee": {"swing": -60, "twist": 7.9},
+   "LeftAnkle": {"swing": -10.2, "spread": -12.1, "twist": -65.3},
+   "RightHip": {"swing": 48.4, "spread": 17.9, "twist": -40.1},
+   "RightKnee": {"swing": -60, "twist": -7.9},
+   "RightAnkle": {"swing": -10.2, "spread": -12.1, "twist": 65.3},
+   "LeftShoulder": {"swing": 100, "spread": 16, "twist": 0},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": -18},
+   "RightShoulder": {"swing": 100, "spread": 16, "twist": 0},
+   "RightElbow": {"swing": 16},
+   "RightWrist": {"swing": -18}
+  }}
+ ]
+}

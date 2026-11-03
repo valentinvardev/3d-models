@@ -1,0 +1,69 @@
+{
+ "name": "Lasso_Hold",
+ "_intent": "Lazo enrollado en la mano derecha, como lo lleva un vaquero antes de armar la vuelta: el puño agarra las vueltas por arriba, el rollo cuelga parado adelante a la derecha a la altura de la cintura (girado 20° para que se lea redondo de frente y de 3/4) y el lazo corredizo cuelga abajo del rollo con la honda; el lazo se hamaca apenas. Solo brazos, cintura y cuello. Prioridad Idle.",
+ "loop": true,
+ "priority": "Idle",
+ "props": {"Coil": {"parent": "RightHand"}, "Noose": {"parent": "Coil"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 2},
+   "Neck": {"turn": -8, "pitch": 6},
+   "RightShoulder": {"swing": -25.5, "spread": 7.4, "twist": 11.8},
+   "RightElbow": {"swing": 145.9},
+   "RightWrist": {"swing": 0, "spread": -5.7, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Coil": {"rot": [-127.9, -46.3, -14.1]},
+   "Noose": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.5, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 2},
+   "Neck": {"turn": -8, "pitch": 6},
+   "RightShoulder": {"swing": -25.5, "spread": 7.4, "twist": 11.8},
+   "RightElbow": {"swing": 145.9},
+   "RightWrist": {"swing": 0, "spread": -5.7, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Coil": {"rot": [-127.9, -46.3, -14.1]},
+   "Noose": {"rot": [0, 0, 4]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 6},
+   "RightShoulder": {"swing": -25.5, "spread": 7.4, "twist": 11.8},
+   "RightElbow": {"swing": 145.9},
+   "RightWrist": {"swing": 0, "spread": -5.7, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Coil": {"rot": [-127.9, -46.3, -14.1]},
+   "Noose": {"rot": [0, 0, 0]}
+  }},
+  {"t": 1.5, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 2},
+   "Neck": {"turn": -8, "pitch": 6},
+   "RightShoulder": {"swing": -25.5, "spread": 7.4, "twist": 11.8},
+   "RightElbow": {"swing": 145.9},
+   "RightWrist": {"swing": 0, "spread": -5.7, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Coil": {"rot": [-127.9, -46.3, -14.1]},
+   "Noose": {"rot": [0, 0, -4]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 2},
+   "Neck": {"turn": -8, "pitch": 6},
+   "RightShoulder": {"swing": -25.5, "spread": 7.4, "twist": 11.8},
+   "RightElbow": {"swing": 145.9},
+   "RightWrist": {"swing": 0, "spread": -5.7, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Coil": {"rot": [-127.9, -46.3, -14.1]},
+   "Noose": {"rot": [0, 0, 0]}
+  }}
+ ]
+}

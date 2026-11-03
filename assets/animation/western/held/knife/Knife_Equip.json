@@ -1,0 +1,65 @@
+{
+ "name": "Knife_Equip",
+ "_intent": "Desenvainar: la mano baja a la vaina en la cadera derecha (cuchillo con la punta para abajo), lo saca para arriba, lo da vuelta hacia adelante con la muñeca mientras sube y queda en guardia, pasándose un poco y volviendo exacto a Knife_Hold. 0,65 s; no ataca hasta Ready.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.65, "name": "Ready"}],
+ "props": {"Handle": {"parent": "RightHand"}},
+ "keys": [
+  {"t": 0.0, "ease": "out", "joints": {
+   "Waist": {"turn": 0, "pitch": 0},
+   "Neck": {"turn": -12, "pitch": 14},
+   "RightShoulder": {"swing": -55.6, "spread": -8.8, "twist": -3.5},
+   "RightElbow": {"swing": 78.9},
+   "RightWrist": {"swing": 1.1, "spread": -3.3, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Handle": {"rot": [-114.6, -11.8, 2.2]}
+  }},
+  {"t": 0.15, "ease": "in", "joints": {
+   "Waist": {"turn": 0, "pitch": 0},
+   "Neck": {"turn": -12, "pitch": 14},
+   "RightShoulder": {"swing": -60, "spread": -3.4, "twist": -63.4},
+   "RightElbow": {"swing": 122.8},
+   "RightWrist": {"swing": 0, "spread": -40, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Handle": {"rot": [-160.7, -19.8, 26]}
+  }},
+  {"t": 0.35, "ease": "out", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -6, "pitch": 6},
+   "RightShoulder": {"swing": -59.7, "spread": -4.9, "twist": 18.4},
+   "RightElbow": {"swing": 150},
+   "RightWrist": {"swing": 5.4, "spread": -19, "twist": 0.3},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Handle": {"rot": [-89.1, -42.9, 8.3]}
+  }},
+  {"t": 0.5, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -12.1, "spread": 0.2, "twist": 19.8},
+   "RightElbow": {"swing": 118.5},
+   "RightWrist": {"swing": 0, "spread": -6.6, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Handle": {"rot": [-68, -25.7, 16.5]}
+  }},
+  {"t": 0.65, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -17, "spread": -1.8, "twist": 20.1},
+   "RightElbow": {"swing": 119.3},
+   "RightWrist": {"swing": 0, "spread": -7, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Handle": {"rot": [-73.7, -27.7, 14.3]}
+  }}
+ ]
+}

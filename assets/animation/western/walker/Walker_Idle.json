@@ -1,0 +1,58 @@
+{
+ "name": "Walker_Idle",
+ "_intent": "Muerto parado esperando: encorvado, rodillas apenas flojas, se balancea despacio de un lado al otro y a los 1,4 s la cabeza da un tirón de costado (el tic del muerto) y vuelve. Prioridad Idle: la caminata (Movement) la tapa entera.",
+ "loop": true,
+ "priority": "Idle",
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.01, 0], "lean": 0},
+   "Waist": {"pitch": 14, "turn": 0},
+   "Neck": {"pitch": 6, "turn": 0, "lean": 0},
+   "LeftHip": {"swing": 6},
+   "LeftKnee": {"swing": -10},
+   "LeftAnkle": {"swing": 4},
+   "RightHip": {"swing": 4},
+   "RightKnee": {"swing": -8},
+   "RightAnkle": {"swing": 4},
+   "LeftShoulder": {"swing": 4, "spread": 4},
+   "LeftElbow": {"swing": 10},
+   "RightShoulder": {"swing": 2, "spread": 4},
+   "RightElbow": {"swing": 14}
+  }},
+  {"t": 0.8, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.02, 0], "lean": 3},
+   "Waist": {"pitch": 17, "turn": 6},
+   "Neck": {"pitch": 10, "turn": -8, "lean": 0},
+   "LeftShoulder": {"swing": -2, "spread": 5},
+   "LeftElbow": {"swing": 8},
+   "RightShoulder": {"swing": 6, "spread": 3},
+   "RightElbow": {"swing": 18}
+  }},
+  {"t": 1.4, "ease": "in", "joints": {
+   "Neck": {"pitch": 8, "turn": -6, "lean": 0}
+  }},
+  {"t": 1.5, "ease": "smooth", "joints": {
+   "Neck": {"pitch": 0, "turn": 18, "lean": -10}
+  }},
+  {"t": 1.9, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.015, 0], "lean": -2},
+   "Waist": {"pitch": 15, "turn": -4},
+   "Neck": {"pitch": 2, "turn": 16, "lean": -8}
+  }},
+  {"t": 2.4, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.01, 0], "lean": 0},
+   "Waist": {"pitch": 14, "turn": 0},
+   "Neck": {"pitch": 6, "turn": 0, "lean": 0},
+   "LeftHip": {"swing": 6},
+   "LeftKnee": {"swing": -10},
+   "LeftAnkle": {"swing": 4},
+   "RightHip": {"swing": 4},
+   "RightKnee": {"swing": -8},
+   "RightAnkle": {"swing": 4},
+   "LeftShoulder": {"swing": 4, "spread": 4},
+   "LeftElbow": {"swing": 10},
+   "RightShoulder": {"swing": 2, "spread": 4},
+   "RightElbow": {"swing": 14}
+  }}
+ ]
+}

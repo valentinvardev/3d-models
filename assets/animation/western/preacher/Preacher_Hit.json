@@ -1,0 +1,48 @@
+{
+ "name": "Preacher_Hit",
+ "_intent": "Golpe recibido: el cuerpo flaco se dobla atrás como una vara (0,07 s), los brazos se abren con lo que tenga en las manos apuntando al piso, y vuelve adelante encorvado con la cabeza ladeada, mirando fijo (0,22), antes de enderezarse (0,6 s). Solo de la cintura para arriba (LeftWrist en 0): se puede tocar encima de la caminata.",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "out", "joints": {
+   "Waist": {"pitch": 4, "lean": 0, "turn": 0},
+   "Neck": {"pitch": 6, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": 4, "spread": 6, "twist": 0},
+   "LeftElbow": {"swing": 12},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 4, "spread": 6, "twist": 0},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.07, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -18, "lean": 6, "turn": -12},
+   "Neck": {"pitch": -28, "lean": 6, "turn": 14},
+   "LeftShoulder": {"swing": -16, "spread": 34, "twist": 0},
+   "LeftElbow": {"swing": 24},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": -12, "spread": 30, "twist": 0},
+   "RightElbow": {"swing": 20},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.22, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 10, "lean": -2, "turn": 6},
+   "Neck": {"pitch": 14, "lean": -6, "turn": -8},
+   "LeftShoulder": {"swing": 12, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 10, "spread": 10, "twist": 0},
+   "RightElbow": {"swing": 20},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.6, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 4, "lean": 0, "turn": 0},
+   "Neck": {"pitch": 6, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": 4, "spread": 6, "twist": 0},
+   "LeftElbow": {"swing": 12},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 4, "spread": 6, "twist": 0},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": 0}
+  }}
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "name": "WhiskeyMolotov_Hold",
+ "_intent": "Molotov lista para tirar, agarrada por el cuello de la botella (como en los juegos: el puño en el cuello, el cuerpo de la botella colgando abajo, el trapo arriba): la mano derecha adelante a la altura del pecho con el codo doblado, la botella parada, el torso apenas de perfil, la izquierda floja. Solo brazos, cintura y cuello. Prioridad Idle.",
+ "loop": true,
+ "priority": "Idle",
+ "props": {"Bottle": {"parent": "RightHand"}, "Rag": {"parent": "Bottle"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -32.8, "spread": 3.8, "twist": 18.8},
+   "RightElbow": {"swing": 147.1},
+   "RightWrist": {"swing": 0, "spread": -9.5, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-113.4, -22.7, -6.8]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 4},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -32.8, "spread": 3.8, "twist": 18.8},
+   "RightElbow": {"swing": 147.1},
+   "RightWrist": {"swing": 0, "spread": -9.5, "twist": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-113.4, -22.7, -6.8]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -32.8, "spread": 3.8, "twist": 18.8},
+   "RightElbow": {"swing": 147.1},
+   "RightWrist": {"swing": 0, "spread": -9.5, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-113.4, -22.7, -6.8]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }}
+ ]
+}

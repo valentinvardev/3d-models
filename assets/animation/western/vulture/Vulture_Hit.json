@@ -1,0 +1,54 @@
+{
+ "name": "Vulture_Hit",
+ "_intent": "Tiro en el aire (0,36 s). Arranca y termina en el planeo de Fly (t=0): 0,00° en los dos empalmes. 0-0,05, lineal: el tiro lo levanta 0,12 y lo rola 12,5° (la derecha abajo) con la nariz arriba 10°. Las alas se desordenan: la izquierda sube a 45° con la punta doblada abajo, la derecha baja a -24° con la punta arriba; la cabeza se va atrás y de costado y la cola salta. 0,05-0,12, lineal: rebota al otro lado. 0,12-0,36: se acomoda; desde 0,29 queda a menos de 0,05 del planeo. La punta que más se mueve recorre 1,23 studs. Las puntas dobladas abajo se apilan (pos) y no atraviesan la de adentro (0,046). Pico 864 °/s. Corta y pisable: Action, solo sobre Fly. Play(0.1) (con 0,05 el salto desde Fly llega a 1819 °/s) y Stop(0.1) a 0,26, porque si termina solo sin fundido sobre un Fly en otra fase salta a 2243 °/s. Otro tiro antes de que termine: Play de nuevo desde 0. No va durante DiveWindup ni Dive, que también son Action y se mezclarían a medias.",
+ "rig": "assets/models/western/enemies/WST_Enemy_Vulture/04_roblox/WST_Enemy_Vulture.rig.json",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Body": {"rot": [2, 0, 0], "pos": [0, 0, 0], "ease": "linear"},
+   "Head": {"rot": [-12, 0, 0], "pos": [0, 0, 0], "ease": "linear"},
+   "Tail": {"rot": [0, 0, 0], "ease": "linear"},
+   "WingLeftInner": {"rot": [0.0, 0.0, -7.0], "ease": "linear"},
+   "WingRightInner": {"rot": [0.0, 0.0, 7.0], "ease": "linear"},
+   "WingLeftOuter": {"rot": [0.0, 0.0, -3.0], "pos": [0.0, 0.0, 0.0], "ease": "linear"},
+   "WingRightOuter": {"rot": [0.0, 0.0, 3.0], "pos": [0.0, 0.0, 0.0], "ease": "linear"}
+  }},
+  {"t": 0.05, "ease": "smooth", "joints": {
+   "Body": {"rot": [10, 6, -14], "pos": [0, 0.12, 0], "ease": "linear"},
+   "Head": {"rot": [24, -16, 10], "pos": [0, 0, 0], "ease": "linear"},
+   "Tail": {"rot": [-20, 0, 12], "ease": "linear"},
+   "WingLeftInner": {"rot": [10.47, -19.69, -42.3], "ease": "linear"},
+   "WingRightInner": {"rot": [-7.43, -10.64, -25.59], "ease": "linear"},
+   "WingLeftOuter": {"rot": [12.02, 15.6, 31.53], "pos": [0.0, -0.07, 0.0], "ease": "linear"},
+   "WingRightOuter": {"rot": [0.0, 8.0, 28.0], "pos": [0.0, 0.0, 0.0], "ease": "linear"}
+  }},
+  {"t": 0.12, "ease": "smooth", "joints": {
+   "Body": {"rot": [-4, -3, 8], "pos": [0, 0.04, 0]},
+   "Head": {"rot": [-22, 8, -6], "pos": [0, 0, 0]},
+   "Tail": {"rot": [10, 0, -6]},
+   "WingLeftInner": {"rot": [-3.95, 3.3, 10.25]},
+   "WingRightInner": {"rot": [5.26, 8.97, 29.31]},
+   "WingLeftOuter": {"rot": [0.0, -4.0, -18.0], "pos": [0.0, 0.0, 0.0]},
+   "WingRightOuter": {"rot": [11.72, -15.84, -17.17], "pos": [0.0, -0.05, 0.0]}
+  }},
+  {"t": 0.22, "ease": "smooth", "joints": {
+   "Body": {"rot": [3, 0, -2], "pos": [0, 0.01, 0]},
+   "Head": {"rot": [-14, 3, 0], "pos": [0, 0, 0]},
+   "Tail": {"rot": [-2, 0, 0]},
+   "WingLeftInner": {"rot": [0.98, 1.79, -12.03]},
+   "WingRightInner": {"rot": [0.0, 0.0, 3.0]},
+   "WingLeftOuter": {"rot": [2.0, 3.1, 2.89], "pos": [0.0, 0.0, 0.0]},
+   "WingRightOuter": {"rot": [0.0, 0.0, 8.0], "pos": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 0.36, "ease": "smooth", "joints": {
+   "Body": {"rot": [2, 0, 0], "pos": [0, 0, 0]},
+   "Head": {"rot": [-12, 0, 0], "pos": [0, 0, 0]},
+   "Tail": {"rot": [0, 0, 0]},
+   "WingLeftInner": {"rot": [0.0, 0.0, -7.0]},
+   "WingRightInner": {"rot": [0.0, 0.0, 7.0]},
+   "WingLeftOuter": {"rot": [0.0, 0.0, -3.0], "pos": [0.0, 0.0, 0.0]},
+   "WingRightOuter": {"rot": [0.0, 0.0, 3.0], "pos": [0.0, 0.0, 0.0]}
+  }}
+ ]
+}

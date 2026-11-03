@@ -1,0 +1,300 @@
+{
+ "name": "HuntingRifle_Fire",
+ "_intent": "Disparo desde HuntingRifle_Hold: el caño sube 14° y el brazo patea en 0,02 s (marcador Fire: el fogonazo sale en _Muzzle), se asienta y vuelve exacto a la pose de sostener en 0,42 s.",
+ "loop": false,
+ "priority": "Action",
+ "props": {
+  "Body": {
+   "parent": "RightHand"
+  },
+  "Lever": {
+   "parent": "Body"
+  },
+  "BreechBlock": {
+   "parent": "Body"
+  },
+  "Hammer": {
+   "parent": "Body"
+  }
+ },
+ "markers": [
+  {
+   "t": 0.02,
+   "name": "Fire"
+  }
+ ],
+ "keys": [
+  {
+   "t": 0.0,
+   "ease": "linear",
+   "joints": {
+    "Waist": {
+     "turn": -42,
+     "pitch": 4
+    },
+    "Neck": {
+     "turn": 40,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 90.4,
+     "spread": 20.7,
+     "twist": 62.6
+    },
+    "RightElbow": {
+     "swing": 0.1
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -4.6,
+     "twist": 0.1
+    },
+    "LeftShoulder": {
+     "swing": 89.9,
+     "spread": 11.7,
+     "twist": -12.1
+    },
+    "LeftElbow": {
+     "swing": 0.1
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": 0.8,
+     "twist": 0
+    },
+    "Body": {
+     "rot": [
+      -97.3,
+      -17.8,
+      -19.4
+     ]
+    },
+    "BreechBlock": {
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      30,
+      0,
+      0
+     ]
+    },
+    "Lever": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.02,
+   "ease": "out",
+   "joints": {
+    "Waist": {
+     "turn": -42,
+     "pitch": -3.0
+    },
+    "Neck": {
+     "turn": 40,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 93.4,
+     "spread": 20.7,
+     "twist": 62.6
+    },
+    "RightElbow": {
+     "swing": 2.1
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -4.6,
+     "twist": 0.1
+    },
+    "LeftShoulder": {
+     "swing": 92.9,
+     "spread": 11.7,
+     "twist": -12.1
+    },
+    "LeftElbow": {
+     "swing": 0.1
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": 0.8,
+     "twist": 0
+    },
+    "Body": {
+     "rot": [
+      -95.3,
+      -17.8,
+      -19.4
+     ]
+    },
+    "BreechBlock": {
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      30,
+      0,
+      0
+     ]
+    },
+    "Lever": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.2,
+   "ease": "smooth",
+   "joints": {
+    "Waist": {
+     "turn": -42,
+     "pitch": 2.3200000000000003
+    },
+    "Neck": {
+     "turn": 40,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 90.4,
+     "spread": 20.7,
+     "twist": 62.6
+    },
+    "RightElbow": {
+     "swing": 0.1
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -4.6,
+     "twist": 0.1
+    },
+    "LeftShoulder": {
+     "swing": 89.9,
+     "spread": 11.7,
+     "twist": -12.1
+    },
+    "LeftElbow": {
+     "swing": 0.1
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": 0.8,
+     "twist": 0
+    },
+    "Body": {
+     "rot": [
+      -97.3,
+      -17.8,
+      -19.4
+     ]
+    },
+    "BreechBlock": {
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      30,
+      0,
+      0
+     ]
+    },
+    "Lever": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.42,
+   "ease": "smooth",
+   "joints": {
+    "Waist": {
+     "turn": -42,
+     "pitch": 4
+    },
+    "Neck": {
+     "turn": 40,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 90.4,
+     "spread": 20.7,
+     "twist": 62.6
+    },
+    "RightElbow": {
+     "swing": 0.1
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -4.6,
+     "twist": 0.1
+    },
+    "LeftShoulder": {
+     "swing": 89.9,
+     "spread": 11.7,
+     "twist": -12.1
+    },
+    "LeftElbow": {
+     "swing": 0.1
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": 0.8,
+     "twist": 0
+    },
+    "Body": {
+     "rot": [
+      -97.3,
+      -17.8,
+      -19.4
+     ]
+    },
+    "BreechBlock": {
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      30,
+      0,
+      0
+     ]
+    },
+    "Lever": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  }
+ ]
+}

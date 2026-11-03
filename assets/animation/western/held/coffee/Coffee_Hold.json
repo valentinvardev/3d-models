@@ -1,0 +1,42 @@
+{
+ "name": "Coffee_Hold",
+ "_intent": "Jarro de café caliente agarrado por el asa, siempre derecho para no volcarlo: los dedos en el asa, el jarro del lado de adentro de la mano, adelante a la altura de la cintura-pecho con el codo doblado. Solo brazos, cintura y cuello. Prioridad Idle.",
+ "loop": true,
+ "priority": "Idle",
+ "props": {"Body": {"parent": "RightHand"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 3},
+   "Neck": {"turn": -6, "pitch": 8},
+   "RightShoulder": {"swing": -33.1, "spread": -1.4, "twist": 18.2},
+   "RightElbow": {"swing": 135.4},
+   "RightWrist": {"swing": 0, "spread": -8.4, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-99.3, -24.4, 1]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 4},
+   "Neck": {"turn": -6, "pitch": 8},
+   "RightShoulder": {"swing": -33.1, "spread": -1.4, "twist": 18.2},
+   "RightElbow": {"swing": 135.4},
+   "RightWrist": {"swing": 0, "spread": -8.4, "twist": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-99.3, -24.4, 1]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 3},
+   "Neck": {"turn": -6, "pitch": 8},
+   "RightShoulder": {"swing": -33.1, "spread": -1.4, "twist": 18.2},
+   "RightElbow": {"swing": 135.4},
+   "RightWrist": {"swing": 0, "spread": -8.4, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-99.3, -24.4, 1]}
+  }}
+ ]
+}

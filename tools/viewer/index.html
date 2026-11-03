@@ -1,0 +1,527 @@
+<!doctype html>
+<!--
+  Visor 3D de los modelos del Western. Se abre con un servidor local desde la raíz del repo:
+
+    py -m http.server 8765 --bind 127.0.0.1
+    http://127.0.0.1:8765/tools/viewer/
+
+  Lee tools/viewer/models.json (lo arma tools/viewer/build_index.py; lo actualizan solos process_model, model_queue
+  y anim_preview). En vivo: lo relee cada 2 s, marca lo nuevo y lo actualizado, recarga el modelo abierto si cambió
+  (sin perder la cámara) y, si hace 20 s que no tocás nada, salta al último que cambió; si estás mirando, avisa.
+  ?id=<Id>&anim=<clip>&sheet=<N> abre con ese clip y arma una hoja de N cuadros para revisarlo.
+  Muestra cada modelo en studs, al lado de un jugador de 2 x 5 x 1, con piezas, pivotes, marcadores,
+  wireframe, el reporte y las animaciones: las que trae el GLB y las de assets/models/western/_animations/
+  cuyas pistas apuntan a piezas con el mismo nombre (así una animación R15 sirve para todos los humanoides).
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visor de modelos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Estilo Geist (Vercel): escala de grises casi negra, bordes de 1 px, radios de 6 px, Geist y Geist Mono */
+  :root {
+    --bg-100:#0a0a0a; --bg-200:#000; --gray-100:#111; --gray-200:#1a1a1a; --gray-300:#1f1f1f; --gray-400:#2e2e2e;
+    --gray-500:#454545; --gray-700:#878787; --gray-900:#a1a1a1; --gray-1000:#ededed;
+    --blue:#0070f3; --green:#45a557; --red:#e5484d; --amber:#ffb224; --radius:6px;
+    --sans:'Geist', ui-sans-serif, system-ui, sans-serif; --mono:'Geist Mono', ui-monospace, monospace;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; height:100vh; display:grid; grid-template-columns:264px 1fr 340px; background:var(--bg-200); color:var(--gray-1000);
+    font:14px/1.5 var(--sans); -webkit-font-smoothing:antialiased; }
+  aside { background:var(--bg-100); border-right:1px solid var(--gray-400); overflow:auto; }
+  #info { border-right:0; border-left:1px solid var(--gray-400); padding:16px; }
+  .brand { display:flex; align-items:center; gap:8px; padding:16px 16px 4px; font-weight:600; letter-spacing:-.01em; }
+  .brand i { width:18px; height:18px; display:inline-block; background:var(--gray-1000); clip-path:polygon(50% 8%, 96% 92%, 4% 92%); }
+  #list h3 { margin:16px 16px 6px; font:500 11px/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--gray-700); }
+  #search { margin:12px 16px 4px; width:calc(100% - 32px); height:32px; padding:0 10px; background:var(--bg-200); color:var(--gray-1000);
+    border:1px solid var(--gray-400); border-radius:var(--radius); font:14px var(--sans); outline:none; }
+  #search:focus { border-color:var(--gray-500); box-shadow:0 0 0 3px rgba(255,255,255,.08); }
+  .item { margin:0 8px; padding:6px 8px; border-radius:var(--radius); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:8px; color:var(--gray-900); }
+  .item:hover { background:var(--gray-100); color:var(--gray-1000); }
+  .item.sel { background:var(--gray-200); color:var(--gray-1000); }
+  .item small { font:12px var(--mono); color:var(--gray-700); white-space:nowrap; }
+  .dot { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:8px; background:var(--gray-500); vertical-align:1px; }
+  .dot.ok { background:var(--green); } .dot.bad { background:var(--red); }
+  main { position:relative; background:var(--bg-100); }
+  canvas { display:block; width:100%; height:100%; }
+  #hud { position:absolute; left:12px; bottom:12px; padding:6px 10px; font:12px var(--mono); color:var(--gray-700);
+    background:rgba(0,0,0,.6); border:1px solid var(--gray-400); border-radius:var(--radius); }
+  h2 { margin:0; font-size:20px; font-weight:600; letter-spacing:-.02em; }
+  .sub { color:var(--gray-700); margin:2px 0 14px; font-size:13px; }
+  .row { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0; }
+  .seg { display:inline-flex; padding:2px; gap:2px; background:var(--gray-100); border:1px solid var(--gray-400); border-radius:var(--radius); flex-wrap:wrap; }
+  .seg button { border:0; background:transparent; height:26px; color:var(--gray-900); }
+  .seg button.on { background:var(--gray-300); color:var(--gray-1000); box-shadow:0 0 0 1px var(--gray-400); }
+  button, select { height:28px; padding:0 10px; background:var(--bg-200); color:var(--gray-1000); border:1px solid var(--gray-400); border-radius:var(--radius);
+    font:500 13px var(--sans); cursor:pointer; transition:background .15s, border-color .15s; }
+  button:hover, select:hover { background:var(--gray-200); }
+  button.on { border-color:var(--gray-1000); }
+  select { width:100%; }
+  .sec { border-top:1px solid var(--gray-400); margin-top:14px; padding-top:12px; }
+  .sec b { display:block; font:500 11px/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--gray-700); margin-bottom:10px; }
+  .kv { display:grid; grid-template-columns:auto 1fr; gap:4px 12px; font-size:13px; }
+  .kv span:nth-child(odd) { color:var(--gray-700); } .kv span:nth-child(even) { font-family:var(--mono); text-align:right; }
+  .badge { display:inline-flex; align-items:center; height:20px; padding:0 8px; border-radius:999px; font:500 12px var(--sans); border:1px solid; }
+  .badge.ok { color:var(--green); border-color:rgba(69,165,87,.4); background:rgba(69,165,87,.1); }
+  .badge.err { color:var(--red); border-color:rgba(229,72,77,.4); background:rgba(229,72,77,.1); }
+  .badge.warn { color:var(--amber); border-color:rgba(255,178,36,.4); background:rgba(255,178,36,.1); }
+  .err { color:var(--red); } .warn { color:var(--amber); } .ok { color:var(--green); }
+  ul { margin:8px 0 0; padding-left:16px; font-size:12px; } li { margin:3px 0; }
+  label { display:flex; gap:8px; align-items:center; font-size:13px; color:var(--gray-900); padding:2px 0; }
+  input[type=checkbox] { accent-color:var(--gray-1000); }
+  .thumbs { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+  .thumbs img { width:100%; border:1px solid var(--gray-400); border-radius:var(--radius); display:block; }
+  input[type=range] { width:100%; accent-color:var(--gray-1000); }
+  code { font:12px var(--mono); background:var(--gray-200); padding:1px 4px; border-radius:4px; }
+  .tl { position:relative; margin-top:8px; padding-top:18px; }
+  #tlmarks { position:absolute; left:0; right:0; top:0; height:16px; }
+  #tlmarks i { position:absolute; transform:translateX(-50%); font:500 10px/16px var(--mono); font-style:normal; color:var(--amber); white-space:nowrap; }
+  #tlmarks i::after { content:''; position:absolute; left:50%; top:15px; width:1px; height:10px; background:var(--amber); }
+  #tltime { font:12px var(--mono); color:var(--gray-700); }
+  button:disabled { opacity:.4; cursor:not-allowed; }
+  .chip { font:500 10px/16px var(--mono); padding:0 6px; border-radius:999px; text-transform:uppercase; letter-spacing:.04em; margin-left:6px; }
+  .chip.new { color:var(--blue); background:rgba(0,112,243,.14); } .chip.upd { color:var(--amber); background:rgba(255,178,36,.12); }
+  #banner { position:absolute; top:12px; left:50%; transform:translateX(-50%); display:none; align-items:center; gap:10px; padding:6px 8px 6px 12px;
+    background:var(--bg-200); border:1px solid var(--gray-400); border-radius:var(--radius); font-size:13px; color:var(--gray-900); box-shadow:0 4px 16px rgba(0,0,0,.5); }
+  #banner.on { display:flex; } #banner i { width:7px; height:7px; border-radius:50%; background:var(--blue); }
+  #live { position:absolute; right:12px; bottom:12px; font:12px var(--mono); color:var(--gray-700); display:flex; align-items:center; gap:6px; }
+  #live i { width:7px; height:7px; border-radius:50%; background:var(--green); } #live.off i { background:var(--red); }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<aside><div class="brand"><i></i>Dead Man's Rail · modelos</div><input id="search" placeholder="Buscar modelo…"><div id="list"></div></aside>
+<main><canvas id="c"></canvas><div id="hud">Arrastrar: girar · Rueda: zoom · Clic derecho: mover · F: encuadrar · W: wireframe · P: pivotes</div>
+  <div id="banner"><i></i><span id="bannerText"></span><button id="bannerGo">Ver el último</button><button id="bannerX">×</button></div>
+  <div id="live" title="El visor consulta models.json cada 2 s"><i></i><span>en vivo</span></div></main>
+<aside id="info"><div class="sub">Elegí un modelo de la lista.</div></aside>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { VFX } from './vfx.js';
+
+const canvas = document.getElementById('c');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0a0a);
+const camera = new THREE.PerspectiveCamera(40, 1, 0.05, 500);
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
+scene.add(new THREE.HemisphereLight(0xfff1dc, 0x3a3028, 1.6));
+const sun = new THREE.DirectionalLight(0xffd2a1, 2.2); sun.position.set(6, 10, -8); scene.add(sun);
+const fill = new THREE.DirectionalLight(0x9fc7c9, 0.6); fill.position.set(-6, 4, 6); scene.add(fill);
+const grid = new THREE.GridHelper(40, 40, 0x454545, 0x1f1f1f); scene.add(grid);
+const player = new THREE.Mesh(new THREE.BoxGeometry(2, 5, 1),
+  new THREE.MeshBasicMaterial({ color: 0x0070f3, wireframe: true, transparent: true, opacity: 0.55 }));
+scene.add(player);
+
+const loader = new GLTFLoader();
+const vfx = new VFX(scene, camera);   // efectos de assets/vfx/western (tools/viewer/vfx.js)
+const S = { data: null, entry: null, source: 'final', wrapper: null, gltf: null, mixer: null, action: null,
+  clips: [], speed: 1, wire: false, pivots: false, markers: true, ref: true, animCache: {},
+  camMode: 'orbit', prevT: 0, clipMarkers: {}, hidden: [] };
+const clock = new THREE.Clock();
+// ?id=<Id>&anim=<clip>&sheet=<N>: abre con ese clip y arma una hoja de N cuadros (costado y 3/4) para revisarlo
+const START = new URLSearchParams(location.search);
+
+function resize() {
+  const r = canvas.parentElement.getBoundingClientRect();
+  renderer.setSize(r.width, r.height, false); camera.aspect = r.width / r.height; camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize); resize();
+
+async function loadIndex() {
+  const res = await fetch('models.json', { cache: 'no-store' });
+  S.raw = await res.text(); S.data = JSON.parse(S.raw); vfx.setData(S.data.vfx);
+  renderList();
+  const want = START.get('id');
+  const first = S.data.models.find(m => m.id === want) || S.data.models[0];
+  if (first) select(first);
+  setInterval(poll, 2000);
+}
+
+// ---- en vivo: cada 2 s se relee el índice; lo nuevo o cambiado se marca y, si no estás tocando nada, se muestra ----
+// lastInput arranca al abrir: la página recién abierta no salta. Con ?anim= (revisando un clip) nunca salta sola.
+const LIVE = { fresh: {}, lastInput: Date.now(), lastJump: 0, review: !!START.get('anim') };
+for (const ev of ['pointerdown', 'wheel', 'keydown']) addEventListener(ev, () => { LIVE.lastInput = Date.now(); }, { capture: true });
+
+async function poll() {
+  let raw;
+  try { raw = await (await fetch('models.json', { cache: 'no-store' })).text(); document.getElementById('live').classList.remove('off'); }
+  catch { document.getElementById('live').classList.add('off'); return; }
+  if (raw === S.raw) return;
+  let next; try { next = JSON.parse(raw); } catch { return; }       // índice a medio escribir: el próximo ciclo
+  const before = Object.fromEntries(S.data.models.map(m => [m.id, m]));
+  const changed = [];
+  for (const m of next.models) {
+    const old = before[m.id];
+    if (!old) { LIVE.fresh[m.id] = 'nuevo'; changed.push(m); }
+    else if (old.stamp !== m.stamp) { LIVE.fresh[m.id] ||= 'actualizado'; changed.push(m); }
+  }
+  const oldAnims = Object.fromEntries((S.data.animations || []).map(a => [a.file, a.stamp]));
+  const animsChanged = (next.animations || []).some(a => oldAnims[a.file] !== a.stamp) || (next.animations || []).length !== (S.data.animations || []).length;
+  S.raw = raw; S.data = next; vfx.setData(next.vfx);
+  const cur = S.entry && next.models.find(m => m.id === S.entry.id);
+  if (cur) S.entry = cur;
+  if (cur && changed.some(m => m.id === cur.id)) { delete LIVE.fresh[cur.id]; await loadModel({ keepView: true }); }
+  else if (animsChanged && S.wrapper) { await setupAnimations(); renderInfo(); }
+  const others = changed.filter(m => !cur || m.id !== cur.id);
+  const idle = !LIVE.review && Date.now() - LIVE.lastInput > 20000 && Date.now() - LIVE.lastJump > 8000 && !document.getElementById('sheet');
+  if (others.length && idle) { LIVE.lastJump = Date.now(); select(newest(others)); }
+  renderList(); updateBanner();
+}
+
+function newest(list) { return list.reduce((a, b) => (b.stamp > a.stamp ? b : a)); }
+
+function updateBanner() {
+  const ids = Object.keys(LIVE.fresh).filter(id => !S.entry || id !== S.entry.id);
+  const el = document.getElementById('banner');
+  el.classList.toggle('on', ids.length > 0);
+  if (!ids.length) return;
+  const nuevos = ids.filter(id => LIVE.fresh[id] === 'nuevo').length;
+  document.getElementById('bannerText').textContent =
+    [nuevos && `${nuevos} nuevo${nuevos > 1 ? 's' : ''}`, ids.length - nuevos && `${ids.length - nuevos} actualizado${ids.length - nuevos > 1 ? 's' : ''}`].filter(Boolean).join(' · ');
+}
+document.getElementById('bannerGo').onclick = () => {
+  const list = S.data.models.filter(m => LIVE.fresh[m.id] && (!S.entry || m.id !== S.entry.id));
+  if (list.length) select(newest(list));
+};
+document.getElementById('bannerX').onclick = () => { LIVE.fresh = {}; renderList(); updateBanner(); };
+
+function renderList() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const list = document.getElementById('list'); list.innerHTML = '';
+  const shown = S.data.models.filter(m => !q || (m.id + ' ' + m.name).toLowerCase().includes(q));
+  const cats = { 'Últimos': [...shown].sort((a, b) => b.stamp - a.stamp).slice(0, 6) };
+  for (const m of shown) (cats[m.category] ||= []).push(m);
+  for (const [cat, items] of Object.entries(cats)) {
+    const h = document.createElement('h3'); h.textContent = cat; list.appendChild(h);
+    for (const m of items) {
+      const d = document.createElement('div'); d.className = 'item' + (S.entry && S.entry.id === m.id ? ' sel' : '');
+      const r = m.report || {};
+      const tris = r.tris ? r.tris.after : '';
+      const f = LIVE.fresh[m.id];
+      d.title = `estado: ${m.estado || 'pendiente'}`;
+      d.innerHTML = `<span><span class="dot ${r.pass === true ? 'ok' : r.pass === false ? 'bad' : ''}"></span>${m.id.replace('WST_', '')}${f ? `<span class="chip ${f === 'nuevo' ? 'new' : 'upd'}">${f === 'nuevo' ? 'nuevo' : 'act.'}</span>` : ''}</span><small>${tris}</small>`;
+      d.onclick = () => select(m); list.appendChild(d);
+    }
+  }
+}
+document.getElementById('search').oninput = renderList;
+
+function select(m) {
+  S.entry = m;
+  delete LIVE.fresh[m.id];
+  S.source = m.files.final ? 'final' : Object.keys(m.files)[0];
+  history.replaceState(null, '', '?id=' + m.id);
+  renderList(); updateBanner(); loadModel();
+}
+
+function disposeCurrent() {
+  if (!S.wrapper) return;
+  scene.remove(S.wrapper);
+  S.wrapper.traverse(o => { if (o.geometry) o.geometry.dispose(); });
+  S.wrapper = null; S.mixer = null; S.action = null; S.clips = [];
+}
+
+async function loadModel({ keepView = false } = {}) {
+  const view = keepView ? { pos: camera.position.clone(), target: controls.target.clone(), clip: S.action && S.action.getClip().name } : null;
+  disposeCurrent();
+  const m = S.entry, file = m.files[S.source];
+  let gltf;
+  try { gltf = await loader.loadAsync(file + '?v=' + (m.stamp || 0)); }      // ?v= para que no lo sirva la caché
+  catch (e) { renderInfo('No se pudo cargar ' + file + ': ' + e.message); return; }
+  S.gltf = gltf;
+  vfx.clear(); vfx.flip = S.source === 'final';
+  const wrapper = new THREE.Group();
+  wrapper.add(gltf.scene);
+  // 03_export viene girado 180° para el importador de Studio: se endereza para verlo igual que el original
+  if (S.source === 'final') wrapper.rotation.y = Math.PI;
+  scene.add(wrapper); S.wrapper = wrapper;
+  gltf.scene.traverse(o => {
+    if (!o.isMesh) return;
+    for (const mat of [].concat(o.material)) {
+      if (mat.map) { mat.map.magFilter = THREE.NearestFilter; mat.map.minFilter = THREE.NearestFilter; mat.map.generateMipmaps = false; mat.map.needsUpdate = true; }
+      mat.flatShading = true; mat.needsUpdate = true;
+    }
+    o.userData.isMarker = o.name.startsWith('_') || (o.parent && o.parent.name.startsWith('_'));
+    if (o.userData.isMarker) o.material = new THREE.MeshBasicMaterial({ color: 0xff3df0 });
+  });
+  // pivotes: un eje por cada pieza (su origen)
+  for (const n of gltf.scene.children) {
+    n.traverse(o => { if (o !== gltf.scene && (o.isMesh || o.children.length)) { const ax = new THREE.AxesHelper(0.35); ax.userData.pivot = true; ax.visible = S.pivots; o.add(ax); } });
+  }
+  applyToggles();
+  if (view) { camera.position.copy(view.pos); controls.target.copy(view.target); controls.update(); } else frame();
+  renderInfo();                 // el panel aparece ya; las animaciones compartidas llegan después
+  await setupAnimations();
+  startAlways();
+  if (S.camMode !== 'orbit') setCam(hasHead() ? S.camMode : 'orbit');   // la cabeza nueva se oculta otra vez
+  renderInfo();
+  if (view && view.clip) {      // recargado en vivo: sigue con el mismo clip
+    const i = S.clips.findIndex(c => c.clip.name === view.clip);
+    const sel = document.getElementById('clip');
+    if (i >= 0) { playClip(i); if (sel) sel.value = i; }
+  }
+  if (!S.startDone && START.get('anim') && START.get('id') === m.id) {   // una sola vez: no en cada recarga en vivo
+    S.startDone = true;
+    const i = S.clips.findIndex(c => c.clip.name === START.get('anim'));
+    const sel = document.getElementById('clip');
+    if (i >= 0) { playClip(i); if (sel) sel.value = i; if (START.get('sheet')) contactSheet(+START.get('sheet') || 8); }
+  }
+}
+
+function contactSheet(n) {
+  const a = S.action; if (!a) return;
+  a.paused = true; a.time = 0; S.mixer.update(0);
+  const W = 200, H = 280, b = bounds(), c = b.getCenter(new THREE.Vector3()), size = b.getSize(new THREE.Vector3());
+  const d = Math.max(size.y, size.z, 2) * 1.7 + 2;
+  const views = [new THREE.Vector3(c.x + d, c.y, c.z), new THREE.Vector3(c.x + d * 0.62, c.y + d * 0.22, c.z - d * 0.78)];
+  const sheet = document.createElement('canvas'); sheet.width = W * n; sheet.height = H * views.length;
+  const g = sheet.getContext('2d'); g.fillStyle = '#0a0a0a'; g.fillRect(0, 0, sheet.width, sheet.height);
+  const keep = renderer.getSize(new THREE.Vector2()), keepAspect = camera.aspect, keepPos = camera.position.clone();
+  renderer.setSize(W, H, false); camera.aspect = W / H; camera.updateProjectionMatrix(); player.visible = false;
+  views.forEach((pos, row) => {
+    for (let i = 0; i < n; i++) {
+      a.time = a.getClip().duration * i / n; S.mixer.update(0);
+      camera.position.copy(pos); camera.lookAt(c.x, Math.max(c.y, 1.6), c.z);
+      renderer.render(scene, camera);
+      g.drawImage(renderer.domElement, i * W, row * H, W, H);
+      g.fillStyle = '#a1a1a1'; g.font = '12px "Geist Mono", monospace'; g.fillText(`${a.time.toFixed(2)} s`, i * W + 6, row * H + 16);
+    }
+  });
+  renderer.setSize(keep.x, keep.y, false); camera.aspect = keepAspect; camera.updateProjectionMatrix();
+  camera.position.copy(keepPos); controls.update(); player.visible = S.ref;
+  const img = new Image(); img.src = sheet.toDataURL(); img.id = 'sheet'; img.title = 'clic para cerrar';
+  img.style.cssText = 'position:fixed;left:0;top:0;max-width:100vw;z-index:20;background:#0a0a0a;cursor:pointer';
+  img.onclick = () => img.remove(); document.getElementById('sheet')?.remove(); document.body.appendChild(img);
+}
+
+function bounds() { return new THREE.Box3().setFromObject(S.wrapper, true); }
+
+function frame() {
+  if (!S.wrapper) return;
+  const b = bounds(), size = b.getSize(new THREE.Vector3()), c = b.getCenter(new THREE.Vector3());
+  player.position.set(b.min.x - 2.5, 2.5, c.z); player.visible = S.ref;
+  const d = Math.max(size.x, size.y, size.z, 2) * 1.6 + 1.5;
+  controls.target.copy(c);
+  camera.position.set(c.x + d * 0.45, c.y + d * 0.3, c.z - d);  // del lado del frente (-Z)
+  controls.update();
+}
+
+function applyToggles() {
+  if (!S.wrapper) return;
+  S.wrapper.traverse(o => {
+    if (o.userData.pivot) o.visible = S.pivots;
+    if (o.isMesh && o.userData.isMarker) o.visible = S.markers;
+    if (o.isMesh && !o.userData.isMarker) for (const mat of [].concat(o.material)) mat.wireframe = S.wire;
+  });
+  player.visible = S.ref;
+}
+
+async function loadAnimFile(file) {
+  if (!S.animCache[file]) S.animCache[file] = loader.loadAsync(file).then(g => g.animations).catch(() => []);
+  return S.animCache[file];
+}
+
+async function setupAnimations() {
+  const root = S.gltf.scene;
+  S.clips = []; S.clipMarkers = {};
+  S.mixer = new THREE.AnimationMixer(root);
+  const own = S.gltf.animations.map(c => ({ clip: c, from: 'en el modelo' }));
+  const shared = [];
+  for (const a of (S.data.animations || [])) {
+    if (a.rig && a.rig !== S.entry.id) continue;     // <Clip>@<Id>: las posiciones son de ese esqueleto
+    Object.assign(S.clipMarkers, a.markers || {});
+    for (const c of await loadAnimFile(a.file + '?v=' + (a.stamp || 0))) {
+      const ok = c.tracks.length && c.tracks.every(t => root.getObjectByName(THREE.PropertyBinding.parseTrackName(t.name).nodeName));
+      if (ok) shared.push({ clip: c, from: a.name });
+    }
+  }
+  S.clips = own.concat(shared);
+}
+
+function playClip(i) {
+  if (!S.mixer) return;
+  S.mixer.stopAllAction();
+  const c = S.clips[i]; if (!c) { S.action = null; return; }
+  S.action = S.mixer.clipAction(c.clip); S.action.reset();
+  S.action.setLoop(document.getElementById('loop')?.checked === false ? THREE.LoopOnce : THREE.LoopRepeat, Infinity);
+  S.action.clampWhenFinished = true; S.action.play(); S.prevT = -1;
+}
+
+function esc(s) { return String(s).replace(/[&<>]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[ch]); }
+
+function renderInfo(error) {
+  const m = S.entry, r = m.report || {}, el = document.getElementById('info');
+  if (error) { el.innerHTML = `<h2>${esc(m.id)}</h2><p class="err">${esc(error)}</p>`; return; }
+  const b = S.wrapper ? bounds().getSize(new THREE.Vector3()) : null;
+  const srcNames = { final: 'Final (Studio, con atlas)', original: 'Original (01_design)', claude_design: 'Claude Design' };
+  const budget = r.budget ? `${r.tris?.after ?? '?'} / ${r.budget.limit}` : (r.tris?.after ?? '—');
+  const budgetBadge = r.budget ? `<span class="badge ${r.budget.pass === false ? 'err' : r.budget.pass ? 'ok' : 'warn'}">${r.budget.pass === false ? 'Se pasa del tope' : r.budget.pass ? 'Entra en el tope' : 'Tope a revisar'}</span>` : '';
+  const qaBadge = r.pass === true ? '<span class="badge ok">Revisión: pasa</span>' : r.pass === false ? '<span class="badge err">Revisión: no pasa</span>' : '';
+  const isPiece = n => !n.userData.pivot && (n.isMesh || n.children.some(c => !c.userData.pivot));
+  const pieces = S.gltf ? S.gltf.scene.children.filter(isPiece) : [];
+  const top = pieces.length === 1 && pieces[0].children.filter(isPiece).length > 1 ? pieces[0].children.filter(isPiece) : pieces;
+  el.innerHTML = `
+    <h2>${esc(m.id.replace('WST_', ''))}</h2><div class="sub">${esc(m.name || '')}${m.source ? ' · fuente: ' + esc(m.source) : ''}</div>
+    <div class="seg">${Object.keys(m.files).map(k => `<button data-src="${k}" class="${k === S.source ? 'on' : ''}">${srcNames[k] || k}</button>`).join('')}</div>
+    <div class="row">
+      <button id="bw" class="${S.wire ? 'on' : ''}">Wireframe</button><button id="bp" class="${S.pivots ? 'on' : ''}">Pivotes</button>
+      <button id="bm" class="${S.markers ? 'on' : ''}">Marcadores</button><button id="br" class="${S.ref ? 'on' : ''}">Jugador</button>
+      <button id="bf">Encuadrar</button></div>
+    <div class="sec"><b>Medidas</b>
+      <div class="kv">
+        <span>Ancho</span><span>${b ? b.x.toFixed(2) : '—'} studs</span>
+        <span>Alto</span><span>${b ? b.y.toFixed(2) : '—'} studs</span>
+        <span>Profundidad</span><span>${b ? b.z.toFixed(2) : '—'} studs</span>
+        <span>Triángulos</span><span>${budget}</span>
+      </div>
+      <div class="row">${budgetBadge}${qaBadge}</div>
+      ${(r.errors || []).length ? '<ul>' + r.errors.map(e => `<li class="err">${esc(e)}</li>`).join('') + '</ul>' : ''}
+      ${(r.warnings || []).length ? '<ul>' + r.warnings.map(e => `<li class="warn">${esc(e)}</li>`).join('') + '</ul>' : ''}
+    </div>
+    <div class="sec"><b>Animaciones</b>
+      ${S.clips.length ? `<select id="clip"><option value="-1">— pose de reposo —</option>${S.clips.map((c, i) => `<option value="${i}">${esc(c.clip.name)} (${esc(c.from)}, ${c.clip.duration.toFixed(2)} s)</option>`).join('')}</select>
+      <div class="row"><button id="pp">Pausa</button><label><input type="checkbox" id="loop" checked> en loop</label></div>
+      <label>Velocidad <input type="range" id="spd" min="0.1" max="2" step="0.1" value="${S.speed}"></label>
+      <div class="tl"><input type="range" id="scrub" min="0" max="1" step="0.001" value="0"><div id="tlmarks"></div><span id="tltime">0.00 s</span></div>`
+      : '<span class="sub">Sin animaciones todavía. Las del GLB o de <code>western/_animations/</code> con piezas del mismo nombre aparecen acá.</span>'}
+    </div>
+    <div class="sec"><b>Cámara</b><div class="seg">${[['orbit', 'Órbita'], ['fp', '1ª persona'], ['3p', '3ª persona']].map(([k, t]) =>
+      `<button data-cam="${k}" class="${S.camMode === k ? 'on' : ''}" ${k !== 'orbit' && !hasHead() ? 'disabled title="sin cabeza"' : ''}>${t}</button>`).join('')}</div>
+      <div class="sub">1ª persona: desde los ojos del personaje (la cabeza se oculta). En el juego la 1ª persona usa un viewmodel por código (D024): esto muestra lo que se ve con los brazos del avatar.</div></div>
+    <div class="sec"><b>Efectos (VFX)</b>
+      <div class="row"><select id="vfxEff">${Object.keys(S.data.vfx?.effects || {}).map(n => `<option>${esc(n)}</option>`).join('')}</select></div>
+      <div class="row"><select id="vfxNode">${nodeNames().map(n => `<option>${esc(n)}</option>`).join('')}</select><button id="vfxGo">Disparar</button><button id="vfxClear">Limpiar</button></div>
+      <div class="sub">Salen solos en los marcadores de los clips (${(S.data.vfx?.bindings || []).length} enlaces en assets/vfx/western/_bindings.json) y los "siempre" quedan prendidos.</div></div>
+    <div class="sec"><b>Piezas (${top.length})</b>${top.map((n, i) => `<label><input type="checkbox" data-piece="${i}" checked> ${esc(n.name)}</label>`).join('')}</div>
+    ${(m.reviews || []).length ? `<div class="sec"><b>Capturas de Blender</b><div class="thumbs">${m.reviews.map(u => `<a href="${u}" target="_blank"><img src="${u}"></a>`).join('')}</div></div>` : ''}
+    ${(m.concept || []).length ? `<div class="sec"><b>Concepto</b><div class="thumbs">${m.concept.map(u => `<a href="${u}" target="_blank"><img src="${u}"></a>`).join('')}</div></div>` : ''}`;
+  el.querySelectorAll('[data-src]').forEach(bt => bt.onclick = () => { S.source = bt.dataset.src; loadModel(); });
+  el.querySelectorAll('[data-piece]').forEach(cb => cb.onchange = () => { top[+cb.dataset.piece].visible = cb.checked; });
+  const tog = (id, key) => { const bt = el.querySelector(id); if (bt) bt.onclick = () => { S[key] = !S[key]; bt.classList.toggle('on', S[key]); applyToggles(); }; };
+  tog('#bw', 'wire'); tog('#bp', 'pivots'); tog('#bm', 'markers'); tog('#br', 'ref');
+  el.querySelector('#bf').onclick = frame;
+  el.querySelectorAll('[data-cam]').forEach(bt => bt.onclick = () => setCam(bt.dataset.cam));
+  const go = el.querySelector('#vfxGo');
+  if (go) go.onclick = () => { const n = S.gltf.scene.getObjectByName(el.querySelector('#vfxNode').value); vfx.play(el.querySelector('#vfxEff').value, n); };
+  const cl = el.querySelector('#vfxClear'); if (cl) cl.onclick = () => { vfx.clear(); startAlways(); };
+  const sc = el.querySelector('#scrub');
+  if (sc) sc.oninput = () => { if (!S.action) return; S.action.paused = true; S.action.time = +sc.value * S.action.getClip().duration; S.mixer.update(0); S.prevT = S.action.time;
+    const pp = el.querySelector('#pp'); if (pp) pp.textContent = 'Seguir'; };
+  drawMarks();
+  const clipSel = el.querySelector('#clip');
+  if (clipSel) {
+    clipSel.onchange = () => { playClip(+clipSel.value); drawMarks(); };
+    el.querySelector('#pp').onclick = (e) => { if (!S.action) return; S.action.paused = !S.action.paused; e.target.textContent = S.action.paused ? 'Seguir' : 'Pausa'; };
+    el.querySelector('#spd').oninput = (e) => { S.speed = +e.target.value; };
+    el.querySelector('#loop').onchange = () => { if (S.action) S.action.setLoop(el.querySelector('#loop').checked ? THREE.LoopRepeat : THREE.LoopOnce, Infinity); };
+  }
+}
+
+// ---- cámara de personaje, línea de tiempo y efectos ------------------------------------------------------------
+function hasHead() { return !!(S.gltf && S.gltf.scene.getObjectByName('Head')); }
+function nodeNames() {
+  if (!S.gltf) return [];
+  const out = [];
+  S.gltf.scene.traverse(o => { if (o !== S.gltf.scene && o.name && !o.userData.pivot && !o.isLight) out.push(o.name); });
+  return [...new Set(out)].sort((a, b) => (a.startsWith('_') ? 0 : 1) - (b.startsWith('_') ? 0 : 1) || a.localeCompare(b));
+}
+function clipName() { return S.action ? S.action.getClip().name : null; }
+function drawMarks() {
+  const box = document.getElementById('tlmarks'); if (!box) return;
+  const name = clipName(), d = S.action ? S.action.getClip().duration : 1;
+  box.innerHTML = (S.clipMarkers[name] || []).map(m => `<i style="left:${(100 * m.t / d).toFixed(2)}%" title="${esc(m.name)} ${m.t.toFixed(2)} s">${esc(m.name)}</i>`).join('');
+}
+function startAlways() {
+  for (const b of (S.data.vfx?.bindings || [])) {
+    if (!b.always || !(b.models || []).includes(S.entry.id)) continue;
+    const n = S.gltf.scene.getObjectByName(b.node);
+    if (n) vfx.play(b.effect, n, { offset: b.offset || [0, 0, 0], loop: true });
+  }
+}
+function fireMarkers(prev, now, loopedOver) {
+  const name = clipName(); if (!name) return;
+  const marks = S.clipMarkers[name] || [];
+  for (const b of (S.data.vfx?.bindings || [])) {
+    if (b.clip !== name) continue;
+    const t = b.marker ? (marks.find(m => m.name === b.marker) || {}).t : b.at;
+    if (t === undefined) continue;
+    const hit = loopedOver ? (t > prev || t <= now) : (t > prev && t <= now);
+    if (hit || (prev < 0 && t <= now)) {
+      const n = S.gltf.scene.getObjectByName(b.node);
+      if (n) vfx.play(b.effect, n, { offset: b.offset || [0, 0, 0] });
+    }
+  }
+}
+const HIDE_FP = /^(Head|Eyes|Acc_Hat|Silver_Eyes|Silver_Head|Acc_Badge)$/;
+function setCam(mode) {
+  if (mode !== 'orbit' && !hasHead()) return;
+  for (const o of S.hidden) o.visible = true;
+  S.hidden = [];
+  S.camMode = mode;
+  controls.enabled = mode === 'orbit';
+  camera.fov = mode === 'orbit' ? 40 : 70; camera.near = mode === 'fp' ? 0.02 : 0.05; camera.updateProjectionMatrix();
+  if (mode === 'fp') S.gltf.scene.traverse(o => { if (HIDE_FP.test(o.name)) { o.visible = false; S.hidden.push(o); } });
+  if (mode === 'orbit') frame();
+  document.querySelectorAll('[data-cam]').forEach(bt => bt.classList.toggle('on', bt.dataset.cam === mode));
+}
+const _q = new THREE.Quaternion(), _p = new THREE.Vector3(), FLIP = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.PI);
+function charCamera() {
+  const head = S.gltf && S.gltf.scene.getObjectByName('Head'); if (!head) return;
+  head.getWorldPosition(_p); head.getWorldQuaternion(_q);
+  const local = S.source === 'final' ? new THREE.Vector3(0, 0.25, 0.25) : new THREE.Vector3(0, 0.25, -0.25);  // los ojos: arriba y adelante del cuello
+  const eye = _p.clone().add(local.applyQuaternion(_q));
+  if (S.camMode === 'fp') {
+    camera.position.copy(eye);
+    camera.quaternion.copy(_q); if (S.source === 'final') camera.quaternion.multiply(FLIP);
+  } else {
+    // 3ª persona como la cámara de Roblox: detrás y arriba del personaje, apenas corrida al hombro, mirando adelante
+    const target = eye.clone().add(new THREE.Vector3(0, 0.3, -3));
+    camera.position.copy(eye).add(new THREE.Vector3(1.6, 1.8, 9));
+    camera.lookAt(target);
+  }
+}
+
+addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  if (e.key === 'f') frame();
+  if (e.key === 'w') { S.wire = !S.wire; applyToggles(); renderInfo(); }
+  if (e.key === 'p') { S.pivots = !S.pivots; applyToggles(); renderInfo(); }
+  if (e.key === '1') setCam('fp');
+  if (e.key === '3') setCam('3p');
+  if (e.key === 'o') setCam('orbit');
+});
+
+renderer.setAnimationLoop(() => {
+  const dt = Math.min(0.1, clock.getDelta());
+  if (S.mixer) S.mixer.update(dt * S.speed);
+  if (S.action) {                                   // efectos en los marcadores del clip
+    const now = S.action.time, prev = S.prevT;
+    if (!S.action.paused && now !== prev) fireMarkers(prev, now, now < prev);
+    S.prevT = now;
+    const sc = document.getElementById('scrub'), tt = document.getElementById('tltime');
+    if (sc && document.activeElement !== sc) sc.value = now / Math.max(1e-6, S.action.getClip().duration);
+    if (tt) tt.textContent = `${now.toFixed(2)} s`;
+  }
+  vfx.update(dt * S.speed);
+  if (S.camMode === 'orbit') controls.update(); else charCamera();
+  renderer.render(scene, camera);
+});
+loadIndex();
+</script>
+</body>
+</html>

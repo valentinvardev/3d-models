@@ -1,0 +1,102 @@
+{
+ "name": "OldHank_Downed",
+ "_intent": "Hank caído en la oleada 2 (\"¡Levantame, chico!\"): tirado en el piso medio recostado (la pelvis 46° atrás), apoyado en la mano izquierda, la rodilla derecha levantada con el pie plano y la pierna izquierda estirada en el piso. Estira la mano derecha hacia los jugadores a la altura de la cara y llama dos veces doblando codo y muñeca (\"vení\", 0,45 y 1,15), se cansa y deja caer el brazo sobre la rodilla con la cabeza colgando (1,75), levanta la cabeza y busca al otro lado (2,45) y vuelve a estirar el brazo. Las piernas, la cadera y la mano de apoyo no se mueven en todo el loop (el crossfade a OldHank_GetUp solo mueve torso y brazo derecho). La cadera queda 1,0 atrás del HumanoidRootPart, con los pies donde los pone el Idle: así GetUp se para sin mover los pies. El sombrero no toca el piso. Prioridad Action, loop de 3,4 s.",
+ "loop": true,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -1.785, 1], "pitch": -46, "lean": 4, "turn": 0},
+   "Waist": {"pitch": 8, "lean": -2, "turn": -6},
+   "Neck": {"pitch": 24, "lean": 0, "turn": 8},
+   "LeftHip": {"swing": 42, "spread": 10},
+   "LeftKnee": {"swing": -8},
+   "LeftAnkle": {"swing": 22, "spread": -4},
+   "RightHip": {"swing": 74.2, "spread": 3.7},
+   "RightKnee": {"swing": -125},
+   "RightAnkle": {"swing": 4.5, "spread": -6.6},
+   "LeftShoulder": {"swing": 3.6, "spread": 9.6, "twist": 140.1},
+   "LeftElbow": {"swing": 39.4},
+   "LeftWrist": {"swing": 7.5, "spread": 75.1, "twist": -66.4},
+   "RightShoulder": {"swing": 70.7, "spread": 4.7, "twist": 5.3},
+   "RightElbow": {"swing": 7.9},
+   "RightWrist": {"swing": -10}
+  }},
+  {"t": 0.45, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 9, "lean": -2, "turn": -6},
+   "Neck": {"pitch": 20, "lean": 4, "turn": 6},
+   "LeftShoulder": {"swing": 3.9, "spread": 9.5, "twist": 140.1},
+   "LeftElbow": {"swing": 38.1},
+   "LeftWrist": {"swing": 7.5, "spread": 75.1, "twist": -66.1},
+   "RightShoulder": {"swing": 58.7, "spread": 4.7, "twist": 5.3},
+   "RightElbow": {"swing": 78},
+   "RightWrist": {"swing": 45}
+  }},
+  {"t": 0.8, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 7, "lean": -2, "turn": -7},
+   "Neck": {"pitch": 22, "lean": 0, "turn": 10},
+   "LeftShoulder": {"swing": 3.8, "spread": 10.8, "twist": 140.1},
+   "LeftElbow": {"swing": 39.6},
+   "LeftWrist": {"swing": 7, "spread": 75.1, "twist": -66.1},
+   "RightShoulder": {"swing": 74.7, "spread": 4.7, "twist": 5.3},
+   "RightElbow": {"swing": 1.9},
+   "RightWrist": {"swing": -14}
+  }},
+  {"t": 1.15, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 9, "lean": -2, "turn": -6},
+   "Neck": {"pitch": 18, "lean": 3, "turn": 6},
+   "LeftShoulder": {"swing": 3.9, "spread": 9.5, "twist": 140.1},
+   "LeftElbow": {"swing": 38.1},
+   "LeftWrist": {"swing": 7.5, "spread": 75.1, "twist": -66.1},
+   "RightShoulder": {"swing": 58.7, "spread": 4.7, "twist": 5.3},
+   "RightElbow": {"swing": 84},
+   "RightWrist": {"swing": 50}
+  }},
+  {"t": 1.75, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 14, "lean": -2, "turn": -6},
+   "Neck": {"pitch": 40, "lean": -6, "turn": 2},
+   "LeftShoulder": {"swing": 5.6, "spread": 8, "twist": 140},
+   "LeftElbow": {"swing": 31.2},
+   "LeftWrist": {"swing": 7.4, "spread": 75.1, "twist": -64.9},
+   "RightShoulder": {"swing": 13.4, "spread": -20.2, "twist": 20.3},
+   "RightElbow": {"swing": 55.2},
+   "RightWrist": {"swing": 10}
+  }},
+  {"t": 2.45, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 8, "lean": -1, "turn": 4},
+   "Neck": {"pitch": 18, "lean": 4, "turn": -34},
+   "LeftShoulder": {"swing": -2.3, "spread": 2, "twist": 140.1},
+   "LeftElbow": {"swing": 51.7},
+   "LeftWrist": {"swing": 12.5, "spread": 75, "twist": -70.3},
+   "RightShoulder": {"swing": 13.4, "spread": -20.2, "twist": 20.3},
+   "RightElbow": {"swing": 55.2},
+   "RightWrist": {"swing": 10}
+  }},
+  {"t": 2.95, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 10, "lean": -2, "turn": -4},
+   "Neck": {"pitch": 26, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": 3.1, "spread": 7.7, "twist": 140.1},
+   "LeftElbow": {"swing": 39.2},
+   "LeftWrist": {"swing": 8.5, "spread": 75.1, "twist": -66.8},
+   "RightShoulder": {"swing": 60.7, "spread": 4.7, "twist": 5.3},
+   "RightElbow": {"swing": 32.9},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 3.4, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -1.785, 1], "pitch": -46, "lean": 4, "turn": 0},
+   "Waist": {"pitch": 8, "lean": -2, "turn": -6},
+   "Neck": {"pitch": 24, "lean": 0, "turn": 8},
+   "LeftHip": {"swing": 42, "spread": 10},
+   "LeftKnee": {"swing": -8},
+   "LeftAnkle": {"swing": 22, "spread": -4},
+   "RightHip": {"swing": 74.2, "spread": 3.7},
+   "RightKnee": {"swing": -125},
+   "RightAnkle": {"swing": 4.5, "spread": -6.6},
+   "LeftShoulder": {"swing": 3.6, "spread": 9.6, "twist": 140.1},
+   "LeftElbow": {"swing": 39.4},
+   "LeftWrist": {"swing": 7.5, "spread": 75.1, "twist": -66.4},
+   "RightShoulder": {"swing": 70.7, "spread": 4.7, "twist": 5.3},
+   "RightElbow": {"swing": 7.9},
+   "RightWrist": {"swing": -10}
+  }}
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "name": "Foreman_Hit",
+ "_intent": "Golpe recibido: el pecho y la cabeza se van atrás y de costado de golpe (0,07 s), los brazos se abren (la izquierda suelta la cintura) sin soltar el cartucho, y vuelve adelante con bronca (0,22) antes de poner otra vez la mano en la cintura (0,6 s). Solo de la cintura para arriba (no toca Root ni piernas): se puede tocar encima de la caminata.",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "out", "joints": {
+   "Waist": {"pitch": -5, "lean": 0, "turn": 4},
+   "Neck": {"pitch": -4, "lean": 0, "turn": -4},
+   "LeftShoulder": {"swing": -8, "spread": 38, "twist": -30},
+   "LeftElbow": {"swing": 95},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 24, "spread": 8, "twist": 0},
+   "RightElbow": {"swing": 46},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.07, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -16, "lean": 6, "turn": -14},
+   "Neck": {"pitch": -24, "lean": 4, "turn": 14},
+   "LeftShoulder": {"swing": -20, "spread": 40, "twist": 0},
+   "LeftElbow": {"swing": 40},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": -10, "spread": 30, "twist": 0},
+   "RightElbow": {"swing": 30},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.22, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 8, "lean": -2, "turn": 6},
+   "Neck": {"pitch": 2, "lean": 0, "turn": -8},
+   "LeftShoulder": {"swing": 10, "spread": 20, "twist": 0},
+   "LeftElbow": {"swing": 50},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 30, "spread": 12, "twist": 0},
+   "RightElbow": {"swing": 60},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.6, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -5, "lean": 0, "turn": 4},
+   "Neck": {"pitch": -4, "lean": 0, "turn": -4},
+   "LeftShoulder": {"swing": -8, "spread": 38, "twist": -30},
+   "LeftElbow": {"swing": 95},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 24, "spread": 8, "twist": 0},
+   "RightElbow": {"swing": 46},
+   "RightWrist": {"swing": 0}
+  }}
+ ]
+}

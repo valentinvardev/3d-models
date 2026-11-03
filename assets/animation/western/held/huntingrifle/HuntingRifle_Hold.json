@@ -1,0 +1,51 @@
+{
+ "name": "HuntingRifle_Hold",
+ "_intent": "Rifle de caza de bloque (tipo Sharps) con mira larga de bronce, montado y listo, como se lleva de verdad: la cantonera en el hueco del hombro derecho, la mano derecha en la muñeca con los dedos en el aro de la palanca-guardamonte, la izquierda debajo de la caña (_Grip2) sosteniendo el caño largo y pesado, el caño casi nivelado (4° abajo), el martillo de costado amartillado, el torso de perfil y la cabeza al frente. Solo brazos, cintura y cuello. Prioridad Idle.",
+ "loop": true,
+ "priority": "Idle",
+ "props": {"Body": {"parent": "RightHand"}, "Lever": {"parent": "Body"}, "BreechBlock": {"parent": "Body"}, "Hammer": {"parent": "Body"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -42, "pitch": 4},
+   "Neck": {"turn": 40, "pitch": 6},
+   "RightShoulder": {"swing": 90.4, "spread": 20.7, "twist": 62.6},
+   "RightElbow": {"swing": 0.1},
+   "RightWrist": {"swing": 0, "spread": -4.6, "twist": 0.1},
+   "LeftShoulder": {"swing": 89.9, "spread": 11.7, "twist": -12.1},
+   "LeftElbow": {"swing": 0.1},
+   "LeftWrist": {"swing": 0, "spread": 0.8, "twist": 0},
+   "Body": {"rot": [-97.3, -17.8, -19.4]},
+   "BreechBlock": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [30, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -42, "pitch": 5.5},
+   "Neck": {"turn": 40, "pitch": 6},
+   "RightShoulder": {"swing": 90.4, "spread": 20.7, "twist": 62.6},
+   "RightElbow": {"swing": 0.1},
+   "RightWrist": {"swing": 0, "spread": -4.6, "twist": 0.1},
+   "LeftShoulder": {"swing": 89.9, "spread": 11.7, "twist": -12.1},
+   "LeftElbow": {"swing": 0.1},
+   "LeftWrist": {"swing": 0, "spread": 0.8, "twist": 0},
+   "Body": {"rot": [-97.3, -17.8, -19.4]},
+   "BreechBlock": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [30, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -42, "pitch": 4},
+   "Neck": {"turn": 40, "pitch": 6},
+   "RightShoulder": {"swing": 90.4, "spread": 20.7, "twist": 62.6},
+   "RightElbow": {"swing": 0.1},
+   "RightWrist": {"swing": 0, "spread": -4.6, "twist": 0.1},
+   "LeftShoulder": {"swing": 89.9, "spread": 11.7, "twist": -12.1},
+   "LeftElbow": {"swing": 0.1},
+   "LeftWrist": {"swing": 0, "spread": 0.8, "twist": 0},
+   "Body": {"rot": [-97.3, -17.8, -19.4]},
+   "BreechBlock": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [30, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }}
+ ]
+}

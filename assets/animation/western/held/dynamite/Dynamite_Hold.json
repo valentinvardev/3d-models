@@ -1,0 +1,45 @@
+{
+ "name": "Dynamite_Hold",
+ "_intent": "Cartucho de dinamita listo para tirar, como se agarra una granada: el cartucho parado en el puño derecho (mecha arriba, lejos de la mano), la mano adelante a la altura del pecho con el codo doblado, el torso apenas de perfil, la izquierda floja. Solo brazos, cintura y cuello. Prioridad Idle.",
+ "loop": true,
+ "priority": "Idle",
+ "props": {"Stick": {"parent": "RightHand"}, "Fuse_Stick": {"parent": "Stick"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -34.5, "spread": 2.6, "twist": 18.6},
+   "RightElbow": {"swing": 145.7},
+   "RightWrist": {"swing": -0.1, "spread": -9.4, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [175.5, -2.5, -27.9]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 4},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -34.5, "spread": 2.6, "twist": 18.6},
+   "RightElbow": {"swing": 145.7},
+   "RightWrist": {"swing": -0.1, "spread": -9.4, "twist": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [175.5, -2.5, -27.9]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -34.5, "spread": 2.6, "twist": 18.6},
+   "RightElbow": {"swing": 145.7},
+   "RightWrist": {"swing": -0.1, "spread": -9.4, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [175.5, -2.5, -27.9]}
+  }}
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "name": "Bandages_Inspect",
+ "_intent": "Inspeccionar (D024): sube el rollo adelante a la derecha a la altura de la cara y lo gira para mirar el agujero y después el alfiler; la izquierda agarra la punta suelta, el rollo gira en la mano como desenrollando un poco (la izquierda tira de la tela), lo vuelve a enrollar, suelta y vuelve a Bandages_Hold. 2,6 s; se corta al usar o cambiar.",
+ "loop": false,
+ "priority": "Action",
+ "props": {"Body": {"parent": "RightHand"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 3},
+   "Neck": {"turn": -6, "pitch": 6},
+   "RightShoulder": {"swing": -26.8, "spread": -0.6, "twist": 20.5},
+   "RightElbow": {"swing": 134},
+   "RightWrist": {"swing": 0, "spread": -8.8, "twist": -0.1},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-104.7, -22, -0.5]}
+  }},
+  {"t": 0.45, "ease": "out", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -38.4, "pitch": 15.3},
+   "RightShoulder": {"swing": 37.1, "spread": 11.8, "twist": 33.9},
+   "RightElbow": {"swing": 114.8},
+   "RightWrist": {"swing": -4.4, "spread": 6, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-141.7, 32.5, -5.2]}
+  }},
+  {"t": 0.85, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -38.4, "pitch": 15.3},
+   "RightShoulder": {"swing": 37.2, "spread": 11.7, "twist": 33.9},
+   "RightElbow": {"swing": 114.7},
+   "RightWrist": {"swing": -4.4, "spread": 6, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-101, 66.2, -42.4]}
+  }},
+  {"t": 1.15, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -38.4, "pitch": 15.3},
+   "RightShoulder": {"swing": 37.2, "spread": 11.7, "twist": 33.9},
+   "RightElbow": {"swing": 114.7},
+   "RightWrist": {"swing": -4.4, "spread": 6, "twist": 0},
+   "LeftShoulder": {"swing": 75.4, "spread": 1.8, "twist": -69.5},
+   "LeftElbow": {"swing": 42.4},
+   "LeftWrist": {"swing": -5.7, "spread": -3.2, "twist": 0},
+   "Body": {"rot": [-120.3, 60, -23.3]}
+  }},
+  {"t": 1.5, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -38.4, "pitch": 15.3},
+   "RightShoulder": {"swing": 37.2, "spread": 11.7, "twist": 33.9},
+   "RightElbow": {"swing": 114.7},
+   "RightWrist": {"swing": -4.4, "spread": 6, "twist": 0},
+   "LeftShoulder": {"swing": 82.8, "spread": -10.4, "twist": -74.7},
+   "LeftElbow": {"swing": 13},
+   "LeftWrist": {"swing": -4.5, "spread": 10.5, "twist": 0},
+   "Body": {"rot": [146.3, 37.2, 54.9]}
+  }},
+  {"t": 1.85, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -38.4, "pitch": 15.3},
+   "RightShoulder": {"swing": 37.2, "spread": 11.7, "twist": 33.9},
+   "RightElbow": {"swing": 114.7},
+   "RightWrist": {"swing": -4.4, "spread": 6, "twist": 0},
+   "LeftShoulder": {"swing": 75.4, "spread": 1.8, "twist": -69.5},
+   "LeftElbow": {"swing": 42.4},
+   "LeftWrist": {"swing": -5.7, "spread": -3.2, "twist": 0},
+   "Body": {"rot": [-120.3, 60, -23.3]}
+  }},
+  {"t": 2.05, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -38.4, "pitch": 15.3},
+   "RightShoulder": {"swing": 37.2, "spread": 11.7, "twist": 33.9},
+   "RightElbow": {"swing": 114.7},
+   "RightWrist": {"swing": -4.4, "spread": 6, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-132.6, 41.6, -11.2]}
+  }},
+  {"t": 2.6, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 3},
+   "Neck": {"turn": -6, "pitch": 6},
+   "RightShoulder": {"swing": -26.8, "spread": -0.6, "twist": 20.5},
+   "RightElbow": {"swing": 134},
+   "RightWrist": {"swing": 0, "spread": -8.8, "twist": -0.1},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-104.7, -22, -0.5]}
+  }}
+ ]
+}

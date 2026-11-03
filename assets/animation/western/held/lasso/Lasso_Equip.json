@@ -1,0 +1,58 @@
+{
+ "name": "Lasso_Equip",
+ "_intent": "Descolgar el lazo de la cadera derecha: la mano baja al rollo colgado al costado, lo levanta adelante (el lazo corredizo se queda atrás por la inercia y después se pasa adelante) y queda exacto en Lasso_Hold con el lazo quieto. 0,8 s; no se tira hasta Ready.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.8, "name": "Ready"}],
+ "props": {"Coil": {"parent": "RightHand"}, "Noose": {"parent": "Coil"}},
+ "keys": [
+  {"t": 0.0, "ease": "out", "joints": {
+   "Waist": {"turn": 2, "pitch": 2},
+   "Neck": {"turn": -10, "pitch": 18},
+   "RightShoulder": {"swing": -60, "spread": -4.2, "twist": -17.5},
+   "RightElbow": {"swing": 98.1},
+   "RightWrist": {"swing": 0, "spread": -17.7, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Coil": {"rot": [10.9, -67.1, 51.5]},
+   "Noose": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.3, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 2},
+   "Neck": {"turn": -8, "pitch": 10},
+   "RightShoulder": {"swing": -60, "spread": -4.7, "twist": -7.9},
+   "RightElbow": {"swing": 150},
+   "RightWrist": {"swing": 9.9, "spread": -36.3, "twist": -0.8},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Coil": {"rot": [20.8, -83.6, 122]},
+   "Noose": {"rot": [-18, 0, 0]}
+  }},
+  {"t": 0.55, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 2},
+   "Neck": {"turn": -8, "pitch": 6},
+   "RightShoulder": {"swing": -19.9, "spread": 8.8, "twist": 11.2},
+   "RightElbow": {"swing": 146.6},
+   "RightWrist": {"swing": 0, "spread": -5.4, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Coil": {"rot": [-135.6, -44.9, -16.3]},
+   "Noose": {"rot": [12, 0, 0]}
+  }},
+  {"t": 0.8, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 2},
+   "Neck": {"turn": -8, "pitch": 6},
+   "RightShoulder": {"swing": -25.5, "spread": 7.4, "twist": 11.8},
+   "RightElbow": {"swing": 145.9},
+   "RightWrist": {"swing": 0, "spread": -5.7, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Coil": {"rot": [-127.9, -46.3, -14.1]},
+   "Noose": {"rot": [0, 0, 0]}
+  }}
+ ]
+}

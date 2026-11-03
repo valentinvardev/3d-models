@@ -1,0 +1,300 @@
+{
+ "name": "LeverRifle_Fire",
+ "_intent": "Disparo desde LeverRifle_Hold: el caño sube 12° y el brazo patea en 0,02 s (marcador Fire: el fogonazo sale en _Muzzle), se asienta y vuelve exacto a la pose de sostener en 0,42 s.",
+ "loop": false,
+ "priority": "Action",
+ "props": {
+  "Body": {
+   "parent": "RightHand"
+  },
+  "Lever": {
+   "parent": "Body"
+  },
+  "Bolt": {
+   "parent": "Body"
+  },
+  "Hammer": {
+   "parent": "Body"
+  }
+ },
+ "markers": [
+  {
+   "t": 0.02,
+   "name": "Fire"
+  }
+ ],
+ "keys": [
+  {
+   "t": 0.0,
+   "ease": "linear",
+   "joints": {
+    "Waist": {
+     "turn": -40,
+     "pitch": 4
+    },
+    "Neck": {
+     "turn": 38,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 67.5,
+     "spread": 20.3,
+     "twist": 61.4
+    },
+    "RightElbow": {
+     "swing": 38.3
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -11,
+     "twist": 0
+    },
+    "LeftShoulder": {
+     "swing": 74.4,
+     "spread": 10,
+     "twist": -17.1
+    },
+    "LeftElbow": {
+     "swing": 26.7
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": -2.9,
+     "twist": 0
+    },
+    "Body": {
+     "rot": [
+      -114,
+      -24.2,
+      -23
+     ]
+    },
+    "Bolt": {
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      28,
+      0,
+      0
+     ]
+    },
+    "Lever": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.02,
+   "ease": "out",
+   "joints": {
+    "Waist": {
+     "turn": -40,
+     "pitch": -2.0
+    },
+    "Neck": {
+     "turn": 38,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 70.5,
+     "spread": 20.3,
+     "twist": 61.4
+    },
+    "RightElbow": {
+     "swing": 40.3
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -11,
+     "twist": 0
+    },
+    "LeftShoulder": {
+     "swing": 77.4,
+     "spread": 10,
+     "twist": -17.1
+    },
+    "LeftElbow": {
+     "swing": 26.7
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": -2.9,
+     "twist": 0
+    },
+    "Body": {
+     "rot": [
+      -112,
+      -24.2,
+      -23
+     ]
+    },
+    "Bolt": {
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      28,
+      0,
+      0
+     ]
+    },
+    "Lever": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.2,
+   "ease": "smooth",
+   "joints": {
+    "Waist": {
+     "turn": -40,
+     "pitch": 2.56
+    },
+    "Neck": {
+     "turn": 38,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 67.5,
+     "spread": 20.3,
+     "twist": 61.4
+    },
+    "RightElbow": {
+     "swing": 38.3
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -11,
+     "twist": 0
+    },
+    "LeftShoulder": {
+     "swing": 74.4,
+     "spread": 10,
+     "twist": -17.1
+    },
+    "LeftElbow": {
+     "swing": 26.7
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": -2.9,
+     "twist": 0
+    },
+    "Body": {
+     "rot": [
+      -114,
+      -24.2,
+      -23
+     ]
+    },
+    "Bolt": {
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      28,
+      0,
+      0
+     ]
+    },
+    "Lever": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.42,
+   "ease": "smooth",
+   "joints": {
+    "Waist": {
+     "turn": -40,
+     "pitch": 4
+    },
+    "Neck": {
+     "turn": 38,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 67.5,
+     "spread": 20.3,
+     "twist": 61.4
+    },
+    "RightElbow": {
+     "swing": 38.3
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -11,
+     "twist": 0
+    },
+    "LeftShoulder": {
+     "swing": 74.4,
+     "spread": 10,
+     "twist": -17.1
+    },
+    "LeftElbow": {
+     "swing": 26.7
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": -2.9,
+     "twist": 0
+    },
+    "Body": {
+     "rot": [
+      -114,
+      -24.2,
+      -23
+     ]
+    },
+    "Bolt": {
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      28,
+      0,
+      0
+     ]
+    },
+    "Lever": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  }
+ ]
+}

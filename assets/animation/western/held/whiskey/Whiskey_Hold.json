@@ -1,0 +1,42 @@
+{
+ "name": "Whiskey_Hold",
+ "_intent": "Botella de whisky agarrada por el cuello, como la lleva un vaquero: el puño en el cuello, la botella colgando parada debajo de la mano, la mano adelante a la derecha a la altura de la cintura, relajada. Solo brazos, cintura y cuello. Prioridad Idle.",
+ "loop": true,
+ "priority": "Idle",
+ "props": {"Body": {"parent": "RightHand"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 2},
+   "Neck": {"turn": -6, "pitch": 4},
+   "RightShoulder": {"swing": -48.3, "spread": -4.3, "twist": 16.5},
+   "RightElbow": {"swing": 141},
+   "RightWrist": {"swing": 0.1, "spread": -9.3, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-89.6, -23.6, -0.9]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 3},
+   "Neck": {"turn": -6, "pitch": 4},
+   "RightShoulder": {"swing": -48.3, "spread": -4.3, "twist": 16.5},
+   "RightElbow": {"swing": 141},
+   "RightWrist": {"swing": 0.1, "spread": -9.3, "twist": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-89.6, -23.6, -0.9]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 2},
+   "Neck": {"turn": -6, "pitch": 4},
+   "RightShoulder": {"swing": -48.3, "spread": -4.3, "twist": 16.5},
+   "RightElbow": {"swing": 141},
+   "RightWrist": {"swing": 0.1, "spread": -9.3, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-89.6, -23.6, -0.9]}
+  }}
+ ]
+}

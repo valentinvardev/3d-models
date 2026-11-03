@@ -1,0 +1,286 @@
+{
+ "name": "ZombieRider_Land",
+ "_intent": "Cae en el techo o el piso del vagón y se para (Action). Arranca exacto en el último cuadro de ZombieRider_Leap (la pose de vuelo) con el HRP ya donde va a quedar: a la altura de parado sobre el techo (HipHeight + 1 = 2,491 sobre el piso del vagón), anclado. En ese momento lo más bajo (un pie) va 1,21 arriba del techo: estira las piernas y toca en 0,10 (baja a ~12 studs/s, como una caída) (marcador Land, el contacto, los pies planos donde los pone el Idle), amortigua en cuclillas hondas con la izquierda apoyada en el techo adelante (0,28: tres apoyos, se lee como un animal que cae; la cadera baja en lineal: con easing 'out' las rodillas pasaban de 1700 °/s), se endereza (0,60) y termina exacto en Walker_Idle(0) en 1,0. Los pies no se mueven desde Land (IK, con keys solo de piernas cada ~0,02-0,05 s). Desde acá usa los clips del caminante: el HRP queda a la altura normal de parado.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.1, "name": "Land"}],
+ "keys": [
+  {"t": 0.0, "ease": "linear", "joints": {
+   "Root": {"pos": [0, 0.6, -0.4], "pitch": 20, "lean": 0, "turn": 0},
+   "Waist": {"pitch": 18, "lean": 0, "turn": 0},
+   "Neck": {"pitch": -22, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 82, "spread": 12, "twist": 0},
+   "LeftKnee": {"swing": -108, "twist": 0},
+   "LeftAnkle": {"swing": 24, "spread": 0, "twist": 0},
+   "RightHip": {"swing": 74, "spread": 12, "twist": 0},
+   "RightKnee": {"swing": -96, "twist": 0},
+   "RightAnkle": {"swing": 20, "spread": 0, "twist": 0},
+   "LeftShoulder": {"swing": 108, "spread": 18, "twist": 0},
+   "LeftElbow": {"swing": 18},
+   "LeftWrist": {"swing": -20},
+   "RightShoulder": {"swing": 112, "spread": 16, "twist": 0},
+   "RightElbow": {"swing": 16},
+   "RightWrist": {"swing": -20}
+  }},
+  {"t": 0.1, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.18, -0.2], "pitch": 18, "lean": 0, "turn": 0},
+   "Waist": {"pitch": 18, "lean": 0, "turn": 0},
+   "Neck": {"pitch": -20, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 35.3, "spread": 0.2, "twist": -0.5, "ease": "linear"},
+   "LeftKnee": {"swing": -45.2, "twist": 0.3, "ease": "linear"},
+   "LeftAnkle": {"swing": 27.3, "spread": -0.1, "twist": 0.2, "ease": "linear"},
+   "RightHip": {"swing": 33.7, "spread": 0.2, "twist": 0.4, "ease": "linear"},
+   "RightKnee": {"swing": -44.3, "twist": -0.3, "ease": "linear"},
+   "RightAnkle": {"swing": 27.9, "spread": -0.1, "twist": -0.2, "ease": "linear"},
+   "LeftShoulder": {"swing": 96, "spread": 30, "twist": 0},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": -10},
+   "RightShoulder": {"swing": 100, "spread": 28, "twist": 0},
+   "RightElbow": {"swing": 16},
+   "RightWrist": {"swing": -10}
+  }},
+  {"t": 0.12, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 43.9, "spread": 0.3, "twist": -0.6},
+   "LeftKnee": {"swing": -57.5, "twist": 0.3},
+   "LeftAnkle": {"swing": 32.8, "spread": -0.2, "twist": 0.3},
+   "RightHip": {"swing": 42.4, "spread": 0.3, "twist": 0.5},
+   "RightKnee": {"swing": -56.7, "twist": -0.3},
+   "RightAnkle": {"swing": 33.6, "spread": -0.2, "twist": -0.2}
+  }},
+  {"t": 0.14, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 51.8, "spread": 0.5, "twist": -0.7},
+   "LeftKnee": {"swing": -68, "twist": 0.4},
+   "LeftAnkle": {"swing": 37.2, "spread": -0.3, "twist": 0.3},
+   "RightHip": {"swing": 50.2, "spread": 0.5, "twist": 0.7},
+   "RightKnee": {"swing": -67.4, "twist": -0.4},
+   "RightAnkle": {"swing": 38.2, "spread": -0.3, "twist": -0.3}
+  }},
+  {"t": 0.16, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 59.2, "spread": 0.7, "twist": -0.8},
+   "LeftKnee": {"swing": -77.5, "twist": 0.5},
+   "LeftAnkle": {"swing": 41.1, "spread": -0.4, "twist": 0.4},
+   "RightHip": {"swing": 57.6, "spread": 0.7, "twist": 0.8},
+   "RightKnee": {"swing": -77, "twist": -0.5},
+   "RightAnkle": {"swing": 42.3, "spread": -0.4, "twist": -0.4}
+  }},
+  {"t": 0.18, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 66.2, "spread": 0.9, "twist": -0.9},
+   "LeftKnee": {"swing": -86.1, "twist": 0.6},
+   "LeftAnkle": {"swing": 44.8, "spread": -0.6, "twist": 0.5},
+   "RightHip": {"swing": 64.6, "spread": 0.9, "twist": 0.9},
+   "RightKnee": {"swing": -85.7, "twist": -0.6},
+   "RightAnkle": {"swing": 46, "spread": -0.5, "twist": -0.4}
+  }},
+  {"t": 0.2, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 73, "spread": 1.2, "twist": -1},
+   "LeftKnee": {"swing": -94.2, "twist": 0.7},
+   "LeftAnkle": {"swing": 48.2, "spread": -0.7, "twist": 0.6},
+   "RightHip": {"swing": 71.3, "spread": 1.1, "twist": 1},
+   "RightKnee": {"swing": -93.8, "twist": -0.7},
+   "RightAnkle": {"swing": 49.6, "spread": -0.7, "twist": -0.5}
+  }},
+  {"t": 0.22, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 79.7, "spread": 1.4, "twist": -1.1},
+   "LeftKnee": {"swing": -101.7, "twist": 0.8},
+   "LeftAnkle": {"swing": 51.3, "spread": -0.8, "twist": 0.6},
+   "RightHip": {"swing": 77.9, "spread": 1.3, "twist": 1.1},
+   "RightKnee": {"swing": -101.4, "twist": -0.8},
+   "RightAnkle": {"swing": 52.9, "spread": -0.8, "twist": -0.6}
+  }},
+  {"t": 0.24, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 86.3, "spread": 1.7, "twist": -1.1},
+   "LeftKnee": {"swing": -108.8, "twist": 0.9},
+   "LeftAnkle": {"swing": 54.3, "spread": -1, "twist": 0.7},
+   "RightHip": {"swing": 84.4, "spread": 1.6, "twist": 1.1},
+   "RightKnee": {"swing": -108.6, "twist": -0.9},
+   "RightAnkle": {"swing": 56, "spread": -0.9, "twist": -0.6}
+  }},
+  {"t": 0.26, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 92.9, "spread": 1.9, "twist": -1.2},
+   "LeftKnee": {"swing": -115.6, "twist": 0.9},
+   "LeftAnkle": {"swing": 57.1, "spread": -1.2, "twist": 0.8},
+   "RightHip": {"swing": 90.9, "spread": 1.8, "twist": 1.1},
+   "RightKnee": {"swing": -115.5, "twist": -1},
+   "RightAnkle": {"swing": 59, "spread": -1.1, "twist": -0.7}
+  }},
+  {"t": 0.28, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -1.15, 0.05], "pitch": 38, "lean": 0, "turn": 0},
+   "Waist": {"pitch": 26, "lean": -4, "turn": 0},
+   "Neck": {"pitch": -36, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 99.8, "spread": 2.5, "twist": -1.2, "ease": "linear"},
+   "LeftKnee": {"swing": -122, "twist": 1.2, "ease": "linear"},
+   "LeftAnkle": {"swing": 58.4, "spread": -1.4, "twist": 0.9, "ease": "linear"},
+   "RightHip": {"swing": 97.6, "spread": 2.4, "twist": 1.2, "ease": "linear"},
+   "RightKnee": {"swing": -122, "twist": -1.2, "ease": "linear"},
+   "RightAnkle": {"swing": 60.4, "spread": -1.3, "twist": -0.8, "ease": "linear"},
+   "LeftShoulder": {"swing": 28.8, "spread": 2.7, "twist": -13.8},
+   "LeftElbow": {"swing": 46.1},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 96, "spread": 34, "twist": 0},
+   "RightElbow": {"swing": 24},
+   "RightWrist": {"swing": -10}
+  }},
+  {"t": 0.316, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 99.3, "spread": 2.2, "twist": -1.1},
+   "LeftKnee": {"swing": -121.8, "twist": 1},
+   "LeftAnkle": {"swing": 59.5, "spread": -1.3, "twist": 0.9},
+   "RightHip": {"swing": 97.1, "spread": 2.1, "twist": 1.1},
+   "RightKnee": {"swing": -121.8, "twist": -1},
+   "RightAnkle": {"swing": 61.6, "spread": -1.2, "twist": -0.8}
+  }},
+  {"t": 0.351, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 97.7, "spread": 2.1, "twist": -1.1},
+   "LeftKnee": {"swing": -120.2, "twist": 1},
+   "LeftAnkle": {"swing": 58.6, "spread": -1.3, "twist": 0.8},
+   "RightHip": {"swing": 95.6, "spread": 2, "twist": 1.1},
+   "RightKnee": {"swing": -120.1, "twist": -1},
+   "RightAnkle": {"swing": 60.7, "spread": -1.2, "twist": -0.8}
+  }},
+  {"t": 0.387, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 93.3, "spread": 1.9, "twist": -1.1},
+   "LeftKnee": {"swing": -115.5, "twist": 0.9},
+   "LeftAnkle": {"swing": 56.2, "spread": -1.1, "twist": 0.8},
+   "RightHip": {"swing": 91.3, "spread": 1.8, "twist": 1.1},
+   "RightKnee": {"swing": -115.5, "twist": -0.9},
+   "RightAnkle": {"swing": 58.2, "spread": -1.1, "twist": -0.7}
+  }},
+  {"t": 0.422, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 84.6, "spread": 1.5, "twist": -1.1},
+   "LeftKnee": {"swing": -106.2, "twist": 0.8},
+   "LeftAnkle": {"swing": 51.4, "spread": -0.9, "twist": 0.7},
+   "RightHip": {"swing": 82.9, "spread": 1.4, "twist": 1},
+   "RightKnee": {"swing": -106.1, "twist": -0.8},
+   "RightAnkle": {"swing": 53.2, "spread": -0.8, "twist": -0.6}
+  }},
+  {"t": 0.458, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 71.4, "spread": 0.9, "twist": -0.9},
+   "LeftKnee": {"swing": -91.3, "twist": 0.6},
+   "LeftAnkle": {"swing": 44, "spread": -0.5, "twist": 0.5},
+   "RightHip": {"swing": 69.8, "spread": 0.9, "twist": 0.8},
+   "RightKnee": {"swing": -91.2, "twist": -0.6},
+   "RightAnkle": {"swing": 45.5, "spread": -0.5, "twist": -0.4}
+  }},
+  {"t": 0.493, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 61.9, "spread": 0.6, "twist": -0.7},
+   "LeftKnee": {"swing": -80.2, "twist": 0.4},
+   "LeftAnkle": {"swing": 38.6, "spread": -0.3, "twist": 0.4},
+   "RightHip": {"swing": 60.4, "spread": 0.6, "twist": 0.7},
+   "RightKnee": {"swing": -80, "twist": -0.4},
+   "RightAnkle": {"swing": 39.9, "spread": -0.3, "twist": -0.3}
+  }},
+  {"t": 0.529, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 56.7, "spread": 0.5, "twist": -0.6},
+   "LeftKnee": {"swing": -74, "twist": 0.4},
+   "LeftAnkle": {"swing": 35.6, "spread": -0.2, "twist": 0.3},
+   "RightHip": {"swing": 55.4, "spread": 0.4, "twist": 0.6},
+   "RightKnee": {"swing": -73.9, "twist": -0.3},
+   "RightAnkle": {"swing": 36.9, "spread": -0.2, "twist": -0.3}
+  }},
+  {"t": 0.564, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 54.8, "spread": 0.4, "twist": -0.6},
+   "LeftKnee": {"swing": -71.7, "twist": 0.3},
+   "LeftAnkle": {"swing": 34.5, "spread": -0.2, "twist": 0.3},
+   "RightHip": {"swing": 53.4, "spread": 0.4, "twist": 0.5},
+   "RightKnee": {"swing": -71.5, "twist": -0.3},
+   "RightAnkle": {"swing": 35.7, "spread": -0.2, "twist": -0.2}
+  }},
+  {"t": 0.6, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.42, 0.04], "pitch": 18, "lean": 0, "turn": 0},
+   "Waist": {"pitch": 20, "lean": 0, "turn": 0},
+   "Neck": {"pitch": -4, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 54.5, "spread": 0.5, "twist": -0.6, "ease": "linear"},
+   "LeftKnee": {"swing": -71.2, "twist": 0.4, "ease": "linear"},
+   "LeftAnkle": {"swing": 33.7, "spread": -0.2, "twist": 0.3, "ease": "linear"},
+   "RightHip": {"swing": 53.2, "spread": 0.4, "twist": 0.6, "ease": "linear"},
+   "RightKnee": {"swing": -71, "twist": -0.4, "ease": "linear"},
+   "RightAnkle": {"swing": 34.9, "spread": -0.2, "twist": -0.2, "ease": "linear"},
+   "LeftShoulder": {"swing": 40, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 44, "spread": 10, "twist": 0},
+   "RightElbow": {"swing": 20},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.644, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 54.3, "spread": 0.4, "twist": -0.6},
+   "LeftKnee": {"swing": -71.1, "twist": 0.3},
+   "LeftAnkle": {"swing": 34.2, "spread": -0.2, "twist": 0.3},
+   "RightHip": {"swing": 53, "spread": 0.4, "twist": 0.5},
+   "RightKnee": {"swing": -70.9, "twist": -0.3},
+   "RightAnkle": {"swing": 35.4, "spread": -0.2, "twist": -0.2}
+  }},
+  {"t": 0.689, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 52.9, "spread": 0.4, "twist": -0.6},
+   "LeftKnee": {"swing": -69.5, "twist": 0.3},
+   "LeftAnkle": {"swing": 33.3, "spread": -0.2, "twist": 0.3},
+   "RightHip": {"swing": 51.5, "spread": 0.3, "twist": 0.5},
+   "RightKnee": {"swing": -69.3, "twist": -0.3},
+   "RightAnkle": {"swing": 34.5, "spread": -0.2, "twist": -0.2}
+  }},
+  {"t": 0.733, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 48.8, "spread": 0.3, "twist": -0.5},
+   "LeftKnee": {"swing": -65.2, "twist": 0.3},
+   "LeftAnkle": {"swing": 30.9, "spread": -0.2, "twist": 0.3},
+   "RightHip": {"swing": 47.4, "spread": 0.3, "twist": 0.5},
+   "RightKnee": {"swing": -64.9, "twist": -0.3},
+   "RightAnkle": {"swing": 32, "spread": -0.2, "twist": -0.2}
+  }},
+  {"t": 0.778, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 40.4, "spread": 0.2, "twist": -0.4},
+   "LeftKnee": {"swing": -55.8, "twist": 0.2},
+   "LeftAnkle": {"swing": 25.8, "spread": -0.1, "twist": 0.2},
+   "RightHip": {"swing": 39, "spread": 0.2, "twist": 0.4},
+   "RightKnee": {"swing": -55.4, "twist": -0.2},
+   "RightAnkle": {"swing": 26.7, "spread": -0.1, "twist": -0.1}
+  }},
+  {"t": 0.822, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 26.5, "spread": 0.1, "twist": -0.2},
+   "LeftKnee": {"swing": -38.7, "twist": 0.1},
+   "LeftAnkle": {"swing": 17.2, "spread": -0.1, "twist": 0.1},
+   "RightHip": {"swing": 25, "spread": 0.1, "twist": 0.2},
+   "RightKnee": {"swing": -37.9, "twist": -0.1},
+   "RightAnkle": {"swing": 17.9, "spread": -0.1, "twist": -0.1}
+  }},
+  {"t": 0.867, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 15.1, "spread": 0, "twist": -0.1},
+   "LeftKnee": {"swing": -23},
+   "LeftAnkle": {"swing": 10, "spread": 0, "twist": 0},
+   "RightHip": {"swing": 13.3, "spread": 0, "twist": 0.1},
+   "RightKnee": {"swing": -21.5},
+   "RightAnkle": {"swing": 10.3, "spread": 0, "twist": 0}
+  }},
+  {"t": 0.911, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 8.6, "spread": 0, "twist": 0},
+   "LeftKnee": {"swing": -13.7},
+   "LeftAnkle": {"swing": 5.8, "spread": 0, "twist": 0},
+   "RightHip": {"swing": 6.6, "spread": 0, "twist": 0},
+   "RightKnee": {"swing": -11.7},
+   "RightAnkle": {"swing": 5.8, "spread": 0, "twist": 0}
+  }},
+  {"t": 0.956, "ease": "linear", "joints": {
+   "LeftHip": {"swing": 6.3, "spread": 0, "twist": 0},
+   "LeftKnee": {"swing": -10.4},
+   "LeftAnkle": {"swing": 4.2, "spread": 0, "twist": 0},
+   "RightHip": {"swing": 4.3, "spread": 0, "twist": 0},
+   "RightKnee": {"swing": -8.4},
+   "RightAnkle": {"swing": 4.2, "spread": 0, "twist": 0}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.01, 0], "pitch": 0, "lean": 0, "turn": 0},
+   "Waist": {"pitch": 14, "lean": 0, "turn": 0},
+   "Neck": {"pitch": 6, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 6, "spread": 0, "twist": 0},
+   "LeftKnee": {"swing": -10, "twist": 0},
+   "LeftAnkle": {"swing": 4, "spread": 0, "twist": 0},
+   "RightHip": {"swing": 4, "spread": 0, "twist": 0},
+   "RightKnee": {"swing": -8, "twist": 0},
+   "RightAnkle": {"swing": 4, "spread": 0, "twist": 0},
+   "LeftShoulder": {"swing": 4, "spread": 4, "twist": 0},
+   "LeftElbow": {"swing": 10},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 2, "spread": 4, "twist": 0},
+   "RightElbow": {"swing": 14},
+   "RightWrist": {"swing": 0}
+  }}
+ ]
+}

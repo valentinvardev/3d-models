@@ -1,0 +1,48 @@
+{
+ "name": "PreacherTrueForm_Hit",
+ "_intent": "Golpe recibido (0,65 s), solo de la cintura para arriba: no nombra Root ni piernas, así que se toca encima del Idle o de la caminata y otro clip lo pisa sin trabarse. El golpe lo echa atrás y lo tuerce (0,08: la cintura pasa de 12 a -6 grados y gira 14, la cabeza se va atrás, la izquierda se abre); la cruz salta del piso (lo más bajo a 0,45). Rebota adelante encorvado con la cabeza gacha mirando fijo (0,26), con la cruz 0,2 sobre el piso en el Idle (sobre la caminata la cadera va hasta 0,28 más baja: así no se hunde), y vuelve a la guardia (0,65), que es el key 0 del Idle.",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "out", "joints": {
+   "Waist": {"pitch": 12, "lean": 0, "turn": 4},
+   "Neck": {"pitch": -10, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": 10, "spread": 14, "twist": 14},
+   "LeftElbow": {"swing": 24},
+   "LeftWrist": {"swing": 12, "spread": 0, "twist": 0},
+   "RightShoulder": {"swing": 11.4, "spread": 3.2, "twist": 7.4},
+   "RightElbow": {"swing": 5.7},
+   "RightWrist": {"swing": -5.7, "spread": 0, "twist": -2.9}
+  }},
+  {"t": 0.08, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -6, "lean": 5, "turn": 14},
+   "Neck": {"pitch": -30, "lean": -4, "turn": -10},
+   "LeftShoulder": {"swing": -14, "spread": 42, "twist": 10},
+   "LeftElbow": {"swing": 42},
+   "LeftWrist": {"swing": -10, "spread": 0, "twist": 0},
+   "RightShoulder": {"swing": 3.3, "spread": 3.2, "twist": 4.7},
+   "RightElbow": {"swing": 0},
+   "RightWrist": {"swing": -12.5, "spread": 1.4, "twist": -5}
+  }},
+  {"t": 0.26, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 20, "lean": -2, "turn": -4},
+   "Neck": {"pitch": 4, "lean": 3, "turn": 4},
+   "LeftShoulder": {"swing": 18, "spread": 18, "twist": 20},
+   "LeftElbow": {"swing": 40},
+   "LeftWrist": {"swing": 14, "spread": 0, "twist": 0},
+   "RightShoulder": {"swing": 20.7, "spread": 3.8, "twist": 13.4},
+   "RightElbow": {"swing": 6.3},
+   "RightWrist": {"swing": -14, "spread": 6.5, "twist": 0.1}
+  }},
+  {"t": 0.65, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 12, "lean": 0, "turn": 4},
+   "Neck": {"pitch": -10, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": 10, "spread": 14, "twist": 14},
+   "LeftElbow": {"swing": 24},
+   "LeftWrist": {"swing": 12, "spread": 0, "twist": 0},
+   "RightShoulder": {"swing": 11.4, "spread": 3.2, "twist": 7.4},
+   "RightElbow": {"swing": 5.7},
+   "RightWrist": {"swing": -5.7, "spread": 0, "twist": -2.9}
+  }}
+ ]
+}

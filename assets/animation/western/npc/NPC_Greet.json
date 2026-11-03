@@ -1,0 +1,44 @@
+{
+ "name": "NPC_Greet",
+ "_intent": "Saludo compartido de los NPCs (cualquier R15 de la fábrica) al jugador que se acerca. Levanta la mano izquierda abierta al costado de la cabeza, a la altura de la frente, con la palma al frente (0,36), la saluda de un lado al otro (0,52-0,84) y la baja (1,2); la cabeza mira arriba y cabecea fuerte (20° a 0,52) inclinada hacia la mano. Solo nombra el cuello y el brazo izquierdo: la derecha suele tener algo (vaso, botella, martillo, pico) y sigue haciendo lo de su Idle, igual que cadera, cintura y piernas; así sirve parado, apoyado en el mostrador o sentado. Arranca y termina en reposo para esas articulaciones (el código lo funde con 0,25 s). Hecho sobre el almacenero, medido en los 7. Prioridad Action, 1,2 s.",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "smooth", "joints": {
+   "Neck": {"pitch": 0, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": 0, "spread": 0, "twist": 0},
+   "LeftElbow": {"swing": 0},
+   "LeftWrist": {"swing": 0, "spread": 0, "twist": 0}
+  }},
+  {"t": 0.36, "ease": "smooth", "joints": {
+   "Neck": {"pitch": -8, "lean": 3, "turn": 0},
+   "LeftShoulder": {"swing": -84.6, "spread": 135.4, "twist": -78.3},
+   "LeftElbow": {"swing": 109},
+   "LeftWrist": {"swing": -12.2, "spread": 37.7, "twist": -2.8}
+  }},
+  {"t": 0.52, "ease": "smooth", "joints": {
+   "Neck": {"pitch": 20, "lean": 6, "turn": 0},
+   "LeftShoulder": {"swing": -62, "spread": 136.2, "twist": -67.4},
+   "LeftElbow": {"swing": 113},
+   "LeftWrist": {"swing": -25.6, "spread": 41.2, "twist": -8.4}
+  }},
+  {"t": 0.68, "ease": "smooth", "joints": {
+   "Neck": {"pitch": -2, "lean": 4, "turn": 0},
+   "LeftShoulder": {"swing": -87.5, "spread": 135.4, "twist": -80.7},
+   "LeftElbow": {"swing": 108.8},
+   "LeftWrist": {"swing": -11, "spread": 37.2, "twist": -3.1}
+  }},
+  {"t": 0.84, "ease": "smooth", "joints": {
+   "Neck": {"pitch": 2, "lean": 3, "turn": 0},
+   "LeftShoulder": {"swing": -75.9, "spread": 135.5, "twist": -74.7},
+   "LeftElbow": {"swing": 111.1},
+   "LeftWrist": {"swing": -18.1, "spread": 38.1, "twist": -5.6}
+  }},
+  {"t": 1.2, "ease": "smooth", "joints": {
+   "Neck": {"pitch": 0, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": 0, "spread": 0, "twist": 0},
+   "LeftElbow": {"swing": 0},
+   "LeftWrist": {"swing": 0, "spread": 0, "twist": 0}
+  }}
+ ]
+}

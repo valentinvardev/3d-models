@@ -1,0 +1,48 @@
+{
+ "name": "Runner_Hit",
+ "_intent": "Golpe recibido del corredor: frágil, se sacude más que el caminante. El torso y la cabeza se van atrás y de costado de golpe (0,07 s), los brazos se abren, rebota una vez y vuelve a la pose agachada. Solo de la cintura para arriba (no toca Root ni piernas): se puede tocar encima de la carrera sin que se le claven los pies.",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "out", "joints": {
+   "Waist": {"pitch": 18, "turn": 0},
+   "Neck": {"pitch": -8, "turn": 0, "lean": 0},
+   "LeftShoulder": {"swing": 24, "spread": 8},
+   "LeftElbow": {"swing": 24},
+   "LeftWrist": {"swing": 14},
+   "RightShoulder": {"swing": 20, "spread": 8},
+   "RightElbow": {"swing": 30},
+   "RightWrist": {"swing": 16}
+  }},
+  {"t": 0.07, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -6, "turn": 14},
+   "Neck": {"pitch": -36, "turn": -16, "lean": 10},
+   "LeftShoulder": {"swing": -10, "spread": 40},
+   "LeftElbow": {"swing": 46},
+   "LeftWrist": {"swing": -10},
+   "RightShoulder": {"swing": -18, "spread": 34},
+   "RightElbow": {"swing": 40},
+   "RightWrist": {"swing": -10}
+  }},
+  {"t": 0.16, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 6, "turn": 8},
+   "Neck": {"pitch": -22, "turn": -8, "lean": 6},
+   "LeftShoulder": {"swing": 4, "spread": 28},
+   "LeftElbow": {"swing": 36},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 0, "spread": 24},
+   "RightElbow": {"swing": 36},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.36, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 18, "turn": 0},
+   "Neck": {"pitch": -8, "turn": 0, "lean": 0},
+   "LeftShoulder": {"swing": 24, "spread": 8},
+   "LeftElbow": {"swing": 24},
+   "LeftWrist": {"swing": 14},
+   "RightShoulder": {"swing": 20, "spread": 8},
+   "RightElbow": {"swing": 30},
+   "RightWrist": {"swing": 16}
+  }}
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "name": "Gunsmith_Offer",
+ "_intent": "El armero le ofrece el revólver al jugador que lo agarra del armero (escena de arranque). Arranca y termina en la pose de 0 de Gunsmith_Idle (las manos juntas adelante del pecho), así empalma con el Idle en los dos lados. Lleva el revólver en la derecha (el código se lo suelda al empezar, contrato D024: _Grip sobre el RightGripAttachment) y estira el brazo hacia el jugador a la altura del pecho, palma arriba, con el caño de costado hacia su derecha (no le apunta), el torso adelante y un cabeceo (0,45: Give, el punto más estirado; el código saca el arma de su mano y se la da). Sostiene un instante (0,62) y vuelve por el mismo camino (0,82; 1,0). La izquierda baja al costado. Solo cintura, cuello y brazos. Prioridad Action, 1,0 s.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.45, "name": "Give"}],
+ "keys": [
+  {"t": 0, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 4, "lean": 0, "turn": 6},
+   "Neck": {"pitch": 24, "lean": 0, "turn": 6},
+   "LeftShoulder": {"swing": 15.5, "spread": -3, "twist": -43.9},
+   "LeftElbow": {"swing": 80},
+   "LeftWrist": {"swing": -6.2, "spread": 13.6, "twist": 36.8},
+   "RightShoulder": {"swing": 3.8, "spread": -8.3, "twist": 33.7},
+   "RightElbow": {"swing": 96.8},
+   "RightWrist": {"swing": -6.9, "spread": 8.4, "twist": 0.7}
+  }},
+  {"t": 0.22, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 8, "lean": 0, "turn": 7},
+   "Neck": {"pitch": 18, "lean": 0, "turn": 6},
+   "LeftShoulder": {"swing": 1.2, "spread": -0.2, "twist": -39.6},
+   "LeftElbow": {"swing": 92.9},
+   "LeftWrist": {"swing": -2.9, "spread": 4.8, "twist": 34.7},
+   "RightShoulder": {"swing": 28.1, "spread": -15.5, "twist": 15.2},
+   "RightElbow": {"swing": 84.8},
+   "RightWrist": {"swing": -5.4, "spread": 14, "twist": -31.5}
+  }},
+  {"t": 0.45, "ease": "out", "joints": {
+   "Waist": {"pitch": 12, "lean": 0, "turn": 8},
+   "Neck": {"pitch": 14, "lean": 0, "turn": 6},
+   "LeftShoulder": {"swing": -7.8, "spread": -8.6, "twist": -21.4},
+   "LeftElbow": {"swing": 96.5},
+   "LeftWrist": {"swing": -0.5, "spread": 2, "twist": 21.7},
+   "RightShoulder": {"swing": 58.4, "spread": -45.2, "twist": 4.9},
+   "RightElbow": {"swing": 54.7},
+   "RightWrist": {"swing": -5.3, "spread": 5.7, "twist": -26.9}
+  }},
+  {"t": 0.62, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 13, "lean": 0, "turn": 8},
+   "Neck": {"pitch": 18, "lean": 0, "turn": 6},
+   "LeftShoulder": {"swing": -7.9, "spread": -9.2, "twist": -20.3},
+   "LeftElbow": {"swing": 97.2},
+   "LeftWrist": {"swing": -0.5, "spread": -0.8, "twist": 19.4},
+   "RightShoulder": {"swing": 61.2, "spread": -45.3, "twist": 4.6},
+   "RightElbow": {"swing": 49.4},
+   "RightWrist": {"swing": -3.6, "spread": 4.6, "twist": -29.4}
+  }},
+  {"t": 0.82, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 8, "lean": 0, "turn": 7},
+   "Neck": {"pitch": 18, "lean": 0, "turn": 6},
+   "LeftShoulder": {"swing": 1.2, "spread": -0.2, "twist": -39.6},
+   "LeftElbow": {"swing": 92.9},
+   "LeftWrist": {"swing": -2.9, "spread": 4.8, "twist": 34.7},
+   "RightShoulder": {"swing": 28.1, "spread": -15.5, "twist": 15.2},
+   "RightElbow": {"swing": 84.8},
+   "RightWrist": {"swing": -5.4, "spread": 14, "twist": -31.5}
+  }},
+  {"t": 1, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 4, "lean": 0, "turn": 6},
+   "Neck": {"pitch": 24, "lean": 0, "turn": 6},
+   "LeftShoulder": {"swing": 15.5, "spread": -3, "twist": -43.9},
+   "LeftElbow": {"swing": 80},
+   "LeftWrist": {"swing": -6.2, "spread": 13.6, "twist": 36.8},
+   "RightShoulder": {"swing": 3.8, "spread": -8.3, "twist": 33.7},
+   "RightElbow": {"swing": 96.8},
+   "RightWrist": {"swing": -6.9, "spread": 8.4, "twist": 0.7}
+  }}
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "name": "OldHank_Draw",
+ "attach": {"Grab": ["Body"]},
+ "_intent": "Saca La Viuda de la funda y apunta: desde el Idle (pulgar en el cinturón, al lado de la funda) la mano va a la cacha con el codo afuera, a la altura del pecho, como pistolero viejo (marcador Grab en 0,24: la mano la toma, el código esconde Acc_HanksWidow y pone el arma entera en la RightHand, D024). La saca para arriba con el caño todavía abajo (0,37; el caño pasa un instante por la pierna porque la funda es más corta que el arma), la gira al frente a la altura de la cadera amartillando con el pulgar (0,54), estira el brazo (0,66), la sube al frente pasándose 4° (0,82) y asienta exacto en el primer cuadro de OldHank_Aim (1,0). El torso gira de perfil y la cabeza busca el blanco. Solo cintura, cuello y brazos, como el Aim. En la vista previa el arma ya está en la mano antes de Grab: es un artefacto del rig (en el juego todavía está enfundada).",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.24, "name": "Grab"}],
+ "props": {"Body": {"parent": "RightHand"}, "Cylinder": {"parent": "Body"}, "LoadingGate": {"parent": "Body"}, "Hammer": {"parent": "Body"}},
+ "keys": [
+  {"t": 0, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 9, "lean": 1, "turn": 4},
+   "Neck": {"pitch": -5, "lean": 0, "turn": -4},
+   "LeftShoulder": {"swing": 2, "spread": 6, "twist": 0},
+   "LeftElbow": {"swing": 12},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": -22, "spread": -5, "twist": 39.9},
+   "RightElbow": {"swing": 91.6},
+   "RightWrist": {"swing": 0},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.24, "ease": "linear", "joints": {
+   "Waist": {"pitch": 10, "lean": -2, "turn": 0},
+   "Neck": {"pitch": 2, "lean": 0, "turn": 6},
+   "LeftShoulder": {"swing": 2, "spread": 6, "twist": 0},
+   "LeftElbow": {"swing": 12},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": -62.2, "spread": -39.7, "twist": 61.8},
+   "RightElbow": {"swing": 136.3},
+   "RightWrist": {"swing": -46.5, "spread": 46.7, "twist": 23.5},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.37, "ease": "linear", "joints": {
+   "Waist": {"pitch": 8, "lean": -1, "turn": 6},
+   "Neck": {"pitch": 0, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": 2, "spread": 6, "twist": 0},
+   "LeftElbow": {"swing": 12},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": -72.8, "spread": -48.2, "twist": 43.9},
+   "RightElbow": {"swing": 149.4},
+   "RightWrist": {"swing": -29.8, "spread": 47.5, "twist": 40.7},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.54, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 7, "lean": 0, "turn": 12},
+   "Neck": {"pitch": -3, "lean": -2, "turn": -8},
+   "LeftShoulder": {"swing": 0, "spread": 9, "twist": 0},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": -4.8, "spread": -8.7, "twist": 17.6},
+   "RightElbow": {"swing": 142.4},
+   "RightWrist": {"swing": -34, "spread": 20.9, "twist": 14.8},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 0.66, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 6, "lean": 0, "turn": 18},
+   "Neck": {"pitch": -6, "lean": -4, "turn": -18},
+   "LeftShoulder": {"swing": 2, "spread": 6, "twist": 0},
+   "LeftElbow": {"swing": 12},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 43.2, "spread": -0.6, "twist": -1.4},
+   "RightElbow": {"swing": 96},
+   "RightWrist": {"swing": -39.1, "spread": 11.4, "twist": 11.5},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 0.82, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 5, "lean": 0, "turn": 22},
+   "Neck": {"pitch": -7.7, "lean": -6, "turn": -25.6},
+   "LeftShoulder": {"swing": -4, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 18},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 86.7, "spread": 0.9, "twist": -10.1},
+   "RightElbow": {"swing": 15.5},
+   "RightWrist": {"swing": -1.4, "spread": 11.6, "twist": 1.4},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 1, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 6, "lean": 0, "turn": 24},
+   "Neck": {"pitch": -7.7, "lean": -6, "turn": -25.6},
+   "LeftShoulder": {"swing": -4, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 18},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 87.3, "spread": 0.7, "twist": -12.5},
+   "RightElbow": {"swing": 13.6},
+   "RightWrist": {"swing": -2.5, "spread": 11.5, "twist": 1.1},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }}
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "name": "DoctorTonic_Hold",
+ "_intent": "Frasco del tónico agarrado por el cuerpo, parado (corcho arriba, como se lleva un remedio para no volcarlo): la mano derecha adelante a la altura de la cintura-pecho con el codo doblado, la etiqueta grande mirando para afuera. Solo brazos, cintura y cuello. Prioridad Idle.",
+ "loop": true,
+ "priority": "Idle",
+ "props": {"Body": {"parent": "RightHand"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 3},
+   "Neck": {"turn": -6, "pitch": 6},
+   "RightShoulder": {"swing": -26.8, "spread": -0.6, "twist": 20.5},
+   "RightElbow": {"swing": 134},
+   "RightWrist": {"swing": 0, "spread": -8.8, "twist": -0.1},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-105, -47, -0.7]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 4},
+   "Neck": {"turn": -6, "pitch": 6},
+   "RightShoulder": {"swing": -26.8, "spread": -0.6, "twist": 20.5},
+   "RightElbow": {"swing": 134},
+   "RightWrist": {"swing": 0, "spread": -8.8, "twist": -0.1},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-105, -47, -0.7]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 3},
+   "Neck": {"turn": -6, "pitch": 6},
+   "RightShoulder": {"swing": -26.8, "spread": -0.6, "twist": 20.5},
+   "RightElbow": {"swing": 134},
+   "RightWrist": {"swing": 0, "spread": -8.8, "twist": -0.1},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-105, -47, -0.7]}
+  }}
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "name": "DoyleBrute_Hit",
+ "_intent": "Golpe recibido, de mole: el pecho y la cabeza se van atrás y de costado de golpe (0,07 s), la izquierda se abre y el hacha apenas se sacude (no la suelta: el cabezal sigue lejos del piso); vuelve adelante encorvado con bronca (0,22) y se acomoda en la guardia (0,55 s). Solo de la cintura para arriba (no toca Root ni piernas): se puede tocar encima de la caminata.",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "linear", "joints": {
+   "Waist": {"pitch": 5, "turn": 4},
+   "Neck": {"pitch": -14, "turn": -3},
+   "LeftShoulder": {"swing": 6, "spread": 9, "twist": 0},
+   "LeftElbow": {"swing": 22},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 8.4, "spread": 1.8, "twist": 0.2},
+   "RightElbow": {"swing": 11.2},
+   "RightWrist": {"swing": 96.3, "spread": 0, "twist": 179.8}
+  }},
+  {"t": 0.07, "ease": "out", "joints": {
+   "Waist": {"pitch": -14, "lean": -6, "turn": 12},
+   "Neck": {"pitch": -2, "lean": 8, "turn": -14},
+   "LeftShoulder": {"swing": -10, "spread": 28, "twist": 0},
+   "LeftElbow": {"swing": 34},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 2.4, "spread": 11.8, "twist": 0.2},
+   "RightElbow": {"swing": 17.2},
+   "RightWrist": {"swing": 96.3, "spread": 0, "twist": 179.8}
+  }},
+  {"t": 0.22, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 10, "turn": -4},
+   "Neck": {"pitch": -24, "turn": 2},
+   "LeftShoulder": {"swing": 14, "spread": 6, "twist": 0},
+   "LeftElbow": {"swing": 36},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 12.4, "spread": 1.8, "twist": 0.2},
+   "RightElbow": {"swing": 11.2},
+   "RightWrist": {"swing": 96.3, "spread": 0, "twist": 179.8}
+  }},
+  {"t": 0.55, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 5, "turn": 4},
+   "Neck": {"pitch": -14, "turn": -3},
+   "LeftShoulder": {"swing": 6, "spread": 9, "twist": 0},
+   "LeftElbow": {"swing": 22},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 8.4, "spread": 1.8, "twist": 0.2},
+   "RightElbow": {"swing": 11.2},
+   "RightWrist": {"swing": 96.3, "spread": 0, "twist": 179.8}
+  }}
+ ]
+}

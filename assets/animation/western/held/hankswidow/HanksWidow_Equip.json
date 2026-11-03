@@ -1,0 +1,67 @@
+{
+ "name": "HanksWidow_Equip",
+ "_intent": "Sacarla y hacerla girar (D024, solo al equipar): la mano baja a la funda, la saca para arriba, la hace girar una vuelta hacia adelante en el dedo por el guardamonte con el brazo al frente y a la altura del pecho (más arriba que el revólver base: el giro queda a la altura del pecho y se lee de frente y de costado), la ataja, amartilla con el pulgar y queda exacta en HanksWidow_Hold. Dura 0,86 s; no dispara hasta el marcador Ready. Antes eran dos vueltas en 1,1 s: Valentin lo probó en Studio y sobraba un giro (2026-10-28).",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.86, "name": "Ready"}],
+ "props": {"Body": {"parent": "RightHand"}, "Cylinder": {"parent": "Body"}, "LoadingGate": {"parent": "Body"}, "Hammer": {"parent": "Body"}},
+ "keys": [
+  {"t": 0.0, "ease": "out", "joints": {
+   "Waist": {"turn": 0},
+   "Neck": {"turn": 0},
+   "RightShoulder": {"swing": -8, "spread": 12},
+   "RightElbow": {"swing": 28},
+   "RightWrist": {"swing": 0},
+   "LeftShoulder": {"swing": 0, "spread": 4},
+   "LeftElbow": {"swing": 10},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.16, "ease": "in", "joints": {
+   "Waist": {"turn": 6},
+   "RightShoulder": {"swing": 34, "spread": 4},
+   "RightElbow": {"swing": 40},
+   "Body": {"rot": [-20, 0, 0]}
+  }},
+  {"t": 0.3, "ease": "linear", "joints": {
+   "RightShoulder": {"swing": 62, "spread": -4},
+   "RightElbow": {"swing": 22},
+   "Body": {"rot": [-40, 0, 0], "pivot": [0, 0.06, -0.16]}
+  }},
+  {"t": 0.38, "ease": "linear", "joints": {
+   "Body": {"rot": [-160, 0, 0], "pivot": [0, 0.06, -0.16]}
+  }},
+  {"t": 0.46, "ease": "linear", "joints": {
+   "Body": {"rot": [-280, 0, 0], "pivot": [0, 0.06, -0.16]}
+  }},
+  {"t": 0.54, "ease": "out", "joints": {
+   "RightShoulder": {"swing": 62, "spread": -4},
+   "RightElbow": {"swing": 22},
+   "Body": {"rot": [-400, 0, 0], "pivot": [0, 0.06, -0.16]}
+  }},
+  {"t": 0.68, "ease": "out", "joints": {
+   "Waist": {"turn": 14},
+   "Neck": {"turn": -10},
+   "RightShoulder": {"swing": 76, "spread": -12},
+   "RightElbow": {"swing": 15},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 22},
+   "Body": {"rot": [-450, 0, 0]},
+   "Hammer": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.76, "ease": "smooth", "joints": {
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 0.86, "ease": "smooth", "joints": {
+   "Waist": {"turn": 14},
+   "Neck": {"turn": -10},
+   "RightShoulder": {"swing": 78, "spread": -14},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 22},
+   "Body": {"rot": [-450, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }}
+ ]
+}

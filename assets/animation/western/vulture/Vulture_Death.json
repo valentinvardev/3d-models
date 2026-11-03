@@ -1,0 +1,116 @@
+{
+ "name": "Vulture_Death",
+ "_intent": "Muere en el aire (1,1 s). Arranca en el planeo de Fly (t=0). 0-0,06, lineal: el tiro lo para (sube 0,10, nariz arriba 14°) y abre las alas arriba. 0,06-0,88: se desarma. Rola una vuelta y media (567° medidos, keys cada ≤ 92° porque Roblox interpola por el camino corto) cayendo de cabeza (nariz a -20°) y girando 15°. Las alas quedan flojas, atrasadas respecto del giro, y al frenar se pasan; la cabeza y la cola se sacuden flojas. Desde 0,85 queda quieto en la pose final: boca arriba, con el cuerpo rolado 180° respecto del HRP, que sigue derecho. El ala izquierda queda abierta y plana en el piso; la derecha a medio plegar, con la punta encima; el cuello cae de costado. Todo apoya en el piso del HipHeight (y = 0): cuerpo +0,000, cabeza +0,007, cola +0,010, alas de adentro +0,011/+0,009, puntas +0,019/+0,009. Se eligió boca arriba y no de costado: de costado, una de las alas de 5 de envergadura tiene que entrar al piso o plegarse. Así la pose es siempre la misma y no depende de cómo cae la física. Marcador Dead en 1,00: el juego congela la pista ahí (AdjustSpeed(0)); hasta 1,10 se repite la misma pose. Durante el giro, la punta del ala llega 2,01 bajo el centro del HRP (t=0,67). Pico 1235 °/s. Play(0.1) desde cualquier clip (≤ 1183 °/s; con 0,05 salta a 1886).",
+ "rig": "assets/models/western/enemies/WST_Enemy_Vulture/04_roblox/WST_Enemy_Vulture.rig.json",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 1.0, "name": "Dead"}],
+ "keys": [
+  {"t": 0.0, "ease": "linear", "joints": {
+   "Body": {"rot": [2, 0, 0], "pos": [0, 0, 0], "ease": "linear"},
+   "Head": {"rot": [-12, 0, 0], "pos": [0, 0, 0], "ease": "linear"},
+   "Tail": {"rot": [0, 0, 0], "ease": "linear"},
+   "WingLeftInner": {"rot": [0.0, 0.0, -7.0], "ease": "linear"},
+   "WingRightInner": {"rot": [0.0, 0.0, 7.0], "ease": "linear"},
+   "WingLeftOuter": {"rot": [0.0, 0.0, -3.0], "pos": [0.0, 0.0, 0.0], "ease": "linear"},
+   "WingRightOuter": {"rot": [0.0, 0.0, 3.0], "pos": [0.0, 0.0, 0.0], "ease": "linear"}
+  }},
+  {"t": 0.06, "ease": "linear", "joints": {
+   "Body": {"rot": [14, 0, -10], "pos": [0, 0.1, 0], "ease": "linear"},
+   "Head": {"rot": [36, 10, 0], "pos": [0, 0, 0], "ease": "smooth"},
+   "Tail": {"rot": [-25, 0, 0], "ease": "smooth"},
+   "WingLeftInner": {"rot": [6.59, -13.61, -48.87], "ease": "smooth"},
+   "WingRightInner": {"rot": [6.58, 10.65, 35.05], "ease": "smooth"},
+   "WingLeftOuter": {"rot": [12.63, 12.38, 25.97], "pos": [0.0, -0.07, 0.0], "ease": "smooth"},
+   "WingRightOuter": {"rot": [12.63, -12.38, -25.97], "pos": [0.0, -0.07, 0.0], "ease": "smooth"}
+  }},
+  {"t": 0.16, "ease": "linear", "joints": {
+   "Body": {"rot": [6, 2, 60], "pos": [0, 0.06, 0], "ease": "linear"}
+  }},
+  {"t": 0.18, "ease": "linear", "joints": {
+   "Head": {"rot": [12, -24, -14], "pos": [0, 0, 0], "ease": "smooth"},
+   "WingLeftInner": {"rot": [0.0, 14.0, -34.0], "ease": "smooth"},
+   "WingRightInner": {"rot": [0.0, -14.0, -16.0], "ease": "smooth"},
+   "WingLeftOuter": {"rot": [0.0, 0.0, -22.0], "pos": [0.0, 0.0, 0.0], "ease": "smooth"},
+   "WingRightOuter": {"rot": [9.22, -8.0, -23.03], "pos": [0.0, -0.05, 0.0], "ease": "smooth"}
+  }},
+  {"t": 0.2, "ease": "linear", "joints": {
+   "Tail": {"rot": [10, 0, -15], "ease": "smooth"}
+  }},
+  {"t": 0.26, "ease": "linear", "joints": {
+   "Body": {"rot": [-10, 4, 150], "pos": [0, 0.02, 0], "ease": "linear"}
+  }},
+  {"t": 0.32, "ease": "linear", "joints": {
+   "Head": {"rot": [-16, 30, 20], "pos": [0, 0, 0], "ease": "smooth"},
+   "WingLeftInner": {"rot": [0.0, 20.0, -40.0], "ease": "smooth"},
+   "WingRightInner": {"rot": [0.0, -22.0, -30.0], "ease": "smooth"},
+   "WingLeftOuter": {"rot": [0.0, 0.0, -28.0], "pos": [0.0, 0.0, 0.0], "ease": "smooth"},
+   "WingRightOuter": {"rot": [10.6, -11.87, -28.35], "pos": [0.0, -0.06, 0.0], "ease": "smooth"}
+  }},
+  {"t": 0.36, "ease": "linear", "joints": {
+   "Body": {"rot": [-18, 7, 240], "pos": [0, 0, 0], "ease": "linear"},
+   "Tail": {"rot": [-15, 0, 15], "ease": "smooth"}
+  }},
+  {"t": 0.46, "ease": "linear", "joints": {
+   "Body": {"rot": [-20, 10, 330], "pos": [0, 0, 0], "ease": "linear"}
+  }},
+  {"t": 0.48, "ease": "linear", "joints": {
+   "Head": {"rot": [-30, -20, 10], "pos": [0, 0, 0], "ease": "smooth"},
+   "WingLeftInner": {"rot": [0.0, 18.0, -34.0], "ease": "smooth"},
+   "WingRightInner": {"rot": [0.0, -26.0, -24.0], "ease": "smooth"},
+   "WingLeftOuter": {"rot": [0.0, 4.0, -20.0], "pos": [0.0, 0.0, 0.0], "ease": "smooth"},
+   "WingRightOuter": {"rot": [10.22, -23.12, -16.23], "pos": [0.0, -0.07, 0.0], "ease": "smooth"}
+  }},
+  {"t": 0.52, "ease": "linear", "joints": {
+   "Tail": {"rot": [12, 0, -12], "ease": "smooth"}
+  }},
+  {"t": 0.57, "ease": "linear", "joints": {
+   "Body": {"rot": [-14, 12, 420], "pos": [0, 0, 0], "ease": "linear"}
+  }},
+  {"t": 0.62, "ease": "linear", "joints": {
+   "Head": {"rot": [-10, 50, 20], "pos": [0, 0, 0], "ease": "smooth"},
+   "WingLeftInner": {"rot": [0.0, 15.0, -26.0], "ease": "smooth"},
+   "WingRightInner": {"rot": [0.0, -30.0, -14.0], "ease": "smooth"},
+   "WingLeftOuter": {"rot": [0.0, 0.0, -10.0], "pos": [0.0, 0.0, 0.0], "ease": "smooth"},
+   "WingRightOuter": {"rot": [8.48, -45.73, -3.96], "pos": [0.0, -0.09, 0.0], "ease": "smooth"}
+  }},
+  {"t": 0.7, "ease": "linear", "joints": {
+   "Body": {"rot": [-6, 14, 500], "pos": [0, 0, 0], "ease": "out"},
+   "Tail": {"rot": [-20, 0, 10], "ease": "smooth"}
+  }},
+  {"t": 0.78, "ease": "linear", "joints": {
+   "Head": {"rot": [-25, 70, 22], "pos": [0, 0, 0], "ease": "smooth"},
+   "WingLeftInner": {"rot": [0.0, 12.0, -2.0], "ease": "smooth"},
+   "WingRightInner": {"rot": [0.0, -36.0, 22.0], "ease": "smooth"},
+   "WingLeftOuter": {"rot": [0.0, 0.0, 18.0], "pos": [0.0, 0.0, 0.0], "ease": "smooth"},
+   "WingRightOuter": {"rot": [0.0, -72.0, -4.0], "pos": [0.0, -0.09, 0.0], "ease": "smooth"}
+  }},
+  {"t": 0.88, "ease": "linear", "joints": {
+   "Body": {"rot": [0, 15, 540], "pos": [0, 0, 0]},
+   "Head": {"rot": [-19, 62, 18], "pos": [0, -0.06, 0]},
+   "Tail": {"rot": [-38.8, 0, 8]},
+   "WingLeftInner": {"rot": [0.0, 12.0, -11.6]},
+   "WingRightInner": {"rot": [0.0, -34.0, 12.2]},
+   "WingLeftOuter": {"rot": [0.0, 0.0, 11.1], "pos": [0.0, 0.0, 0.0]},
+   "WingRightOuter": {"rot": [0.0, -78.0, 0.5], "pos": [0.0, -0.09, 0.0]}
+  }},
+  {"t": 1.0, "ease": "linear", "joints": {
+   "Body": {"rot": [0, 15, 540], "pos": [0, 0, 0]},
+   "Head": {"rot": [-19, 62, 18], "pos": [0, -0.06, 0]},
+   "Tail": {"rot": [-38.8, 0, 8]},
+   "WingLeftInner": {"rot": [0.0, 12.0, -11.6]},
+   "WingRightInner": {"rot": [0.0, -34.0, 12.2]},
+   "WingLeftOuter": {"rot": [0.0, 0.0, 11.1], "pos": [0.0, 0.0, 0.0]},
+   "WingRightOuter": {"rot": [0.0, -78.0, 0.5], "pos": [0.0, -0.09, 0.0]}
+  }},
+  {"t": 1.1, "ease": "linear", "joints": {
+   "Body": {"rot": [0, 15, 540], "pos": [0, 0, 0]},
+   "Head": {"rot": [-19, 62, 18], "pos": [0, -0.06, 0]},
+   "Tail": {"rot": [-38.8, 0, 8]},
+   "WingLeftInner": {"rot": [0.0, 12.0, -11.6]},
+   "WingRightInner": {"rot": [0.0, -34.0, 12.2]},
+   "WingLeftOuter": {"rot": [0.0, 0.0, 11.1], "pos": [0.0, 0.0, 0.0]},
+   "WingRightOuter": {"rot": [0.0, -78.0, 0.5], "pos": [0.0, -0.09, 0.0]}
+  }}
+ ]
+}

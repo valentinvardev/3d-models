@@ -1,0 +1,51 @@
+{
+ "name": "LeverRifle_Hold",
+ "_intent": "Rifle de palanca montado y listo, como se lleva de verdad: la cantonera en el hueco del hombro derecho, la mano derecha en la muñeca de la culata con los dedos en el aro de la palanca, la izquierda debajo de la caña (_Grip2) sosteniendo el peso, el caño casi nivelado (4° abajo), el torso de perfil (hombro izquierdo adelante) y la cabeza al frente, apenas inclinada sobre la culata. Solo brazos, cintura y cuello. Prioridad Idle.",
+ "loop": true,
+ "priority": "Idle",
+ "props": {"Body": {"parent": "RightHand"}, "Lever": {"parent": "Body"}, "Bolt": {"parent": "Body"}, "Hammer": {"parent": "Body"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -40, "pitch": 4},
+   "Neck": {"turn": 38, "pitch": 6},
+   "RightShoulder": {"swing": 67.5, "spread": 20.3, "twist": 61.4},
+   "RightElbow": {"swing": 38.3},
+   "RightWrist": {"swing": 0, "spread": -11, "twist": 0},
+   "LeftShoulder": {"swing": 74.4, "spread": 10, "twist": -17.1},
+   "LeftElbow": {"swing": 26.7},
+   "LeftWrist": {"swing": 0, "spread": -2.9, "twist": 0},
+   "Body": {"rot": [-114, -24.2, -23]},
+   "Bolt": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [28, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -40, "pitch": 5.5},
+   "Neck": {"turn": 38, "pitch": 6},
+   "RightShoulder": {"swing": 67.5, "spread": 20.3, "twist": 61.4},
+   "RightElbow": {"swing": 38.3},
+   "RightWrist": {"swing": 0, "spread": -11, "twist": 0},
+   "LeftShoulder": {"swing": 74.4, "spread": 10, "twist": -17.1},
+   "LeftElbow": {"swing": 26.7},
+   "LeftWrist": {"swing": 0, "spread": -2.9, "twist": 0},
+   "Body": {"rot": [-114, -24.2, -23]},
+   "Bolt": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [28, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -40, "pitch": 4},
+   "Neck": {"turn": 38, "pitch": 6},
+   "RightShoulder": {"swing": 67.5, "spread": 20.3, "twist": 61.4},
+   "RightElbow": {"swing": 38.3},
+   "RightWrist": {"swing": 0, "spread": -11, "twist": 0},
+   "LeftShoulder": {"swing": 74.4, "spread": 10, "twist": -17.1},
+   "LeftElbow": {"swing": 26.7},
+   "LeftWrist": {"swing": 0, "spread": -2.9, "twist": 0},
+   "Body": {"rot": [-114, -24.2, -23]},
+   "Bolt": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [28, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }}
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "name": "Player_Ride",
+ "_intent": "El jugador montado (loop, Movement). Nombra solo la Root (LowerTorso) y las piernas: cintura, cuello y brazos quedan libres para los clips de sostener y disparar (Hold es Idle y no nombra la Root, así que se suman). Va soldado al _Seat del caballo: Weld con Part0 = Acc_Saddle, C0 = _Seat.CFrame * CFrame.new(0, 0.20, 0), Part1 = HumanoidRootPart, C1 = HumanoidRootPart.RootRigAttachment.CFrame: así la articulación Root (la cadera) queda 0,20 sobre el _Seat con cualquier avatar. Root derecha (pitch 0): el arma del Hold apunta igual que a pie. Piernas colgando: muslos abiertos 45° de la vertical hacia abajo y afuera, rodillas apenas dobladas (20°), pies colgando al costado del barril con la punta un poco afuera. Con el R15 por defecto (piernas de 1 de ancho, caderas a ±0,5) es lo justo para no atravesar el barril de 2,0: el muslo roza el hombro del barril cerca de la cadera; con la pelvis en 0,06 pedía 65° y con 0,12, 53°. Forzado a 30°, la pierna entraba 0,41. La pelvis queda 0,20 sobre el _Seat (0,25 sobre el cuero del asiento); de atrás lo tapa el respaldo de la montura (4,84) y de costado, el muslo. Los pies no llegan al estribo: del asiento a la pisa hay 2,18 y la pierna del R15 por defecto mide 2,06 de cadera a suela, más lo que pide rodear el barril; caen en (±1,74; 3,23; -0,05) del caballo. Elegida contra la versión jockey (rodillas adelante, pies recogidos) porque de costado y a 30 studs esta se lee como andar a caballo y la otra como arrodillado sobre la montura. Los tobillos se mueven 4° en 2 s para que no quede muerto; el cabeceo lo pone el caballo.",
+ "loop": true,
+ "priority": "Movement",
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, 0, 0], "pitch": 0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 13.4, "spread": 44.4, "twist": 4.5},
+   "LeftKnee": {"swing": -19.7, "twist": -0.7},
+   "LeftAnkle": {"swing": -8.1, "spread": -44.3, "twist": 6.1},
+   "RightHip": {"swing": 13.4, "spread": 44.4, "twist": -4.5},
+   "RightKnee": {"swing": -19.7, "twist": 0.7},
+   "RightAnkle": {"swing": -8.1, "spread": -44.3, "twist": -6.1}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, 0, 0], "pitch": 0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 13.4, "spread": 44.4, "twist": 4.5},
+   "LeftKnee": {"swing": -21.7, "twist": -0.7},
+   "LeftAnkle": {"swing": -12.1, "spread": -44.3, "twist": 6.1},
+   "RightHip": {"swing": 13.4, "spread": 44.4, "twist": -4.5},
+   "RightKnee": {"swing": -21.7, "twist": 0.7},
+   "RightAnkle": {"swing": -12.1, "spread": -44.3, "twist": -6.1}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, 0, 0], "pitch": 0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 13.4, "spread": 44.4, "twist": 4.5},
+   "LeftKnee": {"swing": -19.7, "twist": -0.7},
+   "LeftAnkle": {"swing": -8.1, "spread": -44.3, "twist": 6.1},
+   "RightHip": {"swing": 13.4, "spread": 44.4, "twist": -4.5},
+   "RightKnee": {"swing": -19.7, "twist": 0.7},
+   "RightAnkle": {"swing": -8.1, "spread": -44.3, "twist": -6.1}
+  }}
+ ]
+}

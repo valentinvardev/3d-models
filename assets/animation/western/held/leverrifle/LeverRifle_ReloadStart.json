@@ -1,0 +1,54 @@
+{
+ "name": "LeverRifle_ReloadStart",
+ "_intent": "Arranque de la recarga bala por bala del rifle de palanca (como un Winchester 1873: las balas entran por la tapa de carga del costado derecho del cajón, con la punta adelante, y van al tubo de abajo del caño). Desde LeverRifle_Hold lo baja del hombro y lo cruza sobre la panza, boca a la izquierda, la mano derecha sigue en la muñeca de la culata, la culata al costado de la cadera derecha, y lo acuesta para que la tapa quede para arriba, a la vista; la cabeza baja a mirarla y la mano izquierda suelta la caña y va a la canana del cinturón, lista para LeverRifle_ReloadRound. 0,36 s.",
+ "loop": false,
+ "priority": "Action",
+ "props": {"Body": {"parent": "RightHand"}, "Lever": {"parent": "Body"}, "Bolt": {"parent": "Body"}, "Hammer": {"parent": "Body"}, "LoadingGate": {"parent": "Body"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -40, "pitch": 4},
+   "Neck": {"turn": 38, "pitch": 6},
+   "RightShoulder": {"swing": 67.5, "spread": 20.3, "twist": 61.4},
+   "RightElbow": {"swing": 38.3},
+   "RightWrist": {"swing": 0, "spread": -11, "twist": 0},
+   "LeftShoulder": {"swing": 74.4, "spread": 10, "twist": -17.1},
+   "LeftElbow": {"swing": 26.7},
+   "LeftWrist": {"swing": 0, "spread": -2.9, "twist": 0},
+   "Body": {"rot": [-114, -24.2, -23]},
+   "Bolt": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [28, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]},
+   "LoadingGate": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.16, "ease": "smooth", "joints": {
+   "Waist": {"turn": -24, "pitch": 5},
+   "Neck": {"turn": 22, "pitch": 16},
+   "RightShoulder": {"swing": 26.8, "spread": -18.9, "twist": 57.9},
+   "RightElbow": {"swing": 63.4},
+   "RightWrist": {"swing": 0, "spread": -12.5, "twist": 0},
+   "LeftShoulder": {"swing": 27.1, "spread": -57.6, "twist": 0},
+   "LeftElbow": {"swing": 70.9},
+   "LeftWrist": {"swing": 0, "spread": 0, "twist": 0},
+   "Body": {"rot": [-84.8, -8, 60]},
+   "Bolt": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [28, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]},
+   "LoadingGate": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.36, "ease": "smooth", "joints": {
+   "Waist": {"turn": -8, "pitch": 6},
+   "Neck": {"turn": 11.4, "pitch": 44.8},
+   "RightShoulder": {"swing": 10.5, "spread": -35.5, "twist": 35.8},
+   "RightElbow": {"swing": 67.7},
+   "RightWrist": {"swing": 0, "spread": -10.7, "twist": 0},
+   "LeftShoulder": {"swing": -14.8, "spread": -16.7, "twist": -36.2},
+   "LeftElbow": {"swing": 75.1},
+   "LeftWrist": {"swing": -3.2, "spread": -7.2, "twist": 0.1},
+   "Body": {"rot": [-92.2, 30.6, 121.3]},
+   "Bolt": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [28, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]},
+   "LoadingGate": {"rot": [0, 0, 0]}
+  }}
+ ]
+}

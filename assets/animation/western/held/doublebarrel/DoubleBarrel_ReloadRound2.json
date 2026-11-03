@@ -1,0 +1,60 @@
+{
+ "name": "DoubleBarrel_ReloadRound2",
+ "_intent": "Un cartucho al caño izquierdo: dura 0.6 s (reloadSeconds de la ficha); el juego lo pasa una vez por cartucho que falta (ReloadRound para el primero, ReloadRound2 para el segundo) y disparar lo corta. Arranca y termina en la escopeta quebrada con la izquierda en la canana: saca un cartucho (ShellShow), lo sube, lo alinea con la boca de la recámara del caño izquierdo y lo empuja adentro con el pulgar (ShellHide), y la mano vuelve a la canana. El cuerpo y la escopeta no se mueven.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.06, "name": "ShellShow"}, {"t": 0.4, "name": "ShellHide"}],
+ "props": {"Stock": {"parent": "RightHand"}, "Barrels": {"parent": "Stock"}, "Extractor": {"parent": "Stock"}, "HammerL": {"parent": "Stock"}, "HammerR": {"parent": "Stock"}, "ShotgunShell": {"parent": "LeftHand"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -10, "pitch": 6},
+   "Neck": {"turn": 7.7, "pitch": 43},
+   "RightShoulder": {"swing": 1, "spread": -35.4, "twist": 40.8},
+   "RightElbow": {"swing": 88.2},
+   "RightWrist": {"swing": 0, "spread": -13.2, "twist": 0},
+   "LeftShoulder": {"swing": -16.7, "spread": -16.6, "twist": -35.7},
+   "LeftElbow": {"swing": 76.2},
+   "LeftWrist": {"swing": -2.9, "spread": -7.9, "twist": 0},
+   "Barrels": {"rot": [-40, 0, 0]},
+   "Extractor": {"rot": [-40, 0, 0], "pivot": [0, -0.07, -0.114], "pos": [0, 0.051, 0.061]},
+   "HammerL": {"rot": [10, 0, 0]},
+   "HammerR": {"rot": [10, 0, 0]},
+   "ShotgunShell": {"rot": [-56.6, 40.4, -45.7], "pos": [-0.115, -0.115, -0.08]},
+   "Stock": {"rot": [-88, 14.7, 57.7]}
+  }},
+  {"t": 0.06, "ease": "smooth", "joints": {
+   "LeftShoulder": {"swing": -16.7, "spread": -16.6, "twist": -35.7},
+   "LeftElbow": {"swing": 76.2},
+   "LeftWrist": {"swing": -2.9, "spread": -7.9, "twist": 0},
+   "ShotgunShell": {"rot": [-56.6, 40.4, -45.7], "pos": [-0.115, -0.115, -0.08]}
+  }},
+  {"t": 0.3, "ease": "linear", "joints": {
+   "LeftShoulder": {"swing": 32.7, "spread": -59.2, "twist": -74.7},
+   "LeftElbow": {"swing": 91.5},
+   "LeftWrist": {"swing": 38.1, "spread": 29.5, "twist": 1.4},
+   "ShotgunShell": {"rot": [-56.6, 40.4, -45.7], "pos": [-0.115, -0.115, -0.08]}
+  }},
+  {"t": 0.4, "ease": "out", "joints": {
+   "LeftShoulder": {"swing": 23.2, "spread": -55.9, "twist": -57.4},
+   "LeftElbow": {"swing": 94.9},
+   "LeftWrist": {"swing": 26.5, "spread": 32, "twist": -0.5},
+   "ShotgunShell": {"rot": [-65.2, 39.6, -33.5], "pos": [-0.117, -0.127, -0.062]}
+  }},
+  {"t": 0.6, "ease": "smooth", "joints": {
+   "Waist": {"turn": -10, "pitch": 6},
+   "Neck": {"turn": 7.7, "pitch": 43},
+   "RightShoulder": {"swing": 1, "spread": -35.4, "twist": 40.8},
+   "RightElbow": {"swing": 88.2},
+   "RightWrist": {"swing": 0, "spread": -13.2, "twist": 0},
+   "LeftShoulder": {"swing": -16.7, "spread": -16.6, "twist": -35.7},
+   "LeftElbow": {"swing": 76.2},
+   "LeftWrist": {"swing": -2.9, "spread": -7.9, "twist": 0},
+   "Barrels": {"rot": [-40, 0, 0]},
+   "Extractor": {"rot": [-40, 0, 0], "pivot": [0, -0.07, -0.114], "pos": [0, 0.051, 0.061]},
+   "HammerL": {"rot": [10, 0, 0]},
+   "HammerR": {"rot": [10, 0, 0]},
+   "ShotgunShell": {"rot": [-56.6, 40.4, -45.7], "pos": [-0.115, -0.115, -0.08]},
+   "Stock": {"rot": [-88, 14.7, 57.7]}
+  }}
+ ]
+}

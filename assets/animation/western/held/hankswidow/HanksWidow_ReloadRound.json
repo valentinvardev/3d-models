@@ -1,0 +1,74 @@
+{
+ "name": "HanksWidow_ReloadRound",
+ "_intent": "Una bala: dura 0.45 s (reloadSeconds de la ficha); el juego lo repite por cada bala que falta y disparar lo corta. Arranca y termina en la pose de carga (fin de ReloadStart): la mano izquierda empuja la cabeza de la varilla expulsora hacia el armazón y el casquillo vacío sale por la tapa (marcador Eject: cae en _Eject), la varilla vuelve sola, la mano baja a la canana del cinturón y saca una bala (RoundShow), la sube y la mete por la tapa en la recámara de atrás del cilindro (RoundHide cuando entra), el pulgar derecho hace girar el cilindro una recámara (60°, clic) y la mano vuelve a la varilla. El cuerpo no se mueve: solo el brazo izquierdo y las piezas.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.08, "name": "Eject"}, {"t": 0.21, "name": "RoundShow"}, {"t": 0.37, "name": "RoundHide"}],
+ "props": {"Body": {"parent": "RightHand"}, "Cylinder": {"parent": "Body"}, "LoadingGate": {"parent": "Body"}, "Hammer": {"parent": "Body"}, "EjectorRod": {"parent": "Body"}, "RevolverRound": {"parent": "LeftHand"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -10, "pitch": 6},
+   "Neck": {"turn": 16.3, "pitch": 41.9},
+   "RightShoulder": {"swing": 16.8, "spread": -40.9, "twist": 36.8},
+   "RightElbow": {"swing": 68},
+   "RightWrist": {"swing": 0, "spread": -11, "twist": 0},
+   "LeftShoulder": {"swing": 15.3, "spread": -4.9, "twist": -26.9},
+   "LeftElbow": {"swing": 95.3},
+   "LeftWrist": {"swing": 3.2, "spread": -3.6, "twist": 0},
+   "Body": {"rot": [-76.3, 15.7, 121.4]},
+   "Cylinder": {"rot": [0, 0, 0]},
+   "EjectorRod": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [12, 0, 0]},
+   "LoadingGate": {"rot": [0, 0, -95]},
+   "RevolverRound": {"rot": [-27.2, -6.3, 28.6], "pos": [-0.068, -0.062, -0.035]}
+  }},
+  {"t": 0.08, "ease": "out", "joints": {
+   "LeftShoulder": {"swing": 7.7, "spread": -9.7, "twist": -34.5},
+   "LeftElbow": {"swing": 99.8},
+   "LeftWrist": {"swing": 5, "spread": -8.3, "twist": 0},
+   "EjectorRod": {"pos": [0, 0, 0.24]},
+   "RevolverRound": {"rot": [-27.2, -6.3, 28.6], "pos": [-0.068, -0.062, -0.035]}
+  }},
+  {"t": 0.12, "ease": "linear", "joints": {
+   "EjectorRod": {"pos": [0, 0, 0]}
+  }},
+  {"t": 0.21, "ease": "smooth", "joints": {
+   "LeftShoulder": {"swing": -16.7, "spread": -16.6, "twist": -35.6},
+   "LeftElbow": {"swing": 76.2},
+   "LeftWrist": {"swing": -2.8, "spread": -7.8, "twist": 0},
+   "RevolverRound": {"rot": [-27.2, -6.3, 28.6], "pos": [-0.068, -0.062, -0.035]}
+  }},
+  {"t": 0.32, "ease": "linear", "joints": {
+   "LeftShoulder": {"swing": 24.7, "spread": -72, "twist": -53.4},
+   "LeftElbow": {"swing": 83.1},
+   "LeftWrist": {"swing": 27.7, "spread": 40, "twist": -1.2},
+   "Cylinder": {"rot": [0, 0, 0]},
+   "RevolverRound": {"rot": [-27.2, -6.3, 28.6], "pos": [-0.068, -0.062, -0.035]}
+  }},
+  {"t": 0.37, "ease": "out", "joints": {
+   "LeftShoulder": {"swing": 28.2, "spread": -65, "twist": -57.7},
+   "LeftElbow": {"swing": 91.3},
+   "LeftWrist": {"swing": 26.4, "spread": 40, "twist": -0.5},
+   "RevolverRound": {"rot": [-35.6, -7.1, 24.4], "pos": [-0.071, -0.061, -0.031]}
+  }},
+  {"t": 0.41, "ease": "smooth", "joints": {
+   "Cylinder": {"rot": [0, 0, 60]}
+  }},
+  {"t": 0.45, "ease": "smooth", "joints": {
+   "Waist": {"turn": -10, "pitch": 6},
+   "Neck": {"turn": 16.3, "pitch": 41.9},
+   "RightShoulder": {"swing": 16.8, "spread": -40.9, "twist": 36.8},
+   "RightElbow": {"swing": 68},
+   "RightWrist": {"swing": 0, "spread": -11, "twist": 0},
+   "LeftShoulder": {"swing": 15.3, "spread": -4.9, "twist": -26.9},
+   "LeftElbow": {"swing": 95.3},
+   "LeftWrist": {"swing": 3.2, "spread": -3.6, "twist": 0},
+   "Body": {"rot": [-76.3, 15.7, 121.4]},
+   "Cylinder": {"rot": [0, 0, 60]},
+   "EjectorRod": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [12, 0, 0]},
+   "LoadingGate": {"rot": [0, 0, -95]},
+   "RevolverRound": {"rot": [-27.2, -6.3, 28.6], "pos": [-0.068, -0.062, -0.035]}
+  }}
+ ]
+}

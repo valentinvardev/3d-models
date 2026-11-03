@@ -1,0 +1,109 @@
+{
+ "name": "Engineer_Idle",
+ "_intent": "Parado con la pala en guardia: la derecha la tiene casi vertical adelante a la derecha con la hoja a un palmo del piso, la izquierda en puño, rodillas flojas. Respira (0,8), levanta la pala y golpea dos veces la hoja contra el piso como si probara la chapa del tender (1,3-1,9), mira a su izquierda hacia la caldera (2,5) y vuelve (3,2 s). Prioridad Idle. Pies: tobillos a z -0,12 y +0,12, x ±0,66.",
+ "loop": true,
+ "priority": "Idle",
+ "keys": [
+  {"t": 0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.12, 0], "pitch": 3},
+   "Waist": {"pitch": 2, "turn": 6},
+   "Neck": {"pitch": -6, "turn": -6},
+   "LeftHip": {"swing": 21.4, "spread": 6.3},
+   "LeftKnee": {"swing": -32.8},
+   "LeftAnkle": {"swing": 14.3, "spread": -6.5},
+   "RightHip": {"swing": 15.8, "spread": 6.3},
+   "RightKnee": {"swing": -32.8},
+   "RightAnkle": {"swing": 20, "spread": -6.6},
+   "LeftShoulder": {"swing": 10, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 30},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 20, "spread": 10, "twist": 0},
+   "RightElbow": {"swing": 30},
+   "RightWrist": {"swing": -55}
+  }},
+  {"t": 0.8, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -2, "turn": 6},
+   "Neck": {"pitch": -10, "turn": -4},
+   "LeftShoulder": {"swing": 10, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 30},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 20, "spread": 10, "twist": 0},
+   "RightElbow": {"swing": 30},
+   "RightWrist": {"swing": -55}
+  }},
+  {"t": 1.3, "ease": "in", "joints": {
+   "Waist": {"pitch": 2, "turn": 6},
+   "Neck": {"pitch": 4, "turn": -10},
+   "LeftShoulder": {"swing": 10, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 30},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 24, "spread": 10, "twist": 0},
+   "RightElbow": {"swing": 48},
+   "RightWrist": {"swing": -70}
+  }},
+  {"t": 1.5, "ease": "out", "joints": {
+   "Waist": {"pitch": 2, "turn": 6},
+   "Neck": {"pitch": 8, "turn": -12},
+   "LeftShoulder": {"swing": 10, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 30},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 14, "spread": 10, "twist": 0},
+   "RightElbow": {"swing": 23.6},
+   "RightWrist": {"swing": -42}
+  }},
+  {"t": 1.7, "ease": "in", "joints": {
+   "Waist": {"pitch": 2, "turn": 6},
+   "Neck": {"pitch": 4, "turn": -10},
+   "LeftShoulder": {"swing": 10, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 30},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 24, "spread": 10, "twist": 0},
+   "RightElbow": {"swing": 48},
+   "RightWrist": {"swing": -70}
+  }},
+  {"t": 1.9, "ease": "out", "joints": {
+   "Waist": {"pitch": 2, "turn": 6},
+   "Neck": {"pitch": 8, "turn": -12},
+   "LeftShoulder": {"swing": 10, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 30},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 14, "spread": 10, "twist": 0},
+   "RightElbow": {"swing": 23.6},
+   "RightWrist": {"swing": -42}
+  }},
+  {"t": 2.5, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.14, 0], "pitch": 3, "lean": 2},
+   "Waist": {"pitch": 2, "turn": 12},
+   "Neck": {"pitch": -4, "turn": 24},
+   "LeftHip": {"swing": 23.9, "spread": 8.4},
+   "LeftKnee": {"swing": -37.9},
+   "LeftAnkle": {"swing": 16.9, "spread": -6.7},
+   "RightHip": {"swing": 16.2, "spread": 4.3},
+   "RightKnee": {"swing": -33.8},
+   "RightAnkle": {"swing": 20.5, "spread": -6.7},
+   "LeftShoulder": {"swing": 10, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 30},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 20, "spread": 10, "twist": 0},
+   "RightElbow": {"swing": 30},
+   "RightWrist": {"swing": -55}
+  }},
+  {"t": 3.2, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.12, 0], "pitch": 3},
+   "Waist": {"pitch": 2, "turn": 6},
+   "Neck": {"pitch": -6, "turn": -6},
+   "LeftHip": {"swing": 21.4, "spread": 6.3},
+   "LeftKnee": {"swing": -32.8},
+   "LeftAnkle": {"swing": 14.3, "spread": -6.5},
+   "RightHip": {"swing": 15.8, "spread": 6.3},
+   "RightKnee": {"swing": -32.8},
+   "RightAnkle": {"swing": 20, "spread": -6.6},
+   "LeftShoulder": {"swing": 10, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 30},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 20, "spread": 10, "twist": 0},
+   "RightElbow": {"swing": 30},
+   "RightWrist": {"swing": -55}
+  }}
+ ]
+}

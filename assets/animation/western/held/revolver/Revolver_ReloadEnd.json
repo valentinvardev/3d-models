@@ -1,0 +1,64 @@
+{
+ "name": "Revolver_ReloadEnd",
+ "_intent": "Cierre de la recarga: desde la pose de carga, el pulgar izquierdo cierra la tapa de carga, el pulgar derecho amartilla del todo (clic) mientras el brazo lleva el arma al frente; termina exacto en Revolver_Hold. 0,4 s; dispara desde el marcador Ready.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.4, "name": "Ready"}],
+ "props": {"Body": {"parent": "RightHand"}, "Cylinder": {"parent": "Body"}, "LoadingGate": {"parent": "Body"}, "Hammer": {"parent": "Body"}, "EjectorRod": {"parent": "Body"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -10, "pitch": 6},
+   "Neck": {"turn": 16.3, "pitch": 41.9},
+   "RightShoulder": {"swing": 16.8, "spread": -40.9, "twist": 36.8},
+   "RightElbow": {"swing": 68},
+   "RightWrist": {"swing": 0, "spread": -11, "twist": 0},
+   "LeftShoulder": {"swing": 15.3, "spread": -4.9, "twist": -26.9},
+   "LeftElbow": {"swing": 95.3},
+   "LeftWrist": {"swing": 3.2, "spread": -3.6, "twist": 0},
+   "Body": {"rot": [-76.3, 15.7, 121.4]},
+   "Cylinder": {"rot": [0, 0, 0]},
+   "EjectorRod": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [12, 0, 0]},
+   "LoadingGate": {"rot": [0, 0, -95]}
+  }},
+  {"t": 0.1, "ease": "out", "joints": {
+   "LeftShoulder": {"swing": 5.8, "spread": 16.5, "twist": -81},
+   "LeftElbow": {"swing": 96.4},
+   "LeftWrist": {"swing": -60, "spread": -33.6, "twist": 3},
+   "LoadingGate": {"rot": [0, 0, -95]}
+  }},
+  {"t": 0.15, "ease": "smooth", "joints": {
+   "Waist": {"turn": -10, "pitch": 6},
+   "Neck": {"turn": 16.3, "pitch": 41.9},
+   "RightShoulder": {"swing": 16.8, "spread": -40.9, "twist": 36.8},
+   "RightElbow": {"swing": 68},
+   "RightWrist": {"swing": 0, "spread": -11, "twist": 0},
+   "LeftShoulder": {"swing": 5.8, "spread": 16.5, "twist": -81},
+   "LeftElbow": {"swing": 96.4},
+   "LeftWrist": {"swing": -60, "spread": -33.6, "twist": 3},
+   "Body": {"rot": [-76.3, 15.7, 121.4]},
+   "Cylinder": {"rot": [0, 0, 0]},
+   "EjectorRod": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [12, 0, 0]},
+   "LoadingGate": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.23, "ease": "smooth", "joints": {
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 0.4, "ease": "smooth", "joints": {
+   "Waist": {"turn": 14},
+   "Neck": {"turn": -10},
+   "RightShoulder": {"swing": 78, "spread": -14},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 22},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-90, 0, 0]},
+   "Cylinder": {"rot": [0, 0, 0]},
+   "EjectorRod": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]},
+   "LoadingGate": {"rot": [0, 0, 0]}
+  }}
+ ]
+}

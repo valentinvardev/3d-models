@@ -1,0 +1,84 @@
+{
+ "name": "Revolver_Inspect",
+ "_intent": "Inspeccionar (D024): lo trae frente a la cara (en primera persona pasa por delante de la cámara), lo gira para mostrar el costado izquierdo, después el derecho, abre la tapa de carga y hace rodar el cilindro dos clics con el pulgar, la cierra, mira la mira de arriba y vuelve a Revolver_Hold. Sin el giro en el dedo (ese es solo al equipar). 2,6 s; se corta al disparar, recargar o cambiar.",
+ "loop": false,
+ "priority": "Action",
+ "props": {"Body": {"parent": "RightHand"}, "Cylinder": {"parent": "Body"}, "LoadingGate": {"parent": "Body"}, "Hammer": {"parent": "Body"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 14},
+   "Neck": {"turn": -10},
+   "RightShoulder": {"swing": 78, "spread": -14},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 22},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 0.45, "ease": "smooth", "joints": {
+   "RightShoulder": {"swing": 72, "spread": -38},
+   "RightElbow": {"swing": 74},
+   "Neck": {"pitch": 12, "turn": 18},
+   "Waist": {"turn": 8, "pitch": 4},
+   "LeftShoulder": {"swing": 18, "spread": 4},
+   "LeftElbow": {"swing": 40},
+   "Body": {"rot": [-150, 70, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 0.95, "ease": "smooth", "joints": {
+   "RightShoulder": {"swing": 72, "spread": -38},
+   "RightElbow": {"swing": 74},
+   "Neck": {"pitch": 12, "turn": 18},
+   "Waist": {"turn": 8, "pitch": 4},
+   "LeftShoulder": {"swing": 18, "spread": 4},
+   "LeftElbow": {"swing": 40},
+   "Body": {"rot": [-150, 82, -8]}
+  }},
+  {"t": 1.25, "ease": "out", "joints": {
+   "RightShoulder": {"swing": 74, "spread": -34},
+   "RightElbow": {"swing": 74},
+   "Neck": {"pitch": 12, "turn": 18},
+   "Waist": {"turn": 8, "pitch": 4},
+   "LeftShoulder": {"swing": 18, "spread": 4},
+   "LeftElbow": {"swing": 40},
+   "Body": {"rot": [-150, -75, 6]},
+   "LoadingGate": {"rot": [0, 0, 0]},
+   "Cylinder": {"rot": [0, 0, 0]}
+  }},
+  {"t": 1.45, "ease": "out", "joints": {
+   "LoadingGate": {"rot": [0, 0, -95]}
+  }},
+  {"t": 1.65, "ease": "linear", "joints": {
+   "Cylinder": {"rot": [0, 0, 60]}
+  }},
+  {"t": 1.85, "ease": "out", "joints": {
+   "Cylinder": {"rot": [0, 0, 120]},
+   "LoadingGate": {"rot": [0, 0, -95]},
+   "Body": {"rot": [-150, -80, 4]}
+  }},
+  {"t": 2.05, "ease": "smooth", "joints": {
+   "LoadingGate": {"rot": [0, 0, 0]},
+   "Body": {"rot": [-125, 0, 0]},
+   "RightShoulder": {"swing": 72, "spread": -38},
+   "RightElbow": {"swing": 74},
+   "Neck": {"pitch": 12, "turn": 18},
+   "Waist": {"turn": 8, "pitch": 4},
+   "LeftShoulder": {"swing": 18, "spread": 4},
+   "LeftElbow": {"swing": 40}
+  }},
+  {"t": 2.6, "ease": "smooth", "joints": {
+   "Waist": {"turn": 14},
+   "Neck": {"turn": -10},
+   "RightShoulder": {"swing": 78, "spread": -14},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 22},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]},
+   "LoadingGate": {"rot": [0, 0, 0]},
+   "Cylinder": {"rot": [0, 0, 120]}
+  }}
+ ]
+}

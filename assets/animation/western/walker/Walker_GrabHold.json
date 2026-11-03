@@ -1,0 +1,47 @@
+{
+ "name": "Walker_GrabHold",
+ "_intent": "Forcejeo: con la víctima agarrada, sacude la cabeza mordiendo y tironea con los brazos, en loop, desde la pose final de Walker_Grab.",
+ "loop": true,
+ "priority": "Action",
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.18, -0.34]},
+   "Waist": {"pitch": 26, "turn": 6},
+   "Neck": {"pitch": 20, "turn": -8},
+   "LeftHip": {"swing": 30},
+   "LeftKnee": {"swing": -24},
+   "LeftAnkle": {"swing": -6},
+   "RightHip": {"swing": -20},
+   "RightKnee": {"swing": -12},
+   "RightAnkle": {"swing": 30},
+   "LeftShoulder": {"swing": 80, "spread": 8},
+   "LeftElbow": {"swing": 30},
+   "RightShoulder": {"swing": 80, "spread": 8},
+   "RightElbow": {"swing": 30}
+  }},
+  {"t": 0.3, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.2, -0.3]},
+   "Waist": {"pitch": 32, "turn": -6},
+   "Neck": {"pitch": 30, "turn": 8},
+   "LeftShoulder": {"swing": 74, "spread": 10},
+   "LeftElbow": {"swing": 42},
+   "RightShoulder": {"swing": 76, "spread": 6},
+   "RightElbow": {"swing": 38}
+  }},
+  {"t": 0.6, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.18, -0.34]},
+   "Waist": {"pitch": 26, "turn": 6},
+   "Neck": {"pitch": 20, "turn": -8},
+   "LeftHip": {"swing": 30},
+   "LeftKnee": {"swing": -24},
+   "LeftAnkle": {"swing": -6},
+   "RightHip": {"swing": -20},
+   "RightKnee": {"swing": -12},
+   "RightAnkle": {"swing": 30},
+   "LeftShoulder": {"swing": 80, "spread": 8},
+   "LeftElbow": {"swing": 30},
+   "RightShoulder": {"swing": 80, "spread": 8},
+   "RightElbow": {"swing": 30}
+  }}
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "name": "Whiskey_Equip",
+ "_intent": "Sacar la botella del bolsillo de atrás (cadera derecha): la mano la agarra del cuello, la saca y la trae adelante balanceándola, se pasa un poco y queda exacta en Whiskey_Hold. 0,65 s; no se toma hasta Ready.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.65, "name": "Ready"}],
+ "props": {"Body": {"parent": "RightHand"}},
+ "keys": [
+  {"t": 0.0, "ease": "out", "joints": {
+   "Waist": {"turn": -6, "pitch": 2},
+   "Neck": {"turn": -6, "pitch": 6},
+   "RightShoulder": {"swing": -60, "spread": 7.8, "twist": -50.7},
+   "RightElbow": {"swing": 98.4},
+   "RightWrist": {"swing": 0.5, "spread": -39.6, "twist": 0.4},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-30.9, 35.9, 13.1]}
+  }},
+  {"t": 0.25, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 2},
+   "Neck": {"turn": -6, "pitch": 4},
+   "RightShoulder": {"swing": -60, "spread": -12.8, "twist": -37.5},
+   "RightElbow": {"swing": 139.2},
+   "RightWrist": {"swing": -0.3, "spread": -40, "twist": -0.3},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-94.5, -13.5, 15.3]}
+  }},
+  {"t": 0.45, "ease": "out", "joints": {
+   "Waist": {"turn": 8, "pitch": 2},
+   "Neck": {"turn": -6, "pitch": 4},
+   "RightShoulder": {"swing": -41.8, "spread": 0.2, "twist": 18},
+   "RightElbow": {"swing": 145.9},
+   "RightWrist": {"swing": 0.1, "spread": -9.7, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-103, -25.5, 8.2]}
+  }},
+  {"t": 0.65, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 2},
+   "Neck": {"turn": -6, "pitch": 4},
+   "RightShoulder": {"swing": -48.3, "spread": -4.3, "twist": 16.5},
+   "RightElbow": {"swing": 141},
+   "RightWrist": {"swing": 0.1, "spread": -9.3, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-89.6, -23.6, -0.9]}
+  }}
+ ]
+}

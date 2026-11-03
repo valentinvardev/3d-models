@@ -1,0 +1,129 @@
+{
+ "name": "WhiskeyMolotov_Inspect",
+ "_intent": "Inspeccionar (D024): sube la botella adelante a la derecha a la altura de la cara y la mira; la sacude de un lado al otro para ver moverse el whisky (tres cabeceos que se apagan), la gira para mostrar el trapo, la izquierda agarra la punta del trapo y lo acomoda tirándolo un poco para afuera del pico, la suelta y vuelve a WhiskeyMolotov_Hold. 2,7 s; se corta al tirar o cambiar.",
+ "loop": false,
+ "priority": "Action",
+ "props": {"Bottle": {"parent": "RightHand"}, "Rag": {"parent": "Bottle"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -32.8, "spread": 3.8, "twist": 18.8},
+   "RightElbow": {"swing": 147.1},
+   "RightWrist": {"swing": 0, "spread": -9.5, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-113.4, -22.7, -6.8]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 0.45, "ease": "out", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -32.6, "pitch": 16.1},
+   "RightShoulder": {"swing": 51.6, "spread": 13.9, "twist": 39.5},
+   "RightElbow": {"swing": 105.5},
+   "RightWrist": {"swing": -4.7, "spread": 13, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-149.7, -20.5, 0.4]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 0.7, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -32.6, "pitch": 16.1},
+   "RightShoulder": {"swing": 50.3, "spread": 12.2, "twist": 45.9},
+   "RightElbow": {"swing": 105.5},
+   "RightWrist": {"swing": -2.4, "spread": 14.5, "twist": 0.1},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-149.2, -25.7, 36]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 0.9, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -32.6, "pitch": 16.1},
+   "RightShoulder": {"swing": 49.7, "spread": 14.4, "twist": 33.9},
+   "RightElbow": {"swing": 106.5},
+   "RightWrist": {"swing": -5.7, "spread": 10.1, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-148.6, -16.1, -33.3]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 1.08, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -32.6, "pitch": 16.1},
+   "RightShoulder": {"swing": 51.3, "spread": 13.1, "twist": 43.1},
+   "RightElbow": {"swing": 105.4},
+   "RightWrist": {"swing": -3.5, "spread": 14.1, "twist": -0.1},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-149.6, -23.6, 20.6]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 1.35, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -32.6, "pitch": 16.1},
+   "RightShoulder": {"swing": 51.3, "spread": 14.1, "twist": 38},
+   "RightElbow": {"swing": 105.8},
+   "RightWrist": {"swing": -5.1, "spread": 12.4, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-138.2, 55.2, -9.5]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 1.65, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -32.6, "pitch": 16.1},
+   "RightShoulder": {"swing": 51.3, "spread": 14.1, "twist": 38},
+   "RightElbow": {"swing": 105.8},
+   "RightWrist": {"swing": -5, "spread": 12.4, "twist": 0},
+   "LeftShoulder": {"swing": 91, "spread": 4.3, "twist": -69.1},
+   "LeftElbow": {"swing": 19.9},
+   "LeftWrist": {"swing": -6.2, "spread": 8.4, "twist": 0},
+   "Bottle": {"rot": [-138.3, 55.2, -9.5]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 1.95, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -32.6, "pitch": 16.1},
+   "RightShoulder": {"swing": 51.6, "spread": 14.2, "twist": 37.2},
+   "RightElbow": {"swing": 105.1},
+   "RightWrist": {"swing": -5.2, "spread": 11.9, "twist": 0},
+   "LeftShoulder": {"swing": 92.9, "spread": 5.6, "twist": -69},
+   "LeftElbow": {"swing": 18.2},
+   "LeftWrist": {"swing": -5.9, "spread": 9.2, "twist": 0},
+   "Bottle": {"rot": [-134.2, 52.4, -16.3]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0.05, 0]}
+  }},
+  {"t": 2.15, "ease": "smooth", "joints": {
+   "Waist": {"turn": 6, "pitch": 4},
+   "Neck": {"turn": -32.6, "pitch": 16.1},
+   "RightShoulder": {"swing": 51.6, "spread": 14.2, "twist": 37.2},
+   "RightElbow": {"swing": 105.1},
+   "RightWrist": {"swing": -5.2, "spread": 12, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-134.3, 52.4, -16.2]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0.05, 0]}
+  }},
+  {"t": 2.7, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -32.8, "spread": 3.8, "twist": 18.8},
+   "RightElbow": {"swing": 147.1},
+   "RightWrist": {"swing": 0, "spread": -9.5, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-113.4, -22.7, -6.8]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }}
+ ]
+}

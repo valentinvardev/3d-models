@@ -1,0 +1,66 @@
+{
+ "name": "HuntingRifle_Equip",
+ "_intent": "Sacarlo del costado y montarlo: arranca colgando de la mano derecha al costado con la boca para abajo, lo sube en arco (es el arma más larga: el arco es más lento) mientras el torso se pone de perfil, la izquierda ataja la caña, la cantonera entra al hombro y el pulgar amartilla el martillo de costado. Termina exacto en HuntingRifle_Hold; no dispara hasta Ready.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 1.05, "name": "Ready"}],
+ "props": {"Body": {"parent": "RightHand"}, "Lever": {"parent": "Body"}, "BreechBlock": {"parent": "Body"}, "Hammer": {"parent": "Body"}},
+ "keys": [
+  {"t": 0.0, "ease": "in", "joints": {
+   "Waist": {"turn": 0, "pitch": 0},
+   "Neck": {"turn": 0, "pitch": 0},
+   "RightShoulder": {"swing": -37.1, "spread": -6.3, "twist": 5.6},
+   "RightElbow": {"swing": 91.9},
+   "RightWrist": {"swing": -0.1, "spread": -3.9, "twist": 0},
+   "LeftShoulder": {"swing": 6, "spread": 6},
+   "LeftElbow": {"swing": 14},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-112.8, -11.9, -2.9]},
+   "BreechBlock": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [0, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.32, "ease": "out", "joints": {
+   "Waist": {"turn": -24, "pitch": 3},
+   "Neck": {"turn": 22, "pitch": 3},
+   "RightShoulder": {"swing": 55.8, "spread": 5.6, "twist": 52},
+   "RightElbow": {"swing": 31.8},
+   "RightWrist": {"swing": 0, "spread": -8.9, "twist": 0},
+   "LeftShoulder": {"swing": 74.5, "spread": -84.5, "twist": 0},
+   "LeftElbow": {"swing": 0},
+   "LeftWrist": {"swing": 0, "spread": 16.1, "twist": 0},
+   "Body": {"rot": [-111.2, -25.6, -14.3]}
+  }},
+  {"t": 0.58, "ease": "smooth", "joints": {
+   "Waist": {"turn": -42, "pitch": 4},
+   "Neck": {"turn": 40, "pitch": 6},
+   "RightShoulder": {"swing": 90.4, "spread": 20.7, "twist": 62.6},
+   "RightElbow": {"swing": 0.1},
+   "RightWrist": {"swing": 0, "spread": -4.6, "twist": 0.1},
+   "LeftShoulder": {"swing": 89.9, "spread": 11.7, "twist": -12.1},
+   "LeftElbow": {"swing": 0.1},
+   "LeftWrist": {"swing": 0, "spread": 0.8, "twist": 0},
+   "Body": {"rot": [-97.3, -17.8, -19.4]},
+   "BreechBlock": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [0, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.8, "ease": "out", "joints": {
+   "Hammer": {"rot": [30, 0, 0]}
+  }},
+  {"t": 1.05, "ease": "smooth", "joints": {
+   "Waist": {"turn": -42, "pitch": 4},
+   "Neck": {"turn": 40, "pitch": 6},
+   "RightShoulder": {"swing": 90.4, "spread": 20.7, "twist": 62.6},
+   "RightElbow": {"swing": 0.1},
+   "RightWrist": {"swing": 0, "spread": -4.6, "twist": 0.1},
+   "LeftShoulder": {"swing": 89.9, "spread": 11.7, "twist": -12.1},
+   "LeftElbow": {"swing": 0.1},
+   "LeftWrist": {"swing": 0, "spread": 0.8, "twist": 0},
+   "Body": {"rot": [-97.3, -17.8, -19.4]},
+   "BreechBlock": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [30, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }}
+ ]
+}

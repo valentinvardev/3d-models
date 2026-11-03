@@ -1,0 +1,215 @@
+{
+ "name": "HanksWidow_Fire",
+ "_intent": "Disparo desde HanksWidow_Hold: el caño sube 24° y el brazo patea en 0,02 s (marcador Fire: el fogonazo sale en _Muzzle), se asienta y vuelve exacto a la pose de sostener en 0,42 s. El martillo cae en el disparo y se vuelve a amartillar; el cilindro avanza una recámara (60°).",
+ "loop": false,
+ "priority": "Action",
+ "props": {
+  "Body": {
+   "parent": "RightHand"
+  },
+  "Cylinder": {
+   "parent": "Body"
+  },
+  "LoadingGate": {
+   "parent": "Body"
+  },
+  "Hammer": {
+   "parent": "Body"
+  }
+ },
+ "markers": [
+  {
+   "t": 0.02,
+   "name": "Fire"
+  }
+ ],
+ "keys": [
+  {
+   "t": 0.0,
+   "ease": "linear",
+   "joints": {
+    "Waist": {
+     "turn": 14
+    },
+    "Neck": {
+     "turn": -10
+    },
+    "RightShoulder": {
+     "swing": 78,
+     "spread": -14
+    },
+    "RightElbow": {
+     "swing": 12
+    },
+    "RightWrist": {
+     "swing": 0
+    },
+    "LeftShoulder": {
+     "swing": 10,
+     "spread": 6
+    },
+    "LeftElbow": {
+     "swing": 22
+    },
+    "Body": {
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      32,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.02,
+   "ease": "out",
+   "joints": {
+    "Waist": {
+     "turn": 14,
+     "pitch": -3
+    },
+    "Neck": {
+     "turn": -10
+    },
+    "RightShoulder": {
+     "swing": 85,
+     "spread": -14
+    },
+    "RightElbow": {
+     "swing": 20
+    },
+    "RightWrist": {
+     "swing": 0
+    },
+    "LeftShoulder": {
+     "swing": 10,
+     "spread": 6
+    },
+    "LeftElbow": {
+     "swing": 22
+    },
+    "Body": {
+     "rot": [
+      -66,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.2,
+   "ease": "smooth",
+   "joints": {
+    "Waist": {
+     "turn": 14
+    },
+    "Neck": {
+     "turn": -10
+    },
+    "RightShoulder": {
+     "swing": 78,
+     "spread": -14
+    },
+    "RightElbow": {
+     "swing": 12
+    },
+    "RightWrist": {
+     "swing": 0
+    },
+    "LeftShoulder": {
+     "swing": 10,
+     "spread": 6
+    },
+    "LeftElbow": {
+     "swing": 22
+    },
+    "Body": {
+     "rot": [
+      -84.0,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Cylinder": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.42,
+   "ease": "smooth",
+   "joints": {
+    "Waist": {
+     "turn": 14
+    },
+    "Neck": {
+     "turn": -10
+    },
+    "RightShoulder": {
+     "swing": 78,
+     "spread": -14
+    },
+    "RightElbow": {
+     "swing": 12
+    },
+    "RightWrist": {
+     "swing": 0
+    },
+    "LeftShoulder": {
+     "swing": 10,
+     "spread": 6
+    },
+    "LeftElbow": {
+     "swing": 22
+    },
+    "Body": {
+     "rot": [
+      -90,
+      0,
+      0
+     ]
+    },
+    "Hammer": {
+     "rot": [
+      32,
+      0,
+      0
+     ]
+    },
+    "Cylinder": {
+     "rot": [
+      0,
+      0,
+      60
+     ]
+    }
+   }
+  }
+ ]
+}

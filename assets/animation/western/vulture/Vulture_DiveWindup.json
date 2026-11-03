@@ -1,0 +1,70 @@
+{
+ "name": "Vulture_DiveWindup",
+ "_intent": "Aviso de la picada (0,6 s). Arranca en el planeo de Fly (t=0). 0-0,10: alza las alas hacia adelante (42°), se para con la nariz arriba y echa la cabeza atrás (+35° en el mundo). 0,10-0,24, lineal: aletazo de freno hacia adelante y abajo (alas barridas 22° adelante, -28°, ataque 18°), la nariz sube a 22°, el cuerpo sube 0,06 y la cola baja 30°. 0,24 (marcador Screech): chilla. El pico no se abre (cabeza y cuello son una sola pieza), así que tira la cabeza al frente y abajo (-19° en el mundo) con el cuello estirado 0,14 (pos) y la sacude de lado (-10° a +12°, lineal) hasta 0,45. 0,24-0,60: pliega las alas en flecha y vuelve a nivel. Desde abajo, la envergadura pasa de 5,15 (en el freno) a 2,42. La punta baja (pos -0,09 y -0,11) antes de barrerse y no atraviesa la de adentro (0,066, la bisagra en el freno). Marcador Go en 0,60: el último cuadro es exactamente Dive t=0 (0,00°, 0,0000 studs). Pico 807 °/s. Prioridad Action, sobre Fly, que sigue andando abajo: Play(0.15), o 0,1 como mínimo (sin fundido, el salto desde Fly llega a 2243 °/s).",
+ "rig": "assets/models/western/enemies/WST_Enemy_Vulture/04_roblox/WST_Enemy_Vulture.rig.json",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.24, "name": "Screech"}, {"t": 0.6, "name": "Go"}],
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Body": {"rot": [2, 0, 0], "pos": [0, 0, 0]},
+   "Head": {"rot": [-12, 0, 0], "pos": [0, 0, 0]},
+   "Tail": {"rot": [0, 0, 0]},
+   "WingLeftInner": {"rot": [0.0, 0.0, -7.0]},
+   "WingRightInner": {"rot": [0.0, 0.0, 7.0]},
+   "WingLeftOuter": {"rot": [0.0, 0.0, -3.0], "pos": [0.0, 0.0, 0.0]},
+   "WingRightOuter": {"rot": [0.0, 0.0, 3.0], "pos": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 0.1, "ease": "smooth", "joints": {
+   "Body": {"rot": [9, 0, 0], "pos": [0, 0, 0], "ease": "linear"},
+   "Head": {"rot": [26, 0, 0], "pos": [0, 0, 0], "ease": "linear"},
+   "Tail": {"rot": [-8, 0, 0], "ease": "linear"},
+   "WingLeftInner": {"rot": [4.63, -15.97, -40.88], "ease": "linear"},
+   "WingRightInner": {"rot": [4.63, 15.97, 40.88], "ease": "linear"},
+   "WingLeftOuter": {"rot": [7.8, 5.89, 13.33], "pos": [0.0, -0.05, 0.0], "ease": "linear"},
+   "WingRightOuter": {"rot": [7.8, -5.89, -13.33], "pos": [0.0, -0.05, 0.0], "ease": "linear"}
+  }},
+  {"t": 0.24, "ease": "smooth", "joints": {
+   "Body": {"rot": [22, 0, 0], "pos": [0, 0.06, 0]},
+   "Head": {"rot": [-36, 0, 0], "pos": [0, 0.03, -0.14], "ease": "linear"},
+   "Tail": {"rot": [30, 0, 0]},
+   "WingLeftInner": {"rot": [16.25, -12.81, 32.91]},
+   "WingRightInner": {"rot": [16.25, 12.81, -32.91]},
+   "WingLeftOuter": {"rot": [5.87, -7.42, -13.31], "pos": [0.0, 0.0, 0.0]},
+   "WingRightOuter": {"rot": [5.87, 7.42, 13.31], "pos": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 0.29, "ease": "smooth", "joints": {
+   "Head": {"rot": [-35, 14, -8], "pos": [0, 0.03, -0.14], "ease": "linear"}
+  }},
+  {"t": 0.32, "ease": "smooth", "joints": {
+   "WingLeftOuter": {"rot": [6.04, 7.54, -4.82], "pos": [0.0, -0.09, 0.0]},
+   "WingRightOuter": {"rot": [6.04, -7.54, 4.82], "pos": [0.0, -0.09, 0.0]}
+  }},
+  {"t": 0.34, "ease": "smooth", "joints": {
+   "Head": {"rot": [-33, -13, 8], "pos": [0, 0.03, -0.14], "ease": "linear"}
+  }},
+  {"t": 0.39, "ease": "smooth", "joints": {
+   "Head": {"rot": [-30, 11, -6], "pos": [0, 0.03, -0.14], "ease": "linear"}
+  }},
+  {"t": 0.42, "ease": "smooth", "joints": {
+   "Body": {"rot": [12, 0, 0], "pos": [0, 0.04, 0]},
+   "Tail": {"rot": [12, 0, 0]},
+   "WingLeftInner": {"rot": [-3.97, 18.59, 21.31]},
+   "WingRightInner": {"rot": [-3.97, -18.59, -21.31]},
+   "WingLeftOuter": {"rot": [3.71, 36.05, -0.18], "pos": [0.0, -0.11, 0.0]},
+   "WingRightOuter": {"rot": [3.71, -36.05, 0.18], "pos": [0.0, -0.11, 0.0]}
+  }},
+  {"t": 0.45, "ease": "smooth", "joints": {
+   "Head": {"rot": [-24, -6, 4], "pos": [0, 0.03, -0.14]}
+  }},
+  {"t": 0.6, "ease": "smooth", "joints": {
+   "Body": {"rot": [0, 0, 0], "pos": [0, 0, 0]},
+   "Head": {"rot": [-4, 0, 0], "pos": [0, 0.02, -0.12]},
+   "Tail": {"rot": [5, 0, 0]},
+   "WingLeftInner": {"rot": [-12.68, 41.18, 26.68]},
+   "WingRightInner": {"rot": [-12.68, -41.18, -26.68]},
+   "WingLeftOuter": {"rot": [0.0, 68.0, 2.0], "pos": [0.0, -0.11, 0.0]},
+   "WingRightOuter": {"rot": [0.0, -68.0, -2.0], "pos": [0.0, -0.11, 0.0]}
+  }}
+ ]
+}

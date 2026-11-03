@@ -1,0 +1,48 @@
+{
+ "name": "Sheriff_Hit",
+ "_intent": "Golpe recibido, pesado: el pecho y la cabeza se van atrás y de costado de golpe (0,07 s), los brazos se abren pero la mano derecha no suelta la escopeta (el brazo se abre y los caños quedan para abajo y afuera: nunca apuntan al frente); vuelve adelante con bronca (0,22) y se acomoda en la guardia. Solo de la cintura para arriba (no toca Root ni piernas): se puede tocar encima de la caminata. Más largo que el del caminante (0,6 s).",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "out", "joints": {
+   "Waist": {"pitch": -3, "lean": 0, "turn": 6},
+   "Neck": {"pitch": -4, "lean": 0, "turn": -6},
+   "LeftShoulder": {"swing": 2, "spread": 10},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 18, "spread": 8, "twist": 0},
+   "RightElbow": {"swing": 38},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.07, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -16, "lean": 6, "turn": -18},
+   "Neck": {"pitch": -28, "lean": 0, "turn": 16},
+   "LeftShoulder": {"swing": -24, "spread": 40},
+   "LeftElbow": {"swing": 36},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": -12, "spread": 34, "twist": 0},
+   "RightElbow": {"swing": 26},
+   "RightWrist": {"swing": 6}
+  }},
+  {"t": 0.22, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 7, "lean": -2, "turn": 4},
+   "Neck": {"pitch": 4, "lean": 0, "turn": -8},
+   "LeftShoulder": {"swing": 6, "spread": 16},
+   "LeftElbow": {"swing": 26},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 24, "spread": 12, "twist": 0},
+   "RightElbow": {"swing": 48},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.6, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -3, "lean": 0, "turn": 6},
+   "Neck": {"pitch": -4, "lean": 0, "turn": -6},
+   "LeftShoulder": {"swing": 2, "spread": 10},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 18, "spread": 8, "twist": 0},
+   "RightElbow": {"swing": 38},
+   "RightWrist": {"swing": 0}
+  }}
+ ]
+}

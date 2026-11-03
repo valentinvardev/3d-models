@@ -1,0 +1,58 @@
+{
+ "name": "WhiskeyMolotov_Equip",
+ "_intent": "Sacarla de la alforja de la cadera izquierda cruzando el cuerpo: el torso gira a la izquierda, la mano derecha baja a la alforja y agarra la botella por el cuello, la saca cruzando por delante del pecho, se pasa un poco a la derecha y arriba y queda exacta en WhiskeyMolotov_Hold. 0,7 s; no se tira hasta Ready.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.7, "name": "Ready"}],
+ "props": {"Bottle": {"parent": "RightHand"}, "Rag": {"parent": "Bottle"}},
+ "keys": [
+  {"t": 0.0, "ease": "out", "joints": {
+   "Waist": {"turn": 22, "pitch": 6},
+   "Neck": {"turn": -2, "pitch": 18},
+   "RightShoulder": {"swing": 26.5, "spread": -56.8, "twist": 29.5},
+   "RightElbow": {"swing": 40.6},
+   "RightWrist": {"swing": 28.9, "spread": 5.7, "twist": -0.3},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-75, -2.2, 66.2]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 0.25, "ease": "smooth", "joints": {
+   "Waist": {"turn": 16, "pitch": 4},
+   "Neck": {"turn": -6, "pitch": 8},
+   "RightShoulder": {"swing": -2.1, "spread": -21.5, "twist": 49.2},
+   "RightElbow": {"swing": 125.6},
+   "RightWrist": {"swing": 8.8, "spread": -2.5, "twist": -0.1},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-107.8, -41.8, 22]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 0.48, "ease": "out", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -22, "spread": 9, "twist": 11.3},
+   "RightElbow": {"swing": 148.7},
+   "RightWrist": {"swing": 0, "spread": -5.8, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-125.2, -11.4, -3.8]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }},
+  {"t": 0.7, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -32.8, "spread": 3.8, "twist": 18.8},
+   "RightElbow": {"swing": 147.1},
+   "RightWrist": {"swing": 0, "spread": -9.5, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Bottle": {"rot": [-113.4, -22.7, -6.8]},
+   "Rag": {"rot": [0, 0, 0], "pos": [0, 0, 0]}
+  }}
+ ]
+}

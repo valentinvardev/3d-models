@@ -1,0 +1,90 @@
+{
+ "name": "LeverRifle_Equip",
+ "_intent": "Sacarlo del costado y montarlo: arranca colgando de la mano derecha al costado con la boca para abajo, lo sube en arco mientras el torso se pone de perfil, la izquierda ataja la caña, la cantonera entra al hombro, y la mano derecha baja la palanca y la sube de un golpe (el cerrojo corre atrás y vuelve, el martillo queda amartillado) sin sacarlo del hombro. Termina exacto en LeverRifle_Hold; no dispara hasta Ready.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 1.0, "name": "Ready"}],
+ "props": {"Body": {"parent": "RightHand"}, "Lever": {"parent": "Body"}, "Bolt": {"parent": "Body"}, "Hammer": {"parent": "Body"}},
+ "keys": [
+  {"t": 0.0, "ease": "in", "joints": {
+   "Waist": {"turn": 0, "pitch": 0},
+   "Neck": {"turn": 0, "pitch": 0},
+   "RightShoulder": {"swing": -32.2, "spread": -6, "twist": 5.2},
+   "RightElbow": {"swing": 82.4},
+   "RightWrist": {"swing": 0, "spread": -3.5, "twist": 0},
+   "LeftShoulder": {"swing": 6, "spread": 6},
+   "LeftElbow": {"swing": 14},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-110.2, -11.1, -2.7]},
+   "Bolt": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [0, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.28, "ease": "out", "joints": {
+   "Waist": {"turn": -22, "pitch": 3},
+   "Neck": {"turn": 20, "pitch": 3},
+   "RightShoulder": {"swing": 41.4, "spread": 5.1, "twist": 52.1},
+   "RightElbow": {"swing": 54.8},
+   "RightWrist": {"swing": 0, "spread": -9.7, "twist": 0},
+   "LeftShoulder": {"swing": 70.9, "spread": -86.8, "twist": 0},
+   "LeftElbow": {"swing": 0},
+   "LeftWrist": {"swing": 0, "spread": 15.8, "twist": 0},
+   "Body": {"rot": [-121, -27.8, -16.6]}
+  }},
+  {"t": 0.5, "ease": "smooth", "joints": {
+   "Waist": {"turn": -40, "pitch": 4},
+   "Neck": {"turn": 38, "pitch": 6},
+   "RightShoulder": {"swing": 67.5, "spread": 20.3, "twist": 61.4},
+   "RightElbow": {"swing": 38.3},
+   "RightWrist": {"swing": 0, "spread": -11, "twist": 0},
+   "LeftShoulder": {"swing": 74.4, "spread": 10, "twist": -17.1},
+   "LeftElbow": {"swing": 26.7},
+   "LeftWrist": {"swing": 0, "spread": -2.9, "twist": 0},
+   "Body": {"rot": [-114, -24.2, -23]},
+   "Bolt": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [0, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.64, "ease": "out", "joints": {
+   "Waist": {"turn": -40, "pitch": 4},
+   "Neck": {"turn": 38, "pitch": 6},
+   "RightShoulder": {"swing": 77.2, "spread": 5.5, "twist": 63.6},
+   "RightElbow": {"swing": 0},
+   "RightWrist": {"swing": -0.1, "spread": -1.3, "twist": 0},
+   "LeftShoulder": {"swing": 72.4, "spread": 10.2, "twist": -17},
+   "LeftElbow": {"swing": 29.8},
+   "LeftWrist": {"swing": -0.1, "spread": -2.9, "twist": 0},
+   "Body": {"rot": [-80.1, -18.8, -3], "pos": [-0.017, 0.184, -0.479]},
+   "Bolt": {"pos": [0, 0, 0.25]},
+   "Hammer": {"rot": [34, 0, 0]},
+   "Lever": {"rot": [50, 0, 0]}
+  }},
+  {"t": 0.8, "ease": "out", "joints": {
+   "Waist": {"turn": -40, "pitch": 4},
+   "Neck": {"turn": 38, "pitch": 6},
+   "RightShoulder": {"swing": 67.5, "spread": 20.3, "twist": 61.4},
+   "RightElbow": {"swing": 38.3},
+   "RightWrist": {"swing": 0, "spread": -11, "twist": 0},
+   "LeftShoulder": {"swing": 74.4, "spread": 10, "twist": -17.1},
+   "LeftElbow": {"swing": 26.7},
+   "LeftWrist": {"swing": 0, "spread": -2.9, "twist": 0},
+   "Body": {"rot": [-114, -24.2, -23]},
+   "Bolt": {"pos": [0, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -40, "pitch": 4},
+   "Neck": {"turn": 38, "pitch": 6},
+   "RightShoulder": {"swing": 67.5, "spread": 20.3, "twist": 61.4},
+   "RightElbow": {"swing": 38.3},
+   "RightWrist": {"swing": 0, "spread": -11, "twist": 0},
+   "LeftShoulder": {"swing": 74.4, "spread": 10, "twist": -17.1},
+   "LeftElbow": {"swing": 26.7},
+   "LeftWrist": {"swing": 0, "spread": -2.9, "twist": 0},
+   "Body": {"rot": [-114, -24.2, -23]},
+   "Bolt": {"pos": [0, 0, 0]},
+   "Hammer": {"rot": [28, 0, 0]},
+   "Lever": {"rot": [0, 0, 0]}
+  }}
+ ]
+}

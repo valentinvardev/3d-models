@@ -1,0 +1,78 @@
+{
+ "name": "Sheriff_Idle",
+ "_intent": "Parado amenazante, escopeta lista: piernas abiertas y rodillas apenas flojas, pecho afuera, la escopeta en la cadera con los caños 33° abajo hacia el frente. Respira hondo (el pecho sube a los 0,8 s), carga el peso a la derecha y mira a su derecha (1,6-2,0 s) y a los 2,0 s la cabeza vuelve de un tirón al frente mientras los caños dan un golpe para arriba (el tic del muerto). Los grilletes de la izquierda se mecen. Prioridad Idle: la caminata la tapa entera. Pies: tobillos a z -0,12 y +0,10, x ±0,62.",
+ "loop": true,
+ "priority": "Idle",
+ "keys": [
+  {"t": 0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.06, 0], "pitch": 2},
+   "Waist": {"pitch": -3, "turn": 6},
+   "Neck": {"pitch": -4, "turn": -6},
+   "LeftHip": {"swing": 15.1, "spread": 5},
+   "LeftKnee": {"swing": -22},
+   "LeftAnkle": {"swing": 8.8, "spread": -5},
+   "RightHip": {"swing": 10.3, "spread": 4.9},
+   "RightKnee": {"swing": -22.2},
+   "RightAnkle": {"swing": 13.8, "spread": -5.1},
+   "LeftShoulder": {"swing": 2, "spread": 10},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 18, "spread": 8},
+   "RightElbow": {"swing": 38},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.8, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -6, "turn": 6},
+   "Neck": {"pitch": -7, "turn": -4},
+   "LeftShoulder": {"swing": 0, "spread": 13},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 20, "spread": 10},
+   "RightElbow": {"swing": 40},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 1.6, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.07, 0], "pitch": 2, "lean": -2},
+   "Waist": {"pitch": -2, "turn": -4},
+   "Neck": {"pitch": -2, "turn": -26},
+   "LeftHip": {"swing": 14.7, "spread": 2.9},
+   "LeftKnee": {"swing": -21},
+   "LeftAnkle": {"swing": 8.3, "spread": -5},
+   "RightHip": {"swing": 12.6, "spread": 7},
+   "RightKnee": {"swing": -27.1},
+   "RightAnkle": {"swing": 16.4, "spread": -5.2},
+   "LeftShoulder": {"swing": 4, "spread": 9},
+   "LeftElbow": {"swing": 14},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 17, "spread": 8, "twist": -8},
+   "RightElbow": {"swing": 36},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 2, "ease": "in", "joints": {
+   "Neck": {"pitch": -1, "turn": -28},
+   "RightElbow": {"swing": 35}
+  }},
+  {"t": 2.15, "ease": "smooth", "joints": {
+   "Neck": {"pitch": -6, "lean": 4, "turn": 4},
+   "RightShoulder": {"swing": 20, "spread": 8, "twist": -4},
+   "RightElbow": {"swing": 46}
+  }},
+  {"t": 3.2, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.06, 0], "pitch": 2},
+   "Waist": {"pitch": -3, "turn": 6},
+   "Neck": {"pitch": -4, "turn": -6},
+   "LeftHip": {"swing": 15.1, "spread": 5},
+   "LeftKnee": {"swing": -22},
+   "LeftAnkle": {"swing": 8.8, "spread": -5},
+   "RightHip": {"swing": 10.3, "spread": 4.9},
+   "RightKnee": {"swing": -22.2},
+   "RightAnkle": {"swing": 13.8, "spread": -5.1},
+   "LeftShoulder": {"swing": 2, "spread": 10},
+   "LeftElbow": {"swing": 16},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 18, "spread": 8},
+   "RightElbow": {"swing": 38},
+   "RightWrist": {"swing": 0}
+  }}
+ ]
+}

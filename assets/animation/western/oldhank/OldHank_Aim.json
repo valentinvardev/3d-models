@@ -1,0 +1,45 @@
+{
+ "name": "OldHank_Aim",
+ "_intent": "Old Hank apuntando con La Viuda a una mano, a la vieja: brazo derecho estirado al frente a la altura del hombro (el codo apenas flojo), caño nivelado y derecho al frente (-Z del personaje: el código gira a Hank hacia el blanco), martillo amartillado; el torso de perfil (cintura girada 24°), la cabeza alineada con el brazo e inclinada hacia la mira, la izquierda floja al costado. Respira despacio (1,2): el torso se mueve y el arma casi no (menos de 0,02 y 0,6°), para que OldHank_Fire pueda arrancar en cualquier cuadro. Solo cintura, cuello y brazos (se apoya en las piernas del Idle o de la Walk) y la pose está calculada con la cadera del Idle: parado, el caño queda nivelado. Prioridad Action, loop de 2,4 s.",
+ "loop": true,
+ "priority": "Action",
+ "props": {"Body": {"parent": "RightHand"}, "Cylinder": {"parent": "Body"}, "LoadingGate": {"parent": "Body"}, "Hammer": {"parent": "Body"}},
+ "keys": [
+  {"t": 0, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 6, "lean": 0, "turn": 24},
+   "Neck": {"pitch": -7.7, "lean": -6, "turn": -25.6},
+   "LeftShoulder": {"swing": -4, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 18},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 87.3, "spread": 0.7, "twist": -12.5},
+   "RightElbow": {"swing": 13.6},
+   "RightWrist": {"swing": -2.5, "spread": 11.5, "twist": 1.1},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 1.2, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 5, "lean": 0, "turn": 23.4},
+   "Neck": {"pitch": -6.7, "lean": -6, "turn": -25.6},
+   "LeftShoulder": {"swing": -3, "spread": 11, "twist": 0},
+   "LeftElbow": {"swing": 18},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 87.1, "spread": 0.7, "twist": -11.6},
+   "RightElbow": {"swing": 12.9},
+   "RightWrist": {"swing": -2.5, "spread": 11.3, "twist": 1.1},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 2.4, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 6, "lean": 0, "turn": 24},
+   "Neck": {"pitch": -7.7, "lean": -6, "turn": -25.6},
+   "LeftShoulder": {"swing": -4, "spread": 10, "twist": 0},
+   "LeftElbow": {"swing": 18},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 87.3, "spread": 0.7, "twist": -12.5},
+   "RightElbow": {"swing": 13.6},
+   "RightWrist": {"swing": -2.5, "spread": 11.5, "twist": 1.1},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }}
+ ]
+}

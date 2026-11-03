@@ -1,0 +1,58 @@
+{
+ "name": "Dynamite_Equip",
+ "_intent": "Sacar un cartucho del cinto: la mano va al frente del cinto (cartucho acostado), lo saca y lo endereza mientras sube, se pasa un poco para arriba y queda exacto en Dynamite_Hold con la mecha arriba. 0,55 s; no se tira hasta Ready.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.55, "name": "Ready"}],
+ "props": {"Stick": {"parent": "RightHand"}, "Fuse_Stick": {"parent": "Stick"}},
+ "keys": [
+  {"t": 0.0, "ease": "out", "joints": {
+   "Waist": {"turn": 4, "pitch": 2},
+   "Neck": {"turn": -4, "pitch": 16},
+   "RightShoulder": {"swing": -11.1, "spread": -18.2, "twist": 18.4},
+   "RightElbow": {"swing": 75.3},
+   "RightWrist": {"swing": 0, "spread": -6.9, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [80.8, -54.7, 139.7]}
+  }},
+  {"t": 0.2, "ease": "smooth", "joints": {
+   "Waist": {"turn": 4, "pitch": 2},
+   "Neck": {"turn": -4, "pitch": 16},
+   "RightShoulder": {"swing": -17.2, "spread": -8.3, "twist": 21.5},
+   "RightElbow": {"swing": 107.2},
+   "RightWrist": {"swing": 0.1, "spread": -7.5, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [-165.2, -52.7, -69.9]}
+  }},
+  {"t": 0.38, "ease": "out", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -26.7, "spread": 6.9, "twist": 18.6},
+   "RightElbow": {"swing": 149.3},
+   "RightWrist": {"swing": 0, "spread": -9.6, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [153.3, 9.7, -27.7]}
+  }},
+  {"t": 0.55, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -34.5, "spread": 2.6, "twist": 18.6},
+   "RightElbow": {"swing": 145.7},
+   "RightWrist": {"swing": -0.1, "spread": -9.4, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Fuse_Stick": {"rot": [0, 0, 0]},
+   "Stick": {"rot": [175.5, -2.5, -27.9]}
+  }}
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "name": "HanksWidow_Hold",
+ "_intent": "La Viuda de Hank lista para disparar, igual que el revólver base (es la misma arma): a una mano, brazo derecho al frente a la altura del pecho, caño nivelado, martillo amartillado; torso un poco de perfil (hombro derecho adelante), la izquierda floja. Solo brazos, cintura y cuello. Prioridad Idle.",
+ "loop": true,
+ "priority": "Idle",
+ "props": {"Body": {"parent": "RightHand"}, "Cylinder": {"parent": "Body"}, "LoadingGate": {"parent": "Body"}, "Hammer": {"parent": "Body"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 14},
+   "Neck": {"turn": -10},
+   "RightShoulder": {"swing": 78, "spread": -14},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 22},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 15},
+   "Neck": {"turn": -10},
+   "RightShoulder": {"swing": 78, "spread": -14},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": 0},
+   "LeftShoulder": {"swing": 12, "spread": 6},
+   "LeftElbow": {"swing": 22},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 14},
+   "Neck": {"turn": -10},
+   "RightShoulder": {"swing": 78, "spread": -14},
+   "RightElbow": {"swing": 12},
+   "RightWrist": {"swing": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 22},
+   "Body": {"rot": [-90, 0, 0]},
+   "Hammer": {"rot": [32, 0, 0]}
+  }}
+ ]
+}

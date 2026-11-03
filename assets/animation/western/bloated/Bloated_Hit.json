@@ -1,0 +1,48 @@
+{
+ "name": "Bloated_Hit",
+ "_intent": "Golpe recibido del minero: el torso se va atrás y de costado, los brazos se sacuden hacia afuera y la panza bambolea dos veces (adelante, atrás) antes de quedarse. Solo de la cintura para arriba (no toca Root ni piernas): se puede tocar encima de la caminata.",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "out", "joints": {
+   "Waist": {"pitch": -2, "lean": 0, "turn": 0},
+   "Neck": {"pitch": 8, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": 4, "spread": 2},
+   "LeftElbow": {"swing": 12},
+   "RightShoulder": {"swing": 4, "spread": 2},
+   "RightElbow": {"swing": 12}
+  }},
+  {"t": 0.06, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -12, "lean": 6, "turn": -10},
+   "Neck": {"pitch": -8, "lean": -4, "turn": 12},
+   "LeftShoulder": {"swing": -10, "spread": 22},
+   "LeftElbow": {"swing": 24},
+   "RightShoulder": {"swing": -6, "spread": 18},
+   "RightElbow": {"swing": 22}
+  }},
+  {"t": 0.16, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 4, "lean": -4, "turn": 4},
+   "Neck": {"pitch": 14, "lean": 3, "turn": -4},
+   "LeftShoulder": {"swing": 8, "spread": 4},
+   "LeftElbow": {"swing": 16},
+   "RightShoulder": {"swing": 8, "spread": 4},
+   "RightElbow": {"swing": 16}
+  }},
+  {"t": 0.26, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -4, "lean": 2, "turn": -2},
+   "Neck": {"pitch": 5, "lean": -1, "turn": 2},
+   "LeftShoulder": {"swing": 4, "spread": 2},
+   "LeftElbow": {"swing": 12},
+   "RightShoulder": {"swing": 4, "spread": 2},
+   "RightElbow": {"swing": 12}
+  }},
+  {"t": 0.45, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -2, "lean": 0, "turn": 0},
+   "Neck": {"pitch": 8, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": 4, "spread": 2},
+   "LeftElbow": {"swing": 12},
+   "RightShoulder": {"swing": 4, "spread": 2},
+   "RightElbow": {"swing": 12}
+  }}
+ ]
+}

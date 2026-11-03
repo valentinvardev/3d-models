@@ -1,0 +1,18 @@
+# Lo que sale de las recetas y los specs (se regenera)
+*.glb
+*.blend
+*.blend1
+*.rbxm
+*.poses.json
+**/02_blend/
+**/03_export/
+review_*.png
+report.json
+tools/viewer/models.json
+assets/models/western/_animations/
+assets/models/western/_prompts/
+assets/models/western/previews/
+
+# Python
+__pycache__/
+*.pyc

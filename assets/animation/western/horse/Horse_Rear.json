@@ -1,0 +1,579 @@
+{
+ "name": "Horse_Rear",
+ "_intent": "Se asusta (la tormenta) y se para de manos. Empieza y termina en Horse_Idle t=0 (0,000 studs). 0-0,18: carga el peso atrás, levanta la cabeza (22°) y planta la trasera derecha que descansaba. 0,18-0,62: sube girando alrededor de las caderas, que bajan 0,35 (se sienta sobre las traseras, corvejón hasta 34°); las manos patalean alternadas en el aire (plegada: antebrazo horizontal y caña colgando; golpe: estirada adelante y abajo). Pico en 0,70, marcador Neigh: el torso a 44,9° y la cabeza tirada arriba (el hocico a 9,2 de alto). Desde 0,86 se viene abajo acelerando y apoya las manos en 1,22, marcador Land (los cascos de adelante no tocan antes: van a 0,63 o más del piso entre 0,30 y Land). Absorbe (la nariz 4° abajo, el lomo 0,09 más bajo), sacude la cabeza (1,42-1,68) y vuelve al Idle en 1,9, con la trasera derecha otra vez descansando. Traseras plantadas (se corren 0,021 como mucho). EL JINETE VA SOLDADO: en el pico el _Seat queda en (-0,15; 5,26; 1,76), 0,76 más alto y 1,86 más atrás que parado, inclinado 44,9° hacia atrás y rolado 2,8°.",
+ "rig": "assets/models/western/transport/WST_Mount_Horse/04_roblox/WST_Mount_Horse.rig.json",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.7, "name": "Neigh"}, {"t": 1.22, "name": "Land"}],
+ "keys": [
+  {"t": 0.0, "ease": "linear", "joints": {
+   "Torso": {"rot": [-0.15, 0.0, 0.0], "pos": [0.0, -0.008, 0.0], "ease": "out"},
+   "Neck": {"rot": [-4, 0.0, 0.0], "ease": "out"},
+   "Head": {"rot": [-3, 0.0, 0.0], "ease": "out"},
+   "Tail": {"rot": [-3, 0.0, -6], "ease": "smooth"},
+   "FrontLeftUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0127, -0.0009]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0127, -0.0009]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0041, -0.0009]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [14.27, 0.0, 0.0], "pos": [0.0, 0.1173, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-30.0, 0.0, 0.0]}
+  }},
+  {"t": 0.0333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-2.19, 0.0, 0.0], "pos": [0.0, 0.0486, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [2.02, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [11.0, 0.0, 0.0], "pos": [0.0, 0.1791, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-25.96, 0.0, 0.0]}
+  }},
+  {"t": 0.0667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-3.69, 0.0, 0.0], "pos": [0.0, 0.0756, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [3.37, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [5.54, 0.0, 0.0], "pos": [0.0, 0.2187, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-16.08, 0.0, 0.0]}
+  }},
+  {"t": 0.1, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-4.52, 0.0, 0.0], "pos": [0.0, 0.0902, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [4.13, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-0.3, 0.0, 0.0], "pos": [0.0, 0.1653, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-4.72, 0.0, 0.0]}
+  }},
+  {"t": 0.12, "ease": "linear", "joints": {
+   "Neck": {"rot": [10, 0.0, 0.0], "ease": "smooth"},
+   "Head": {"rot": [22, 0.0, 0.0], "ease": "smooth"},
+   "FrontLeftUpperLeg": {"rot": [-1.17, 0.0, 0.0], "pos": [0.0, -0.2274, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [-6, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [-1.17, 0.0, 0.0], "pos": [0.0, -0.2274, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [-6, 0.0, 0.0]}
+  }},
+  {"t": 0.1333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-4.88, 0.0, 0.0], "pos": [0.0, 0.0965, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [4.45, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-4.31, 0.0, 0.0], "pos": [0.0, 0.1085, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [3.27, 0.0, 0.0]}
+  }},
+  {"t": 0.1667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-4.97, 0.0, 0.0], "pos": [0.0, 0.098, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [4.53, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-4.97, 0.0, 0.0], "pos": [0.0, 0.098, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [4.53, 0.0, 0.0]}
+  }},
+  {"t": 0.18, "ease": "linear", "joints": {
+   "Torso": {"rot": [6, 0.0, 0.0], "pos": [0.0, 0.0508, 0.1404], "ease": "out"},
+   "BackLeftUpperLeg": {"rot": [-4.97, 0.0, 0.0], "pos": [0.0, 0.098, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [4.53, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-4.97, 0.0, 0.0], "pos": [0.0, 0.098, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [4.53, 0.0, 0.0]}
+  }},
+  {"t": 0.2, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-9.2, 0.0, -0.13], "pos": [0.0, 0.1567, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [8.08, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-9.32, 0.0, -0.13], "pos": [0.0, 0.1525, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [8.08, 0.0, 0.0]}
+  }},
+  {"t": 0.2333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-15.42, 0.0, -0.34], "pos": [0.0, 0.2364, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [13.27, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-15.73, 0.0, -0.35], "pos": [0.0, 0.2257, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [13.27, 0.0, 0.0]}
+  }},
+  {"t": 0.2667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-20.7, 0.0, -0.54], "pos": [0.0, 0.2972, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [17.64, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-21.18, 0.0, -0.55], "pos": [0.0, 0.2804, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [17.64, 0.0, 0.0]}
+  }},
+  {"t": 0.3, "ease": "smooth", "joints": {
+   "Tail": {"rot": [-30, 0.0, 10]},
+   "FrontLeftUpperLeg": {"rot": [22, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [-70, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [16, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [-55, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [-25.12, 0.0, -0.73], "pos": [0.0, 0.343, 0.0], "pivot": [0.0, 0.8, 0.0], "ease": "linear"},
+   "BackLeftLowerLeg": {"rot": [21.25, 0.0, 0.0], "ease": "linear"},
+   "BackRightUpperLeg": {"rot": [-25.76, 0.0, -0.74], "pos": [0.0, 0.3209, 0.0], "pivot": [0.0, 0.8, 0.0], "ease": "linear"},
+   "BackRightLowerLeg": {"rot": [21.25, 0.0, 0.0], "ease": "linear"}
+  }},
+  {"t": 0.3333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-28.76, 0.0, -0.89], "pos": [0.0, 0.3772, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [24.19, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-29.53, 0.0, -0.9], "pos": [0.0, 0.3503, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [24.19, 0.0, 0.0]}
+  }},
+  {"t": 0.3667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-31.68, 0.0, -1.02], "pos": [0.0, 0.4023, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [26.51, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-32.57, 0.0, -1.04], "pos": [0.0, 0.3714, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [26.51, 0.0, 0.0]}
+  }},
+  {"t": 0.4, "ease": "linear", "joints": {
+   "FrontRightUpperLeg": {"rot": [20, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0], "ease": "smooth"},
+   "FrontRightLowerLeg": {"rot": [-35, 0.0, 0.0], "ease": "smooth"},
+   "BackLeftUpperLeg": {"rot": [-33.95, 0.0, -1.13], "pos": [0.0, 0.4203, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [28.3, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-34.93, 0.0, -1.15], "pos": [0.0, 0.3861, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [28.3, 0.0, 0.0]}
+  }},
+  {"t": 0.4333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-35.64, 0.0, -1.22], "pos": [0.0, 0.4329, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [29.61, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-36.7, 0.0, -1.24], "pos": [0.0, 0.3961, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [29.61, 0.0, 0.0]}
+  }},
+  {"t": 0.44, "ease": "smooth", "joints": {
+   "FrontLeftUpperLeg": {"rot": [48, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [-105, 0.0, 0.0]}
+  }},
+  {"t": 0.4667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-36.83, 0.0, -1.28], "pos": [0.0, 0.4413, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [30.53, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-37.94, 0.0, -1.3], "pos": [0.0, 0.4027, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [30.53, 0.0, 0.0]}
+  }},
+  {"t": 0.5, "ease": "linear", "joints": {
+   "FrontRightUpperLeg": {"rot": [48, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0], "ease": "smooth"},
+   "FrontRightLowerLeg": {"rot": [-105, 0.0, 0.0], "ease": "smooth"},
+   "BackLeftUpperLeg": {"rot": [-37.61, 0.0, -1.32], "pos": [0.0, 0.4466, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [31.13, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-38.75, 0.0, -1.34], "pos": [0.0, 0.4067, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [31.13, 0.0, 0.0]}
+  }},
+  {"t": 0.5333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-38.06, 0.0, -1.34], "pos": [0.0, 0.4496, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [31.47, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-39.22, 0.0, -1.37], "pos": [0.0, 0.409, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [31.47, 0.0, 0.0]}
+  }},
+  {"t": 0.56, "ease": "smooth", "joints": {
+   "FrontLeftUpperLeg": {"rot": [20, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [-35, 0.0, 0.0]}
+  }},
+  {"t": 0.5667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-38.26, 0.0, -1.35], "pos": [0.0, 0.4509, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [31.63, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-39.44, 0.0, -1.38], "pos": [0.0, 0.41, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [31.63, 0.0, 0.0]}
+  }},
+  {"t": 0.6, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-38.32, 0.0, -1.35], "pos": [0.0, 0.4513, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [31.68, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-39.5, 0.0, -1.38], "pos": [0.0, 0.4103, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [31.68, 0.0, 0.0]}
+  }},
+  {"t": 0.62, "ease": "smooth", "joints": {
+   "Torso": {"rot": [42.0, 3, 0.0], "pos": [-0.0864, 0.6755, 0.7762]},
+   "Neck": {"rot": [-6, 4, 0.0]},
+   "Head": {"rot": [18, 6, 3]},
+   "Tail": {"rot": [-62, 0.0, -6]},
+   "FrontRightUpperLeg": {"rot": [20, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [-35, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [-38.33, 0.0, -1.35], "pos": [0.0, 0.4513, 0.0], "pivot": [0.0, 0.8, 0.0], "ease": "linear"},
+   "BackLeftLowerLeg": {"rot": [31.68, 0.0, 0.0], "ease": "linear"},
+   "BackRightUpperLeg": {"rot": [-39.5, 0.0, -1.38], "pos": [0.0, 0.4103, 0.0], "pivot": [0.0, 0.8, 0.0], "ease": "linear"},
+   "BackRightLowerLeg": {"rot": [31.68, 0.0, 0.0], "ease": "linear"}
+  }},
+  {"t": 0.6333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-38.37, 0.0, -1.36], "pos": [0.0, 0.4518, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [31.72, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-39.56, 0.0, -1.39], "pos": [0.0, 0.4105, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [31.72, 0.0, 0.0]}
+  }},
+  {"t": 0.6667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-40.1, 0.0, -1.75], "pos": [0.0, 0.468, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [33.26, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-41.59, 0.0, -1.8], "pos": [0.0, 0.4148, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [33.26, 0.0, 0.0]}
+  }},
+  {"t": 0.68, "ease": "smooth", "joints": {
+   "FrontLeftUpperLeg": {"rot": [48, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [-105, 0.0, 0.0]}
+  }},
+  {"t": 0.7, "ease": "linear", "joints": {
+   "Torso": {"rot": [45.0, 4, 0.0], "pos": [-0.1151, 0.726, 0.8482], "ease": "smooth"},
+   "Neck": {"rot": [-3, 8, 2], "ease": "smooth"},
+   "Head": {"rot": [30, 10, 6], "ease": "smooth"},
+   "BackLeftUpperLeg": {"rot": [-40.83, 0.0, -1.92], "pos": [0.0, 0.4744, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [33.89, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-42.45, 0.0, -1.97], "pos": [0.0, 0.4161, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [33.89, 0.0, 0.0]}
+  }},
+  {"t": 0.7333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-40.69, 0.0, -1.88], "pos": [0.0, 0.4723, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [33.76, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-42.28, 0.0, -1.93], "pos": [0.0, 0.4152, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [33.76, 0.0, 0.0]}
+  }},
+  {"t": 0.74, "ease": "smooth", "joints": {
+   "FrontRightUpperLeg": {"rot": [48, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [-105, 0.0, 0.0]}
+  }},
+  {"t": 0.7667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-39.7, 0.0, -1.61], "pos": [0.0, 0.4575, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [32.83, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-41.06, 0.0, -1.65], "pos": [0.0, 0.4087, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [32.83, 0.0, 0.0]}
+  }},
+  {"t": 0.8, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [20, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0], "ease": "smooth"},
+   "FrontLeftLowerLeg": {"rot": [-35, 0.0, 0.0], "ease": "smooth"},
+   "BackLeftUpperLeg": {"rot": [-37.74, 0.0, -1.09], "pos": [0.0, 0.427, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [30.98, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-38.69, 0.0, -1.11], "pos": [0.0, 0.3941, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [30.98, 0.0, 0.0]}
+  }},
+  {"t": 0.8333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-37.0, 0.0, -0.89], "pos": [0.0, 0.4148, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [30.27, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-37.78, 0.0, -0.91], "pos": [0.0, 0.3879, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [30.27, 0.0, 0.0]}
+  }},
+  {"t": 0.86, "ease": "linear", "joints": {
+   "Torso": {"rot": [40.0, 2, 0.0], "pos": [-0.0576, 0.6573, 0.7296], "ease": "in"},
+   "Neck": {"rot": [-2, 4, 0.0], "ease": "in"},
+   "Head": {"rot": [16, 4, 0.0], "ease": "in"},
+   "Tail": {"rot": [-58, 0.0, 10], "ease": "smooth"},
+   "FrontRightUpperLeg": {"rot": [20, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0], "ease": "smooth"},
+   "FrontRightLowerLeg": {"rot": [-35, 0.0, 0.0], "ease": "smooth"},
+   "BackLeftUpperLeg": {"rot": [-36.92, 0.0, -0.87], "pos": [0.0, 0.4137, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [30.2, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-37.69, 0.0, -0.89], "pos": [0.0, 0.3873, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [30.2, 0.0, 0.0]}
+  }},
+  {"t": 0.8667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-36.92, 0.0, -0.87], "pos": [0.0, 0.4137, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [30.2, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-37.69, 0.0, -0.89], "pos": [0.0, 0.3873, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [30.2, 0.0, 0.0]}
+  }},
+  {"t": 0.9, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-36.86, 0.0, -0.87], "pos": [0.0, 0.4134, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [30.16, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-37.63, 0.0, -0.88], "pos": [0.0, 0.387, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [30.16, 0.0, 0.0]}
+  }},
+  {"t": 0.92, "ease": "smooth", "joints": {
+   "FrontLeftUpperLeg": {"rot": [40, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [-95, 0.0, 0.0]}
+  }},
+  {"t": 0.9333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-36.56, 0.0, -0.86], "pos": [0.0, 0.4118, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [29.93, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-37.32, 0.0, -0.87], "pos": [0.0, 0.3857, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [29.93, 0.0, 0.0]}
+  }},
+  {"t": 0.96, "ease": "smooth", "joints": {
+   "FrontRightUpperLeg": {"rot": [34, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [-80, 0.0, 0.0]}
+  }},
+  {"t": 0.9667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-35.8, 0.0, -0.84], "pos": [0.0, 0.4078, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [29.37, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-36.54, 0.0, -0.85], "pos": [0.0, 0.3825, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [29.37, 0.0, 0.0]}
+  }},
+  {"t": 1.0, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-34.38, 0.0, -0.8], "pos": [0.0, 0.4001, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [28.31, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-35.09, 0.0, -0.81], "pos": [0.0, 0.376, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [28.31, 0.0, 0.0]}
+  }},
+  {"t": 1.0333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-32.13, 0.0, -0.74], "pos": [0.0, 0.3868, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [26.62, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-32.79, 0.0, -0.75], "pos": [0.0, 0.3646, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [26.62, 0.0, 0.0]}
+  }},
+  {"t": 1.0667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-28.88, 0.0, -0.65], "pos": [0.0, 0.3653, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [24.13, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-29.45, 0.0, -0.66], "pos": [0.0, 0.3458, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [24.13, 0.0, 0.0]}
+  }},
+  {"t": 1.07, "ease": "smooth", "joints": {
+   "FrontLeftUpperLeg": {"rot": [18, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [-20, 0.0, 0.0]}
+  }},
+  {"t": 1.09, "ease": "smooth", "joints": {
+   "FrontRightUpperLeg": {"rot": [18, 0.0, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [-20, 0.0, 0.0]}
+  }},
+  {"t": 1.1, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-24.45, 0.0, -0.53], "pos": [0.0, 0.3324, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [20.7, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-24.94, 0.0, -0.54], "pos": [0.0, 0.3161, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [20.7, 0.0, 0.0]}
+  }},
+  {"t": 1.1333, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-18.73, 0.0, -0.4], "pos": [0.0, 0.2831, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [16.16, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-19.1, 0.0, -0.4], "pos": [0.0, 0.2707, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [16.16, 0.0, 0.0]}
+  }},
+  {"t": 1.1667, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-11.56, 0.0, -0.25], "pos": [0.0, 0.2113, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [10.37, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-11.8, 0.0, -0.25], "pos": [0.0, 0.2033, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [10.37, 0.0, 0.0]}
+  }},
+  {"t": 1.2, "ease": "linear", "joints": {
+   "BackLeftUpperLeg": {"rot": [-2.76, 0.0, -0.09], "pos": [0.0, 0.1155, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [3.17, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-2.85, 0.0, -0.09], "pos": [0.0, 0.113, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [3.17, 0.0, 0.0]}
+  }},
+  {"t": 1.22, "ease": "linear", "joints": {
+   "Torso": {"rot": [-2.5, 0.0, 0.0], "pos": [0.0, -0.1323, 0.0285], "ease": "out"},
+   "Neck": {"rot": [-10, -2, 0.0], "ease": "out"},
+   "Head": {"rot": [-6, -2, 0.0], "ease": "out"},
+   "Tail": {"rot": [-14, 0.0, -12], "ease": "smooth"},
+   "FrontLeftUpperLeg": {"rot": [2.59, 0.0, 0.0], "pos": [0.0, 0.2115, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [2.59, 0.0, 0.0], "pos": [0.0, 0.2115, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [2.57, 0.0, 0.0], "pos": [0.0, 0.0677, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [2.57, 0.0, 0.0], "pos": [0.0, 0.0677, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 1.2333, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [2.8, 0.0, 0.0], "pos": [0.0, 0.2434, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [2.8, 0.0, 0.0], "pos": [0.0, 0.2434, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [2.79, 0.0, 0.0], "pos": [0.0, 0.0768, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [2.79, 0.0, 0.0], "pos": [0.0, 0.0768, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 1.2667, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [3.14, 0.0, 0.0], "pos": [0.0, 0.2996, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [3.14, 0.0, 0.0], "pos": [0.0, 0.2996, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [3.16, 0.0, 0.0], "pos": [0.0, 0.0934, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [3.16, 0.0, 0.0], "pos": [0.0, 0.0934, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 1.3, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [3.31, 0.0, 0.0], "pos": [0.0, 0.3272, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [3.31, 0.0, 0.0], "pos": [0.0, 0.3272, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [3.34, 0.0, 0.0], "pos": [0.0, 0.1016, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [3.34, 0.0, 0.0], "pos": [0.0, 0.1016, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 1.3333, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [3.36, 0.0, 0.0], "pos": [0.0, 0.3363, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [3.36, 0.0, 0.0], "pos": [0.0, 0.3363, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [3.39, 0.0, 0.0], "pos": [0.0, 0.1043, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [3.39, 0.0, 0.0], "pos": [0.0, 0.1043, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 1.36, "ease": "linear", "joints": {
+   "Torso": {"rot": [-4.0, 0.0, 0.0], "pos": [0.0, -0.2058, 0.0031], "ease": "smooth"},
+   "FrontLeftUpperLeg": {"rot": [3.37, 0.0, 0.0], "pos": [0.0, 0.3371, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [3.37, 0.0, 0.0], "pos": [0.0, 0.3371, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [3.4, 0.0, 0.0], "pos": [0.0, 0.1045, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [3.4, 0.0, 0.0], "pos": [0.0, 0.1045, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 1.3667, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [3.36, 0.0, 0.0], "pos": [0.0, 0.3371, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [3.36, 0.0, 0.0], "pos": [0.0, 0.3371, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [3.4, 0.0, 0.0], "pos": [0.0, 0.1045, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [3.4, 0.0, 0.0], "pos": [0.0, 0.1045, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 1.4, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [3.3, 0.0, 0.0], "pos": [0.0, 0.3297, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [3.3, 0.0, 0.0], "pos": [0.0, 0.3297, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [3.33, 0.0, 0.0], "pos": [0.0, 0.1023, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [3.33, 0.0, 0.0], "pos": [0.0, 0.1023, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 1.42, "ease": "smooth", "joints": {
+   "Neck": {"rot": [3, -4, 0.0]},
+   "Head": {"rot": [10, -6, -8]}
+  }},
+  {"t": 1.4333, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [2.95, 0.0, 0.0], "pos": [0.0, 0.2914, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [2.95, 0.0, 0.0], "pos": [0.0, 0.2914, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [2.96, 0.0, 0.0], "pos": [0.0, 0.0909, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [2.96, 0.0, 0.0], "pos": [0.0, 0.0909, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 1.4667, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [2.05, 0.0, 0.0], "pos": [0.0, 0.1969, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [2.05, 0.0, 0.0], "pos": [0.0, 0.1969, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [2.03, 0.0, 0.0], "pos": [0.0, 0.0628, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [2.03, 0.0, 0.0], "pos": [0.0, 0.0628, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 1.5, "ease": "linear", "joints": {
+   "Tail": {"rot": [-2, 0.0, 10], "ease": "smooth"},
+   "FrontLeftUpperLeg": {"rot": [0.59, 0.0, 0.0], "pos": [0.0, 0.0546, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [0.59, 0.0, 0.0], "pos": [0.0, 0.0546, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [0.57, 0.0, 0.0], "pos": [0.0, 0.0208, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [0.57, 0.0, 0.0], "pos": [0.0, 0.0208, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.0, 0.0, 0.0]}
+  }},
+  {"t": 1.5333, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [-0.29, 0.0, 0.0], "pos": [0.0, -0.0246, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [-0.29, 0.0, 0.0], "pos": [0.0, -0.0246, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [-0.4, 0.0, 0.0], "pos": [0.0, -0.0029, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.29, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-0.4, 0.0, 0.0], "pos": [0.0, -0.0029, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.29, 0.0, 0.0]}
+  }},
+  {"t": 1.55, "ease": "smooth", "joints": {
+   "Head": {"rot": [6, -2, 8]}
+  }},
+  {"t": 1.5667, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [-0.62, 0.0, 0.0], "pos": [0.0, -0.0538, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [-0.62, 0.0, 0.0], "pos": [0.0, -0.0538, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [-0.83, 0.0, 0.0], "pos": [0.0, -0.0122, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.57, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-0.74, 0.0, 0.0], "pos": [0.0, -0.0104, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [0.36, 0.0, 0.0]}
+  }},
+  {"t": 1.6, "ease": "linear", "joints": {
+   "Torso": {"rot": [0.8, 0.0, 0.0], "pos": [0.0, 0.033, 0.0043], "ease": "smooth"},
+   "FrontLeftUpperLeg": {"rot": [-0.67, 0.0, 0.0], "pos": [0.0, -0.0579, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [-0.67, 0.0, 0.0], "pos": [0.0, -0.0579, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [-0.89, 0.0, 0.0], "pos": [0.0, -0.0135, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.6, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [-0.09, 0.0, 0.0], "pos": [0.0, 0.0045, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-1.09, 0.0, 0.0]}
+  }},
+  {"t": 1.62, "ease": "smooth", "joints": {
+   "Neck": {"rot": [-6, 0.0, 0.0]}
+  }},
+  {"t": 1.6333, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [-0.66, 0.0, 0.0], "pos": [0.0, -0.0576, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [-0.66, 0.0, 0.0], "pos": [0.0, -0.0576, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [-0.89, 0.0, 0.0], "pos": [0.0, -0.0134, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.6, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [1.19, 0.0, 0.0], "pos": [0.0, 0.0374, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-3.78, 0.0, 0.0]}
+  }},
+  {"t": 1.6667, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [-0.63, 0.0, 0.0], "pos": [0.0, -0.0548, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [-0.63, 0.0, 0.0], "pos": [0.0, -0.0548, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [-0.85, 0.0, 0.0], "pos": [0.0, -0.0127, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.57, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [2.92, 0.0, 0.0], "pos": [0.0, 0.0758, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-7.35, 0.0, 0.0]}
+  }},
+  {"t": 1.68, "ease": "smooth", "joints": {
+   "Head": {"rot": [-1, 0.0, -3]}
+  }},
+  {"t": 1.7, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [-0.55, 0.0, 0.0], "pos": [0.0, -0.0475, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [-0.55, 0.0, 0.0], "pos": [0.0, -0.0475, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [-0.73, 0.0, 0.0], "pos": [0.0, -0.0109, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.5, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [4.96, 0.0, 0.0], "pos": [0.0, 0.1107, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-11.51, 0.0, 0.0]}
+  }},
+  {"t": 1.7333, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [-0.38, 0.0, 0.0], "pos": [0.0, -0.0331, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [-0.38, 0.0, 0.0], "pos": [0.0, -0.0331, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [-0.52, 0.0, 0.0], "pos": [0.0, -0.0072, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.35, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [7.18, 0.0, 0.0], "pos": [0.0, 0.1348, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-15.91, 0.0, 0.0]}
+  }},
+  {"t": 1.7667, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [-0.14, 0.0, 0.0], "pos": [0.0, -0.0121, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [-0.14, 0.0, 0.0], "pos": [0.0, -0.0121, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [-0.2, 0.0, 0.0], "pos": [0.0, -0.0019, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.14, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [9.42, 0.0, 0.0], "pos": [0.0, 0.1454, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-20.21, 0.0, 0.0]}
+  }},
+  {"t": 1.8, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [0.02, 0.0, 0.0], "pos": [0.0, 0.0022, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [0.02, 0.0, 0.0], "pos": [0.0, 0.0022, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [0.02, 0.0, 0.0], "pos": [0.0, 0.0017, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [11.37, 0.0, 0.0], "pos": [0.0, 0.1421, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-24.05, 0.0, 0.0]}
+  }},
+  {"t": 1.8333, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [0.1, 0.0, 0.0], "pos": [0.0, 0.0097, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [0.1, 0.0, 0.0], "pos": [0.0, 0.0097, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [0.1, 0.0, 0.0], "pos": [0.0, 0.0034, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [12.9, 0.0, 0.0], "pos": [0.0, 0.1316, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-27.15, 0.0, 0.0]}
+  }},
+  {"t": 1.8667, "ease": "linear", "joints": {
+   "FrontLeftUpperLeg": {"rot": [0.13, 0.0, 0.0], "pos": [0.0, 0.0124, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [0.13, 0.0, 0.0], "pos": [0.0, 0.0124, 0.0], "pivot": [0.0, 0.7, 0.0]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [0.13, 0.0, 0.0], "pos": [0.0, 0.004, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [13.91, 0.0, 0.0], "pos": [0.0, 0.1216, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-29.24, 0.0, 0.0]}
+  }},
+  {"t": 1.9, "ease": "linear", "joints": {
+   "Torso": {"rot": [-0.15, 0.0, 0.0], "pos": [0.0, -0.008, 0.0]},
+   "Neck": {"rot": [-4, 0.0, 0.0]},
+   "Head": {"rot": [-3, 0.0, 0.0]},
+   "Tail": {"rot": [-3, 0.0, -6]},
+   "FrontLeftUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0127, -0.0009]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0127, -0.0009]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0041, -0.0009]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [14.27, 0.0, 0.0], "pos": [0.0, 0.1173, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-30.0, 0.0, 0.0]}
+  }}
+ ]
+}

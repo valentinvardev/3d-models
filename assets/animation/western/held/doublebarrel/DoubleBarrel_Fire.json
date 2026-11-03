@@ -1,0 +1,351 @@
+{
+ "name": "DoubleBarrel_Fire",
+ "_intent": "Disparo desde DoubleBarrel_Hold: el caño sube 18° y el brazo patea en 0,02 s (marcador Fire: el fogonazo sale en _Muzzle), se asienta y vuelve exacto a la pose de sostener en 0,42 s.",
+ "loop": false,
+ "priority": "Action",
+ "props": {
+  "Stock": {
+   "parent": "RightHand"
+  },
+  "Barrels": {
+   "parent": "Stock"
+  },
+  "Extractor": {
+   "parent": "Stock"
+  },
+  "HammerL": {
+   "parent": "Stock"
+  },
+  "HammerR": {
+   "parent": "Stock"
+  }
+ },
+ "markers": [
+  {
+   "t": 0.02,
+   "name": "Fire"
+  }
+ ],
+ "keys": [
+  {
+   "t": 0.0,
+   "ease": "linear",
+   "joints": {
+    "Waist": {
+     "turn": -38,
+     "pitch": 4
+    },
+    "Neck": {
+     "turn": 36,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 49.9,
+     "spread": 19,
+     "twist": 61.9
+    },
+    "RightElbow": {
+     "swing": 65.5
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -12.3,
+     "twist": 0.1
+    },
+    "LeftShoulder": {
+     "swing": 63.9,
+     "spread": -2,
+     "twist": -24.7
+    },
+    "LeftElbow": {
+     "swing": 44
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": -4.4,
+     "twist": 0
+    },
+    "Barrels": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Extractor": {
+     "rot": [
+      0,
+      0,
+      0
+     ],
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "HammerL": {
+     "rot": [
+      38,
+      0,
+      0
+     ]
+    },
+    "HammerR": {
+     "rot": [
+      38,
+      0,
+      0
+     ]
+    },
+    "Stock": {
+     "rot": [
+      -126.3,
+      -26.4,
+      -25.4
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.02,
+   "ease": "out",
+   "joints": {
+    "Waist": {
+     "turn": -38,
+     "pitch": -5.0
+    },
+    "Neck": {
+     "turn": 36,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 52.9,
+     "spread": 19,
+     "twist": 61.9
+    },
+    "RightElbow": {
+     "swing": 67.5
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -12.3,
+     "twist": 0.1
+    },
+    "LeftShoulder": {
+     "swing": 66.9,
+     "spread": -2,
+     "twist": -24.7
+    },
+    "LeftElbow": {
+     "swing": 44
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": -4.4,
+     "twist": 0
+    },
+    "Barrels": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Extractor": {
+     "rot": [
+      0,
+      0,
+      0
+     ],
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "HammerL": {
+     "rot": [
+      38,
+      0,
+      0
+     ]
+    },
+    "HammerR": {
+     "rot": [
+      38,
+      0,
+      0
+     ]
+    },
+    "Stock": {
+     "rot": [
+      -124.3,
+      -26.4,
+      -25.4
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.2,
+   "ease": "smooth",
+   "joints": {
+    "Waist": {
+     "turn": -38,
+     "pitch": 1.8399999999999999
+    },
+    "Neck": {
+     "turn": 36,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 49.9,
+     "spread": 19,
+     "twist": 61.9
+    },
+    "RightElbow": {
+     "swing": 65.5
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -12.3,
+     "twist": 0.1
+    },
+    "LeftShoulder": {
+     "swing": 63.9,
+     "spread": -2,
+     "twist": -24.7
+    },
+    "LeftElbow": {
+     "swing": 44
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": -4.4,
+     "twist": 0
+    },
+    "Barrels": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Extractor": {
+     "rot": [
+      0,
+      0,
+      0
+     ],
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "HammerL": {
+     "rot": [
+      38,
+      0,
+      0
+     ]
+    },
+    "HammerR": {
+     "rot": [
+      38,
+      0,
+      0
+     ]
+    },
+    "Stock": {
+     "rot": [
+      -126.3,
+      -26.4,
+      -25.4
+     ]
+    }
+   }
+  },
+  {
+   "t": 0.42,
+   "ease": "smooth",
+   "joints": {
+    "Waist": {
+     "turn": -38,
+     "pitch": 4
+    },
+    "Neck": {
+     "turn": 36,
+     "pitch": 6
+    },
+    "RightShoulder": {
+     "swing": 49.9,
+     "spread": 19,
+     "twist": 61.9
+    },
+    "RightElbow": {
+     "swing": 65.5
+    },
+    "RightWrist": {
+     "swing": 0,
+     "spread": -12.3,
+     "twist": 0.1
+    },
+    "LeftShoulder": {
+     "swing": 63.9,
+     "spread": -2,
+     "twist": -24.7
+    },
+    "LeftElbow": {
+     "swing": 44
+    },
+    "LeftWrist": {
+     "swing": 0,
+     "spread": -4.4,
+     "twist": 0
+    },
+    "Barrels": {
+     "rot": [
+      0,
+      0,
+      0
+     ]
+    },
+    "Extractor": {
+     "rot": [
+      0,
+      0,
+      0
+     ],
+     "pos": [
+      0,
+      0,
+      0
+     ]
+    },
+    "HammerL": {
+     "rot": [
+      38,
+      0,
+      0
+     ]
+    },
+    "HammerR": {
+     "rot": [
+      38,
+      0,
+      0
+     ]
+    },
+    "Stock": {
+     "rot": [
+      -126.3,
+      -26.4,
+      -25.4
+     ]
+    }
+   }
+  }
+ ]
+}

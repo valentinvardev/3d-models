@@ -1,0 +1,89 @@
+{
+ "name": "Player_CrouchIdle",
+ "_intent": "Agachado quieto del jugador (loop, Movement), la pose de base de Player_CrouchWalk. Nombra solo Root y piernas: cintura, cuello y brazos quedan para el <Arma>_Hold (Idle), que sigue sonando encima. La cadera baja 0,70 con Root.pos y va 0,30 atrás; la pelvis se inclina 15° adelante (Root pitch), y con ella todo el torso y el arma (el caño baja 15°). Postura de tirador agachado: el pie izquierdo adelante y plano (tobillo 0,80 adelante de la cadera, canilla casi vertical), el derecho atrás apoyado en la punta (talón 60° arriba) y la rodilla de atrás baja, a 0,66 del piso. Pies derechos, sin twist ni spread: con el muslo a 95°, el twist de la cadera rola el pie y lo metía 0,03 en el piso. El pie de atrás va en la punta porque con el pie plano la canilla del R15 por defecto no se puede inclinar más de ~25° sin meter en el piso la esquina de su caja (baja 0,107 bajo el tobillo). Respira: la cadera sube y baja ±0,022 y la pelvis cabecea ±0,8° en 2,0 s, con un balanceo de ±0,02 de costado. Pies por IK (anim_ik.leg) en cada key, quietos en el piso.",
+ "loop": true,
+ "priority": "Movement",
+ "keys": [
+  {"t": 0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.7, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 95.6, "spread": 0},
+   "LeftKnee": {"swing": -83.0},
+   "LeftAnkle": {"swing": 2.4},
+   "RightHip": {"swing": 48.8, "spread": 0},
+   "RightKnee": {"swing": -118.1},
+   "RightAnkle": {"swing": 24.4}
+  }},
+  {"t": 0.25, "ease": "smooth", "joints": {
+   "Root": {"pos": [0.014, -0.684, 0.3], "pitch": 15.57, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 95.0, "spread": 0.9},
+   "LeftKnee": {"swing": -81.7},
+   "LeftAnkle": {"swing": 2.3},
+   "RightHip": {"swing": 49.2, "spread": -0.9},
+   "RightKnee": {"swing": -117.1},
+   "RightAnkle": {"swing": 23.5}
+  }},
+  {"t": 0.5, "ease": "smooth", "joints": {
+   "Root": {"pos": [0.02, -0.678, 0.3], "pitch": 15.8, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 94.8, "spread": 1.3},
+   "LeftKnee": {"swing": -81.3},
+   "LeftAnkle": {"swing": 2.2},
+   "RightHip": {"swing": 49.3, "spread": -1.3},
+   "RightKnee": {"swing": -116.7},
+   "RightAnkle": {"swing": 23.1}
+  }},
+  {"t": 0.75, "ease": "smooth", "joints": {
+   "Root": {"pos": [0.014, -0.684, 0.3], "pitch": 15.57, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 95.0, "spread": 0.9},
+   "LeftKnee": {"swing": -81.7},
+   "LeftAnkle": {"swing": 2.3},
+   "RightHip": {"swing": 49.2, "spread": -0.9},
+   "RightKnee": {"swing": -117.1},
+   "RightAnkle": {"swing": 23.5}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.7, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 95.6, "spread": 0},
+   "LeftKnee": {"swing": -83.0},
+   "LeftAnkle": {"swing": 2.4},
+   "RightHip": {"swing": 48.8, "spread": 0},
+   "RightKnee": {"swing": -118.1},
+   "RightAnkle": {"swing": 24.4}
+  }},
+  {"t": 1.25, "ease": "smooth", "joints": {
+   "Root": {"pos": [-0.014, -0.716, 0.3], "pitch": 14.43, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 96.1, "spread": -0.9},
+   "LeftKnee": {"swing": -84.2},
+   "LeftAnkle": {"swing": 2.5},
+   "RightHip": {"swing": 48.3, "spread": 0.9},
+   "RightKnee": {"swing": -119.1},
+   "RightAnkle": {"swing": 25.2}
+  }},
+  {"t": 1.5, "ease": "smooth", "joints": {
+   "Root": {"pos": [-0.02, -0.722, 0.3], "pitch": 14.2, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 96.3, "spread": -1.4},
+   "LeftKnee": {"swing": -84.6},
+   "LeftAnkle": {"swing": 2.6},
+   "RightHip": {"swing": 48.2, "spread": 1.3},
+   "RightKnee": {"swing": -119.5},
+   "RightAnkle": {"swing": 25.6}
+  }},
+  {"t": 1.75, "ease": "smooth", "joints": {
+   "Root": {"pos": [-0.014, -0.716, 0.3], "pitch": 14.43, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 96.1, "spread": -0.9},
+   "LeftKnee": {"swing": -84.2},
+   "LeftAnkle": {"swing": 2.5},
+   "RightHip": {"swing": 48.3, "spread": 0.9},
+   "RightKnee": {"swing": -119.1},
+   "RightAnkle": {"swing": 25.2}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.7, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 95.6, "spread": 0},
+   "LeftKnee": {"swing": -83.0},
+   "LeftAnkle": {"swing": 2.4},
+   "RightHip": {"swing": 48.8, "spread": 0},
+   "RightKnee": {"swing": -118.1},
+   "RightAnkle": {"swing": 24.4}
+  }}
+ ]
+}

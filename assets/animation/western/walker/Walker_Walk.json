@@ -1,0 +1,83 @@
+{
+ "name": "Walker_Walk",
+ "_intent": "Caminata de muerto (caminantes A-D, mismo esqueleto): pasos largos y pesados, la cadera cae en cada apoyo y rebota (sube rápido después del apoyo, cae tarde antes del siguiente), se tumba hacia la pierna que carga, el torso va encorvado y gira al revés que la cadera, los brazos cuelgan y se mecen flojos, y el pie que pasa arrastra la punta. Un ciclo = 2 pasos. Medidas de la pierna (Bloque D): muslo 1,144, canilla 1,04, tobillo a 0,26 del piso.",
+ "loop": true,
+ "priority": "Movement",
+ "keys": [
+  {"t": 0.0, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.24, 0], "turn": -8, "lean": 0, "ease": "out"},
+   "Waist": {"pitch": 16, "turn": 12},
+   "Neck": {"pitch": 8, "turn": -4},
+   "LeftHip": {"swing": 30},
+   "LeftKnee": {"swing": -6},
+   "LeftAnkle": {"swing": -18},
+   "RightHip": {"swing": -24},
+   "RightKnee": {"swing": -24},
+   "RightAnkle": {"swing": 18},
+   "LeftShoulder": {"swing": -12, "spread": 4},
+   "LeftElbow": {"swing": 12},
+   "RightShoulder": {"swing": 18, "spread": 4},
+   "RightElbow": {"swing": 24}
+  }},
+  {"t": 0.25, "ease": "linear", "joints": {
+   "Root": {"pos": [0, 0.0, 0], "turn": 0, "lean": 6, "ease": "in"},
+   "Waist": {"pitch": 12, "turn": 0},
+   "Neck": {"pitch": -2, "turn": 0},
+   "LeftHip": {"swing": -2},
+   "LeftKnee": {"swing": -4},
+   "LeftAnkle": {"swing": 6},
+   "RightHip": {"swing": 12},
+   "RightKnee": {"swing": -40},
+   "RightAnkle": {"swing": 4},
+   "LeftShoulder": {"swing": 0, "spread": 6},
+   "LeftElbow": {"swing": 14},
+   "RightShoulder": {"swing": 4, "spread": 6},
+   "RightElbow": {"swing": 16}
+  }},
+  {"t": 0.5, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.24, 0], "turn": 8, "lean": 0, "ease": "out"},
+   "Waist": {"pitch": 16, "turn": -12},
+   "Neck": {"pitch": 8, "turn": 4},
+   "RightHip": {"swing": 30},
+   "RightKnee": {"swing": -6},
+   "RightAnkle": {"swing": -18},
+   "LeftHip": {"swing": -24},
+   "LeftKnee": {"swing": -24},
+   "LeftAnkle": {"swing": 18},
+   "RightShoulder": {"swing": -12, "spread": 4},
+   "RightElbow": {"swing": 12},
+   "LeftShoulder": {"swing": 18, "spread": 4},
+   "LeftElbow": {"swing": 24}
+  }},
+  {"t": 0.75, "ease": "linear", "joints": {
+   "Root": {"pos": [0, 0.0, 0], "turn": 0, "lean": -6, "ease": "in"},
+   "Waist": {"pitch": 12, "turn": 0},
+   "Neck": {"pitch": -2, "turn": 0},
+   "RightHip": {"swing": -2},
+   "RightKnee": {"swing": -4},
+   "RightAnkle": {"swing": 6},
+   "LeftHip": {"swing": 12},
+   "LeftKnee": {"swing": -40},
+   "LeftAnkle": {"swing": 4},
+   "RightShoulder": {"swing": 0, "spread": 6},
+   "RightElbow": {"swing": 14},
+   "LeftShoulder": {"swing": 4, "spread": 6},
+   "LeftElbow": {"swing": 16}
+  }},
+  {"t": 1.0, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.24, 0], "turn": -8, "lean": 0, "ease": "out"},
+   "Waist": {"pitch": 16, "turn": 12},
+   "Neck": {"pitch": 8, "turn": -4},
+   "LeftHip": {"swing": 30},
+   "LeftKnee": {"swing": -6},
+   "LeftAnkle": {"swing": -18},
+   "RightHip": {"swing": -24},
+   "RightKnee": {"swing": -24},
+   "RightAnkle": {"swing": 18},
+   "LeftShoulder": {"swing": -12, "spread": 4},
+   "LeftElbow": {"swing": 12},
+   "RightShoulder": {"swing": 18, "spread": 4},
+   "RightElbow": {"swing": 24}
+  }}
+ ]
+}

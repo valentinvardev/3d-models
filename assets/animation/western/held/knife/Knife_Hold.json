@@ -1,0 +1,42 @@
+{
+ "name": "Knife_Hold",
+ "_intent": "Cuchillo en guardia, empuñado como se pelea de verdad (agarre de martillo, hoja adelante, filo abajo): la mano derecha adelante a la altura de la cintura-pecho, la hoja apuntando al frente y un poco arriba (~22°), el torso apenas de perfil (hombro derecho adelante), la izquierda floja. Solo brazos, cintura y cuello. Prioridad Idle.",
+ "loop": true,
+ "priority": "Idle",
+ "props": {"Handle": {"parent": "RightHand"}},
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -17, "spread": -1.8, "twist": 20.1},
+   "RightElbow": {"swing": 119.3},
+   "RightWrist": {"swing": 0, "spread": -7, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Handle": {"rot": [-73.7, -27.7, 14.3]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 4},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -17, "spread": -1.8, "twist": 20.1},
+   "RightElbow": {"swing": 119.3},
+   "RightWrist": {"swing": 0, "spread": -7, "twist": 0},
+   "LeftShoulder": {"swing": 10, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Handle": {"rot": [-73.7, -27.7, 14.3]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": 10, "pitch": 3},
+   "Neck": {"turn": -8, "pitch": 4},
+   "RightShoulder": {"swing": -17, "spread": -1.8, "twist": 20.1},
+   "RightElbow": {"swing": 119.3},
+   "RightWrist": {"swing": 0, "spread": -7, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Handle": {"rot": [-73.7, -27.7, 14.3]}
+  }}
+ ]
+}

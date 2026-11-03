@@ -1,0 +1,73 @@
+{
+ "name": "Walker_Death",
+ "_intent": "Muerte: el impacto lo echa atrás, se le aflojan las rodillas, cae de rodillas con el torso todavía erguido, se va de boca pivotando sobre las rodillas y se desploma boca abajo con la cara de costado; rebota un poco y queda. Termina tirado (el cuerpo queda corpseSeconds), la cadera a ~0,6 del piso y 1,2 studs adelante de donde estaba parado. De rodillas: muslo vertical, rodilla a 0,2 del piso, canillas a -104° (el tobillo 0,25 más alto que la rodilla) y los pies verticales con la punta en el piso, como una persona arrodillada: un pie rígido que pasa de plano a estirado se clava en el piso. Queda un transitorio de 2 cuadros (0,53-0,57 s) con la punta del pie 0,14 adentro del piso en plena caída. Boca abajo, la cara adelantada mira al piso: el cuello va a -75° para levantarla.",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0.0, "ease": "out", "joints": {
+   "Root": {"pos": [0, -0.01, 0], "pitch": 0},
+   "Waist": {"pitch": 14},
+   "Neck": {"pitch": 6, "turn": 0},
+   "LeftHip": {"swing": 6}, "LeftKnee": {"swing": -10}, "LeftAnkle": {"swing": 4},
+   "RightHip": {"swing": 4}, "RightKnee": {"swing": -8}, "RightAnkle": {"swing": 4},
+   "LeftShoulder": {"swing": 4, "spread": 4}, "LeftElbow": {"swing": 10},
+   "RightShoulder": {"swing": 2, "spread": 4}, "RightElbow": {"swing": 14}
+  }},
+  {"t": 0.12, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -0.02, 0.1], "pitch": -6},
+   "Waist": {"pitch": -10},
+   "Neck": {"pitch": -24, "turn": 0},
+   "LeftHip": {"swing": 0}, "LeftKnee": {"swing": -10}, "LeftAnkle": {"swing": 10},
+   "RightHip": {"swing": -2}, "RightKnee": {"swing": -8}, "RightAnkle": {"swing": 10},
+   "LeftShoulder": {"swing": -14, "spread": 30}, "LeftElbow": {"swing": 24},
+   "RightShoulder": {"swing": -8, "spread": 34}, "RightElbow": {"swing": 30}
+  }},
+  {"t": 0.4, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.5, 0.0], "pitch": 8},
+   "Waist": {"pitch": 22},
+   "Neck": {"pitch": 30, "turn": 0},
+   "LeftHip": {"swing": 40}, "LeftKnee": {"swing": -80}, "LeftAnkle": {"swing": 40},
+   "RightHip": {"swing": 36}, "RightKnee": {"swing": -76}, "RightAnkle": {"swing": 40},
+   "LeftShoulder": {"swing": 6, "spread": 10}, "LeftElbow": {"swing": 10},
+   "RightShoulder": {"swing": 10, "spread": 8}, "RightElbow": {"swing": 12}
+  }},
+  {"t": 0.5, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.75, 0.0], "pitch": 9},
+   "LeftHip": {"swing": 25}, "LeftKnee": {"swing": -95}, "LeftAnkle": {"swing": 59},
+   "RightHip": {"swing": 25}, "RightKnee": {"swing": -95}, "RightAnkle": {"swing": 59}
+  }},
+  {"t": 0.6, "ease": "smooth", "joints": {
+   "Root": {"pos": [0, -1.1, 0.0], "pitch": 10},
+   "Waist": {"pitch": 18},
+   "Neck": {"pitch": 34, "turn": 0},
+   "LeftHip": {"swing": 10}, "LeftKnee": {"swing": -104}, "LeftAnkle": {"swing": 14},
+   "RightHip": {"swing": 10}, "RightKnee": {"swing": -104}, "RightAnkle": {"swing": 14},
+   "LeftShoulder": {"swing": 8, "spread": 12}, "LeftElbow": {"swing": 14},
+   "RightShoulder": {"swing": 12, "spread": 10}, "RightElbow": {"swing": 16}
+  }},
+  {"t": 0.85, "ease": "in", "joints": {
+   "Root": {"pos": [0, -1.25, -0.5], "pitch": 52},
+   "Waist": {"pitch": 12},
+   "Neck": {"pitch": 10, "turn": 30},
+   "LeftHip": {"swing": 22}, "LeftKnee": {"swing": -74}, "LeftAnkle": {"swing": 14},
+   "RightHip": {"swing": 22}, "RightKnee": {"swing": -74}, "RightAnkle": {"swing": 14},
+   "LeftShoulder": {"swing": 120, "spread": 16}, "LeftElbow": {"swing": 30},
+   "RightShoulder": {"swing": -10, "spread": 40}, "RightElbow": {"swing": 26}
+  }},
+  {"t": 1.05, "ease": "out", "joints": {
+   "Root": {"pos": [0, -1.85, -1.2], "pitch": 88},
+   "Waist": {"pitch": 0},
+   "Neck": {"pitch": -75, "turn": 60},
+   "LeftHip": {"swing": 0}, "LeftKnee": {"swing": -6}, "LeftAnkle": {"swing": -60},
+   "RightHip": {"swing": -4}, "RightKnee": {"swing": -14}, "RightAnkle": {"swing": -60},
+   "LeftShoulder": {"swing": 182, "spread": 18}, "LeftElbow": {"swing": 0},
+   "RightShoulder": {"swing": -4, "spread": 44}, "RightElbow": {"swing": 0}
+  }},
+  {"t": 1.15, "ease": "in", "joints": {
+   "Root": {"pos": [0, -1.76, -1.2], "pitch": 85}
+  }},
+  {"t": 1.4, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -1.85, -1.2], "pitch": 88}
+  }}
+ ]
+}

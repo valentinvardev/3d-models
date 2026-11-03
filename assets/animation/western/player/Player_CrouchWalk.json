@@ -1,0 +1,234 @@
+{
+ "name": "Player_CrouchWalk",
+ "markers": [{"t": 0.25, "name": "Step", "value": "R"}, {"t": 0.4792, "name": "Step", "value": "L"}],
+ "_intent": "Caminata agachada del jugador (loop, Movement) a crouchSpeed = 8 studs/s: el pie apoyado retrocede a 8 studs/s, así que walkAnimationSpeed = 8. Nombra solo Root y piernas: cintura, cuello y brazos quedan para el <Arma>_Hold (Idle), que sigue sonando encima. La cadera baja 0,68 con Root.pos (rebota ±0,035, más baja a mitad de cada apoyo) y va 0,30 atrás; la pelvis se inclina 15° adelante (Root pitch), y con ella todo el torso y el arma (el caño baja 15°). Sin giro ni tumbo de cadera (Root turn y lean en 0): el arma no se mece, y anim_ik.leg no rola el pie (con lean ±1,5 el canto del pie entraba 0,014). Ciclo de 0,50 s (2 pasos), cada pie apoyado el 56 % (doble apoyo, sin vuelo). Pies por IK (anim_ik.leg) en cada key: pisa plano con el tobillo 1,20 adelante de la cadera, la suela retrocede a 8 y despega por la punta (talón hasta 40° arriba, pivotando en el borde de la punta, que también retrocede a 8): el contacto recorre 2,24 en el apoyo. El talón sube lo justo para que la esquina de atrás de la caja de la canilla no entre en el piso: la canilla del R15 por defecto baja 0,107 bajo el tobillo y, con el pie plano y la canilla a más de ~25° de la vertical, se mete. Por eso el tramo plano es corto (~0,08 s por paso) y el talón despega de golpe (8° en un key): así el tobillo sale enseguida de la franja de 0,06 con que anim_preview cuenta el pie apoyado, y la mediana queda en los tramos planos. Vuelo con Hermite: sale yendo para atrás a 2,4 y llega a 8, como el piso; el tobillo sube hasta 0,16 sobre la recta, antes de la mitad del vuelo, para que la rodilla no suba de más (con 0,28 el muslo pasaba la horizontal y la mano del cuchillo, a la altura de la cintura, se metía 0,32 en él). Keys cada 0,0208 s, en lineal.",
+ "loop": true,
+ "priority": "Movement",
+ "keys": [
+  {"t": 0, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.647, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 85.9, "spread": 0},
+   "LeftKnee": {"swing": -46.5},
+   "LeftAnkle": {"swing": -24.4},
+   "RightHip": {"swing": 39.0, "spread": 0},
+   "RightKnee": {"swing": -104.5},
+   "RightAnkle": {"swing": 49.0}
+  }},
+  {"t": 0.0208, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.645, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 90.1, "spread": 0},
+   "LeftKnee": {"swing": -62.5},
+   "LeftAnkle": {"swing": -12.7},
+   "RightHip": {"swing": 29.8, "spread": 0},
+   "RightKnee": {"swing": -99.0},
+   "RightAnkle": {"swing": 49.0}
+  }},
+  {"t": 0.0417, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.653, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 92.3, "spread": 0},
+   "LeftKnee": {"swing": -75.2},
+   "LeftAnkle": {"swing": -2.1},
+   "RightHip": {"swing": 24.7, "spread": 0},
+   "RightKnee": {"swing": -98.7},
+   "RightAnkle": {"swing": 54.1}
+  }},
+  {"t": 0.0625, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.667, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 92.7, "spread": 0},
+   "LeftKnee": {"swing": -85.6},
+   "LeftAnkle": {"swing": 7.9},
+   "RightHip": {"swing": 31.6, "spread": 0},
+   "RightKnee": {"swing": -108.2},
+   "RightAnkle": {"swing": 58.5}
+  }},
+  {"t": 0.0833, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.685, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 91.3, "spread": 0},
+   "LeftKnee": {"swing": -94.3},
+   "LeftAnkle": {"swing": 17.9},
+   "RightHip": {"swing": 47.1, "spread": 0},
+   "RightKnee": {"swing": -119.7},
+   "RightAnkle": {"swing": 57.6}
+  }},
+  {"t": 0.1042, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.702, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 93.4, "spread": 0},
+   "LeftKnee": {"swing": -104.9},
+   "LeftAnkle": {"swing": 18.5},
+   "RightHip": {"swing": 70.1, "spread": 0},
+   "RightKnee": {"swing": -128.4},
+   "RightAnkle": {"swing": 47.3}
+  }},
+  {"t": 0.125, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.713, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 90.7, "spread": 0},
+   "LeftKnee": {"swing": -111.6},
+   "LeftAnkle": {"swing": 23.9},
+   "RightHip": {"swing": 93.8, "spread": 0},
+   "RightKnee": {"swing": -128.0},
+   "RightAnkle": {"swing": 28.0}
+  }},
+  {"t": 0.1458, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.715, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 87.2, "spread": 0},
+   "LeftKnee": {"swing": -116.9},
+   "LeftAnkle": {"swing": 26.7},
+   "RightHip": {"swing": 106.7, "spread": 0},
+   "RightKnee": {"swing": -116.5},
+   "RightAnkle": {"swing": 8.6}
+  }},
+  {"t": 0.1667, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.707, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 81.6, "spread": 0},
+   "LeftKnee": {"swing": -119.8},
+   "LeftAnkle": {"swing": 29.2},
+   "RightHip": {"swing": 107.7, "spread": 0},
+   "RightKnee": {"swing": -97.6},
+   "RightAnkle": {"swing": -6.4}
+  }},
+  {"t": 0.1875, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.693, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 73.0, "spread": 0},
+   "LeftKnee": {"swing": -119.8},
+   "LeftAnkle": {"swing": 33.8},
+   "RightHip": {"swing": 101.5, "spread": 0},
+   "RightKnee": {"swing": -75.5},
+   "RightAnkle": {"swing": -18.0}
+  }},
+  {"t": 0.2083, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.675, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 62.5, "spread": 0},
+   "LeftKnee": {"swing": -117.1},
+   "LeftAnkle": {"swing": 39.0},
+   "RightHip": {"swing": 93.1, "spread": 0},
+   "RightKnee": {"swing": -54.5},
+   "RightAnkle": {"swing": -26.9}
+  }},
+  {"t": 0.2292, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.658, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 50.9, "spread": 0},
+   "LeftKnee": {"swing": -111.8},
+   "LeftAnkle": {"swing": 44.4},
+   "RightHip": {"swing": 87.3, "spread": 0},
+   "RightKnee": {"swing": -42.9},
+   "RightAnkle": {"swing": -30.3}
+  }},
+  {"t": 0.25, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.647, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 39.0, "spread": 0},
+   "LeftKnee": {"swing": -104.5},
+   "LeftAnkle": {"swing": 49.0},
+   "RightHip": {"swing": 85.9, "spread": 0},
+   "RightKnee": {"swing": -46.5},
+   "RightAnkle": {"swing": -24.4}
+  }},
+  {"t": 0.2708, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.645, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 29.8, "spread": 0},
+   "LeftKnee": {"swing": -99.0},
+   "LeftAnkle": {"swing": 49.0},
+   "RightHip": {"swing": 90.2, "spread": 0},
+   "RightKnee": {"swing": -62.5},
+   "RightAnkle": {"swing": -12.7}
+  }},
+  {"t": 0.2917, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.653, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 24.7, "spread": 0},
+   "LeftKnee": {"swing": -98.7},
+   "LeftAnkle": {"swing": 54.1},
+   "RightHip": {"swing": 92.3, "spread": 0},
+   "RightKnee": {"swing": -75.2},
+   "RightAnkle": {"swing": -2.2}
+  }},
+  {"t": 0.3125, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.667, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 31.6, "spread": 0},
+   "LeftKnee": {"swing": -108.2},
+   "LeftAnkle": {"swing": 58.5},
+   "RightHip": {"swing": 92.7, "spread": 0},
+   "RightKnee": {"swing": -85.6},
+   "RightAnkle": {"swing": 7.9}
+  }},
+  {"t": 0.3333, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.685, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 47.1, "spread": 0},
+   "LeftKnee": {"swing": -119.7},
+   "LeftAnkle": {"swing": 57.7},
+   "RightHip": {"swing": 91.4, "spread": 0},
+   "RightKnee": {"swing": -94.3},
+   "RightAnkle": {"swing": 17.9}
+  }},
+  {"t": 0.3542, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.702, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 70.1, "spread": 0},
+   "LeftKnee": {"swing": -128.4},
+   "LeftAnkle": {"swing": 47.4},
+   "RightHip": {"swing": 93.5, "spread": 0},
+   "RightKnee": {"swing": -104.9},
+   "RightAnkle": {"swing": 18.5}
+  }},
+  {"t": 0.375, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.713, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 93.8, "spread": 0},
+   "LeftKnee": {"swing": -128.0},
+   "LeftAnkle": {"swing": 28.0},
+   "RightHip": {"swing": 90.8, "spread": 0},
+   "RightKnee": {"swing": -111.6},
+   "RightAnkle": {"swing": 23.8}
+  }},
+  {"t": 0.3958, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.715, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 106.7, "spread": 0},
+   "LeftKnee": {"swing": -116.5},
+   "LeftAnkle": {"swing": 8.6},
+   "RightHip": {"swing": 87.2, "spread": 0},
+   "RightKnee": {"swing": -116.9},
+   "RightAnkle": {"swing": 26.7}
+  }},
+  {"t": 0.4167, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.707, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 107.6, "spread": 0},
+   "LeftKnee": {"swing": -97.6},
+   "LeftAnkle": {"swing": -6.4},
+   "RightHip": {"swing": 81.6, "spread": 0},
+   "RightKnee": {"swing": -119.8},
+   "RightAnkle": {"swing": 29.2}
+  }},
+  {"t": 0.4375, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.693, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 101.5, "spread": 0},
+   "LeftKnee": {"swing": -75.4},
+   "LeftAnkle": {"swing": -18.0},
+   "RightHip": {"swing": 73.1, "spread": 0},
+   "RightKnee": {"swing": -119.8},
+   "RightAnkle": {"swing": 33.8}
+  }},
+  {"t": 0.4583, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.675, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 93.1, "spread": 0},
+   "LeftKnee": {"swing": -54.5},
+   "LeftAnkle": {"swing": -26.9},
+   "RightHip": {"swing": 62.6, "spread": 0},
+   "RightKnee": {"swing": -117.1},
+   "RightAnkle": {"swing": 39.0}
+  }},
+  {"t": 0.4792, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.658, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 87.3, "spread": 0},
+   "LeftKnee": {"swing": -42.9},
+   "LeftAnkle": {"swing": -30.3},
+   "RightHip": {"swing": 50.9, "spread": 0},
+   "RightKnee": {"swing": -111.8},
+   "RightAnkle": {"swing": 44.4}
+  }},
+  {"t": 0.5, "ease": "linear", "joints": {
+   "Root": {"pos": [0, -0.647, 0.3], "pitch": 15.0, "lean": 0, "turn": 0},
+   "LeftHip": {"swing": 85.9, "spread": 0},
+   "LeftKnee": {"swing": -46.5},
+   "LeftAnkle": {"swing": -24.4},
+   "RightHip": {"swing": 39.0, "spread": 0},
+   "RightKnee": {"swing": -104.5},
+   "RightAnkle": {"swing": 49.0}
+  }}
+ ]
+}

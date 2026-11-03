@@ -1,0 +1,48 @@
+{
+ "name": "Butcher_Hit",
+ "_intent": "Golpe recibido, de mole: el tiro apenas lo mueve; el pecho se va atrás y de costado (0,07 s), los brazos se abren con el gancho para afuera, y vuelve adelante encorvado con bronca, la cabeza baja (0,22) antes de acomodarse (0,6 s). Solo de la cintura para arriba (no toca Root ni piernas): se puede tocar encima de la caminata y del arrastre.",
+ "loop": false,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "out", "joints": {
+   "Waist": {"pitch": 2, "turn": 4},
+   "Neck": {"pitch": -10, "turn": -4},
+   "LeftShoulder": {"swing": 8, "spread": 8},
+   "LeftElbow": {"swing": 22},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 6, "spread": 12},
+   "RightElbow": {"swing": 14},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.07, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -14, "lean": 6, "turn": -14},
+   "Neck": {"pitch": -2, "lean": 6, "turn": 14},
+   "LeftShoulder": {"swing": -20, "spread": 34},
+   "LeftElbow": {"swing": 34},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": -14, "spread": 30},
+   "RightElbow": {"swing": 10},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.22, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 8, "lean": -2, "turn": 4},
+   "Neck": {"pitch": -18, "lean": 0, "turn": -6},
+   "LeftShoulder": {"swing": 20, "spread": 12},
+   "LeftElbow": {"swing": 50},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 18, "spread": 14},
+   "RightElbow": {"swing": 26},
+   "RightWrist": {"swing": 0}
+  }},
+  {"t": 0.6, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 2, "turn": 4},
+   "Neck": {"pitch": -10, "turn": -4},
+   "LeftShoulder": {"swing": 8, "spread": 8},
+   "LeftElbow": {"swing": 22},
+   "LeftWrist": {"swing": 0},
+   "RightShoulder": {"swing": 6, "spread": 12},
+   "RightElbow": {"swing": 14},
+   "RightWrist": {"swing": 0}
+  }}
+ ]
+}

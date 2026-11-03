@@ -1,0 +1,94 @@
+{
+ "name": "Horse_Idle",
+ "_intent": "Parado, casi quieto en la cruz (arriba va el jinete soldado al _Seat). Respira lento: el lomo sube 0,02 y cabecea 0,3° (inhala en t=2,0). Descansa la trasera derecha: corvejón y babilla flexionados, la caña inclinada con la pinza en el piso, el casco 0,12 adelante de su lugar; las otras tres cargan y llevan la inversa del torso (quedan quietas en el mundo). Cuello relajado, un poco abajo; a los 1-2 s mira a su izquierda (15°), vuelve, y a los 2,9 s sacude la cabeza (moscas). La cola da dos coletazos de lado a lado. Es la pose de entrada y salida de Rear, Hit y Death (t=0).",
+ "rig": "assets/models/western/transport/WST_Mount_Horse/04_roblox/WST_Mount_Horse.rig.json",
+ "loop": true,
+ "priority": "Idle",
+ "keys": [
+  {"t": 0.0, "ease": "smooth", "joints": {
+   "Torso": {"rot": [-0.15, 0.0, 0.0], "pos": [0.0, -0.008, 0.0]},
+   "Neck": {"rot": [-4, 0.0, 0.0]},
+   "Head": {"rot": [-3, 0.0, 0.0]},
+   "Tail": {"rot": [-3, 0.0, -6]},
+   "FrontLeftUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0127, -0.0009]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0127, -0.0009]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0041, -0.0009]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [14.27, 0.0, 0.0], "pos": [0.0, 0.1173, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-30.0, 0.0, 0.0]}
+  }},
+  {"t": 0.8, "ease": "smooth", "joints": {
+   "Tail": {"rot": [1, 0.0, 12]}
+  }},
+  {"t": 0.9, "ease": "smooth", "joints": {
+   "Head": {"rot": [-1, 9, 2]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Neck": {"rot": [-3, 4, 0.0]}
+  }},
+  {"t": 1.6, "ease": "smooth", "joints": {
+   "Tail": {"rot": [-2, 0.0, -9]}
+  }},
+  {"t": 1.9, "ease": "smooth", "joints": {
+   "Neck": {"rot": [-2, 7, 0.0]},
+   "Head": {"rot": [1, 15, 3]}
+  }},
+  {"t": 2.0, "ease": "smooth", "joints": {
+   "Torso": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.012, 0.0]},
+   "FrontLeftUpperLeg": {"rot": [-0.15, 0.0, 0.0], "pos": [0.0, -0.0167, 0.001]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [-0.15, 0.0, 0.0], "pos": [0.0, -0.0167, 0.001]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [-0.15, 0.0, 0.0], "pos": [0.0, -0.0081, 0.0009]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [14.02, 0.0, 0.0], "pos": [0.0, 0.1049, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-30.0, 0.0, 0.0]}
+  }},
+  {"t": 2.3, "ease": "smooth", "joints": {
+   "Tail": {"rot": [0.0, 0.0, 3]}
+  }},
+  {"t": 2.6, "ease": "smooth", "joints": {
+   "Head": {"rot": [-3, -3, -1]}
+  }},
+  {"t": 2.7, "ease": "smooth", "joints": {
+   "Neck": {"rot": [-5, -1, 0.0]}
+  }},
+  {"t": 2.9, "ease": "smooth", "joints": {
+   "Head": {"rot": [3, -2, -7]}
+  }},
+  {"t": 3.0, "ease": "smooth", "joints": {
+   "Tail": {"rot": [-5, 0.0, -15]}
+  }},
+  {"t": 3.07, "ease": "smooth", "joints": {
+   "Head": {"rot": [2, -2, 7]}
+  }},
+  {"t": 3.24, "ease": "smooth", "joints": {
+   "Head": {"rot": [3, -1, -4]}
+  }},
+  {"t": 3.3, "ease": "smooth", "joints": {
+   "Neck": {"rot": [-5, -2, 0.0]}
+  }},
+  {"t": 3.45, "ease": "smooth", "joints": {
+   "Head": {"rot": [-2, 0.0, 1]}
+  }},
+  {"t": 3.5, "ease": "smooth", "joints": {
+   "Tail": {"rot": [1, 0.0, 13]}
+  }},
+  {"t": 4.0, "ease": "smooth", "joints": {
+   "Torso": {"rot": [-0.15, 0.0, 0.0], "pos": [0.0, -0.008, 0.0]},
+   "Neck": {"rot": [-4, 0.0, 0.0]},
+   "Head": {"rot": [-3, 0.0, 0.0]},
+   "Tail": {"rot": [-3, 0.0, -6]},
+   "FrontLeftUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0127, -0.0009]},
+   "FrontLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "FrontRightUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0127, -0.0009]},
+   "FrontRightLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackLeftUpperLeg": {"rot": [0.15, 0.0, 0.0], "pos": [0.0, 0.0041, -0.0009]},
+   "BackLeftLowerLeg": {"rot": [0.0, 0.0, 0.0]},
+   "BackRightUpperLeg": {"rot": [14.27, 0.0, 0.0], "pos": [0.0, 0.1173, 0.0], "pivot": [0.0, 0.8, 0.0]},
+   "BackRightLowerLeg": {"rot": [-30.0, 0.0, 0.0]}
+  }}
+ ]
+}

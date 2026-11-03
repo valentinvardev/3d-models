@@ -1,0 +1,54 @@
+{
+ "name": "Coffee_Equip",
+ "_intent": "Levantar el jarro: la mano lo trae desde abajo adelante (como de una mesa o del suelo) hasta la altura de la cintura, siempre derecho y con cuidado (apenas se mece), se pasa un poco y queda exacto en Coffee_Hold. 0,7 s; no se toma hasta Ready.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 0.7, "name": "Ready"}],
+ "props": {"Body": {"parent": "RightHand"}},
+ "keys": [
+  {"t": 0.0, "ease": "out", "joints": {
+   "Waist": {"turn": 4, "pitch": 6},
+   "Neck": {"turn": -6, "pitch": 18},
+   "RightShoulder": {"swing": -17.4, "spread": -10.7, "twist": 14.3},
+   "RightElbow": {"swing": 85.9},
+   "RightWrist": {"swing": 0.1, "spread": -5.5, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-60.7, -11.8, 17.9]}
+  }},
+  {"t": 0.3, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 3},
+   "Neck": {"turn": -6, "pitch": 8},
+   "RightShoulder": {"swing": -27.8, "spread": -4.2, "twist": 17.7},
+   "RightElbow": {"swing": 122.3},
+   "RightWrist": {"swing": 0, "spread": -7.2, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-90.2, -22.6, 2.3]}
+  }},
+  {"t": 0.5, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 3},
+   "Neck": {"turn": -6, "pitch": 8},
+   "RightShoulder": {"swing": -32, "spread": 0.5, "twist": 19.2},
+   "RightElbow": {"swing": 139.5},
+   "RightWrist": {"swing": 0, "spread": -8.9, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-105.4, -25.8, 0]}
+  }},
+  {"t": 0.7, "ease": "smooth", "joints": {
+   "Waist": {"turn": 8, "pitch": 3},
+   "Neck": {"turn": -6, "pitch": 8},
+   "RightShoulder": {"swing": -33.1, "spread": -1.4, "twist": 18.2},
+   "RightElbow": {"swing": 135.4},
+   "RightWrist": {"swing": 0, "spread": -8.4, "twist": 0},
+   "LeftShoulder": {"swing": 8, "spread": 6},
+   "LeftElbow": {"swing": 20},
+   "LeftWrist": {"swing": 0},
+   "Body": {"rot": [-99.3, -24.4, 1]}
+  }}
+ ]
+}

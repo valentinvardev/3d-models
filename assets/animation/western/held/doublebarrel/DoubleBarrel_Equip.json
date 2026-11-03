@@ -1,0 +1,74 @@
+{
+ "name": "DoubleBarrel_Equip",
+ "_intent": "Sacarla del costado y montarla: arranca colgando de la mano derecha al costado con los caños para abajo, la sube en arco mientras el torso se pone de perfil, la izquierda ataja la caña, la cantonera entra al hombro y el pulgar amartilla un martillo y después el otro (clic, clic). Termina exacta en DoubleBarrel_Hold; no dispara hasta Ready.",
+ "loop": false,
+ "priority": "Action",
+ "markers": [{"t": 1.0, "name": "Ready"}],
+ "props": {"Stock": {"parent": "RightHand"}, "Barrels": {"parent": "Stock"}, "Extractor": {"parent": "Stock"}, "HammerL": {"parent": "Stock"}, "HammerR": {"parent": "Stock"}},
+ "keys": [
+  {"t": 0.0, "ease": "in", "joints": {
+   "Waist": {"turn": 0, "pitch": 0},
+   "Neck": {"turn": 0, "pitch": 0},
+   "RightShoulder": {"swing": -34.7, "spread": -6.1, "twist": 5.4},
+   "RightElbow": {"swing": 87.2},
+   "RightWrist": {"swing": -0.1, "spread": -3.8, "twist": 0},
+   "LeftShoulder": {"swing": 6, "spread": 6},
+   "LeftElbow": {"swing": 14},
+   "LeftWrist": {"swing": 0},
+   "Barrels": {"rot": [0, 0, 0]},
+   "Extractor": {"rot": [0, 0, 0], "pos": [0, 0, 0]},
+   "HammerL": {"rot": [0, 0, 0]},
+   "HammerR": {"rot": [0, 0, 0]},
+   "Stock": {"rot": [-114.5, -11.4, -3.5]}
+  }},
+  {"t": 0.28, "ease": "out", "joints": {
+   "Waist": {"turn": -20, "pitch": 3},
+   "Neck": {"turn": 18, "pitch": 3},
+   "RightShoulder": {"swing": 28.5, "spread": 3.5, "twist": 52.7},
+   "RightElbow": {"swing": 73.3},
+   "RightWrist": {"swing": 0, "spread": -10.8, "twist": -0.1},
+   "LeftShoulder": {"swing": 63.5, "spread": -81.5, "twist": 0},
+   "LeftElbow": {"swing": 0},
+   "LeftWrist": {"swing": 0, "spread": 15.3, "twist": 0},
+   "Stock": {"rot": [-129.8, -30.6, -19.1]}
+  }},
+  {"t": 0.52, "ease": "smooth", "joints": {
+   "Waist": {"turn": -38, "pitch": 4},
+   "Neck": {"turn": 36, "pitch": 6},
+   "RightShoulder": {"swing": 49.9, "spread": 19, "twist": 61.9},
+   "RightElbow": {"swing": 65.5},
+   "RightWrist": {"swing": 0, "spread": -12.3, "twist": 0.1},
+   "LeftShoulder": {"swing": 63.9, "spread": -2, "twist": -24.7},
+   "LeftElbow": {"swing": 44},
+   "LeftWrist": {"swing": 0, "spread": -4.4, "twist": 0},
+   "Barrels": {"rot": [0, 0, 0]},
+   "Extractor": {"rot": [0, 0, 0], "pos": [0, 0, 0]},
+   "HammerL": {"rot": [0, 0, 0]},
+   "HammerR": {"rot": [0, 0, 0]},
+   "Stock": {"rot": [-126.3, -26.4, -25.4]}
+  }},
+  {"t": 0.68, "ease": "out", "joints": {
+   "HammerL": {"rot": [38, 0, 0]},
+   "HammerR": {"rot": [0, 0, 0]}
+  }},
+  {"t": 0.84, "ease": "out", "joints": {
+   "HammerL": {"rot": [38, 0, 0]},
+   "HammerR": {"rot": [38, 0, 0]}
+  }},
+  {"t": 1.0, "ease": "smooth", "joints": {
+   "Waist": {"turn": -38, "pitch": 4},
+   "Neck": {"turn": 36, "pitch": 6},
+   "RightShoulder": {"swing": 49.9, "spread": 19, "twist": 61.9},
+   "RightElbow": {"swing": 65.5},
+   "RightWrist": {"swing": 0, "spread": -12.3, "twist": 0.1},
+   "LeftShoulder": {"swing": 63.9, "spread": -2, "twist": -24.7},
+   "LeftElbow": {"swing": 44},
+   "LeftWrist": {"swing": 0, "spread": -4.4, "twist": 0},
+   "Barrels": {"rot": [0, 0, 0]},
+   "Extractor": {"rot": [0, 0, 0], "pos": [0, 0, 0]},
+   "HammerL": {"rot": [38, 0, 0]},
+   "HammerR": {"rot": [38, 0, 0]},
+   "Stock": {"rot": [-126.3, -26.4, -25.4]}
+  }}
+ ]
+}

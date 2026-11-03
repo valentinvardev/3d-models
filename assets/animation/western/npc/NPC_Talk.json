@@ -1,0 +1,88 @@
+{
+ "name": "NPC_Talk",
+ "_intent": "Charla compartida de los NPCs mientras la tienda está abierta (cualquier R15 de la fábrica). Arranca con los antebrazos levantados adelante de la panza; explica con la izquierda abierta, palma arriba, hacia su izquierda, mirando para ese lado (0,7); marca con el puño derecho adelante mientras asiente (1,45); abre los dos brazos con la cabeza ladeada (2,2); corta el aire con la izquierda de canto, dos golpecitos de mano y cabeza (2,95-3,55). La izquierda gesticula abierta; la derecha suele tener algo (vaso, botella, martillo, pico), así que gesticula con el puño y los dedos siempre para abajo (37° o más bajo la horizontal): lo que lleva no le apunta al que escucha. Brazos moderados (manos a la altura del pecho bajo) y la cabeza en cada frase. Nombra cintura, cuello y brazos: la cintura casi derecha (2° adelante) endereza al que estaba inclinado (el almacenero sobre el mostrador, el herrero sobre el yunque) para que hable con las manos por arriba de la tapa; cadera y piernas son las del Idle de cada uno, así sirve parado, apoyado o sentado frente al telégrafo. Antebrazos, manos y objetos resueltos contra la malla del torso y los muslos de cuatro cuerpos a la vez (almacenero, herrero, buhonero, minero); medido en los 7, solo y encima de cada Idle. Prioridad Action, loop de 4,2 s.",
+ "loop": true,
+ "priority": "Action",
+ "keys": [
+  {"t": 0, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 2, "lean": 0, "turn": 0},
+   "Neck": {"pitch": 0, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": -19.4, "spread": -4.2, "twist": -11.3},
+   "LeftElbow": {"swing": 105.5},
+   "LeftWrist": {"swing": -2.4, "spread": 3.6, "twist": 20.7},
+   "RightShoulder": {"swing": -20, "spread": -2.3, "twist": 11},
+   "RightElbow": {"swing": 109.5},
+   "RightWrist": {"swing": -32.7, "spread": 1.4, "twist": -3.7}
+  }},
+  {"t": 0.7, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 0, "lean": 2, "turn": 6},
+   "Neck": {"pitch": -5, "lean": 6, "turn": 10},
+   "LeftShoulder": {"swing": -0.3, "spread": 0.4, "twist": 6},
+   "LeftElbow": {"swing": 96.3},
+   "LeftWrist": {"swing": -0.8, "spread": 4.3, "twist": 31.9},
+   "RightShoulder": {"swing": -19.1, "spread": -1, "twist": 11.1},
+   "RightElbow": {"swing": 108.4},
+   "RightWrist": {"swing": -32.5, "spread": 2.2, "twist": -3.6}
+  }},
+  {"t": 1.45, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 5, "lean": 0, "turn": -4},
+   "Neck": {"pitch": 10, "lean": -2, "turn": -4},
+   "LeftShoulder": {"swing": -15.3, "spread": -3.7, "twist": -11.5},
+   "LeftElbow": {"swing": 103.2},
+   "LeftWrist": {"swing": -0.6, "spread": 4.1, "twist": 23.3},
+   "RightShoulder": {"swing": -1.6, "spread": 2.7, "twist": 20.4},
+   "RightElbow": {"swing": 102.8},
+   "RightWrist": {"swing": -43.8, "spread": 9.3, "twist": -1.5}
+  }},
+  {"t": 2.2, "ease": "smooth", "joints": {
+   "Waist": {"pitch": -2, "lean": 0, "turn": 0},
+   "Neck": {"pitch": -6, "lean": 7, "turn": 0},
+   "LeftShoulder": {"swing": -11.3, "spread": 3.7, "twist": 11.3},
+   "LeftElbow": {"swing": 100},
+   "LeftWrist": {"swing": 1.1, "spread": 1.2, "twist": 32.2},
+   "RightShoulder": {"swing": -17.8, "spread": 11.8, "twist": 3.6},
+   "RightElbow": {"swing": 103.3},
+   "RightWrist": {"swing": -30.8, "spread": 8.6, "twist": -2.9}
+  }},
+  {"t": 2.95, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 4, "lean": 0, "turn": 3},
+   "Neck": {"pitch": 6, "lean": 0, "turn": 2},
+   "LeftShoulder": {"swing": 8.4, "spread": 1.9, "twist": -24.8},
+   "LeftElbow": {"swing": 92.4},
+   "LeftWrist": {"swing": -0.8, "spread": 6.8, "twist": 6.9},
+   "RightShoulder": {"swing": -19.4, "spread": -0.1, "twist": 12.3},
+   "RightElbow": {"swing": 108.3},
+   "RightWrist": {"swing": -32, "spread": 3.2, "twist": -4.7}
+  }},
+  {"t": 3.25, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 4, "lean": 0, "turn": 3},
+   "Neck": {"pitch": -2, "lean": 0, "turn": 2},
+   "LeftShoulder": {"swing": 4.5, "spread": 0.8, "twist": -25.7},
+   "LeftElbow": {"swing": 85.5},
+   "LeftWrist": {"swing": -1.1, "spread": 10.3, "twist": 2},
+   "RightShoulder": {"swing": -20.3, "spread": -1, "twist": 11.3},
+   "RightElbow": {"swing": 107.9},
+   "RightWrist": {"swing": -30.7, "spread": 2.1, "twist": -4.4}
+  }},
+  {"t": 3.55, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 4, "lean": 0, "turn": 3},
+   "Neck": {"pitch": 8, "lean": 0, "turn": 1},
+   "LeftShoulder": {"swing": 8.4, "spread": 1.9, "twist": -24.8},
+   "LeftElbow": {"swing": 92.4},
+   "LeftWrist": {"swing": -0.8, "spread": 6.8, "twist": 6.9},
+   "RightShoulder": {"swing": -19.4, "spread": -0.1, "twist": 12.3},
+   "RightElbow": {"swing": 108.3},
+   "RightWrist": {"swing": -32, "spread": 3.2, "twist": -4.7}
+  }},
+  {"t": 4.2, "ease": "smooth", "joints": {
+   "Waist": {"pitch": 2, "lean": 0, "turn": 0},
+   "Neck": {"pitch": 0, "lean": 0, "turn": 0},
+   "LeftShoulder": {"swing": -19.4, "spread": -4.2, "twist": -11.3},
+   "LeftElbow": {"swing": 105.5},
+   "LeftWrist": {"swing": -2.4, "spread": 3.6, "twist": 20.7},
+   "RightShoulder": {"swing": -20, "spread": -2.3, "twist": 11},
+   "RightElbow": {"swing": 109.5},
+   "RightWrist": {"swing": -32.7, "spread": 1.4, "twist": -3.7}
+  }}
+ ]
+}
